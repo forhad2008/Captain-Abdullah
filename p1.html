@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Captain Abdullah — Product</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800;900&family=Cinzel:wght@500;600;700;800&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+<style>
+:root{--paper:#eee9df;--paper2:#e1dacd;--ink:#111;--muted:#746e66;--red:#8d1515;--gold:#a27a3b;--dark:#11100f;--line:rgba(0,0,0,.13)}
+*{box-sizing:border-box;margin:0;padding:0}html{scroll-behavior:smooth}body{background:var(--paper);color:var(--ink);font-family:Archivo,sans-serif}body.lock{overflow:hidden}a{text-decoration:none;color:inherit}button{font:inherit;cursor:pointer}
+header{height:78px;position:fixed;z-index:1000;inset:0 0 auto;background:rgba(238,233,223,.94);backdrop-filter:blur(18px);border-bottom:1px solid var(--line)}
+.head{height:100%;max-width:1500px;margin:auto;padding:0 38px;display:flex;align-items:center;justify-content:space-between}.brand{display:flex;align-items:center;gap:10px;min-width:210px;font:800 13px Cinzel;letter-spacing:.16em}.brand img{width:43px;height:43px;object-fit:contain}.nav{display:flex;gap:40px;justify-content:center;flex:1}.nav a{font-size:10px;font-weight:700;letter-spacing:.18em;text-transform:uppercase}.actions{min-width:210px;text-align:right}.cart{border:0;background:none;font-size:10px;letter-spacing:.15em;text-transform:uppercase}.cart b{display:inline-grid;place-items:center;margin-left:8px;width:24px;height:24px;border-radius:50%;background:#111;color:#fff;font-size:9px}.menu{display:none;border:0;background:none}.menu span{display:block;width:22px;height:2px;background:#111;margin:5px}
+.page{max-width:1500px;margin:auto;padding:120px 38px 80px}.crumb{font-size:9px;letter-spacing:.18em;text-transform:uppercase;color:#777;margin-bottom:28px}.layout{display:grid;grid-template-columns:1.08fr .92fr;gap:65px}.gallery{position:sticky;top:100px}.mainpic{aspect-ratio:1/1.1;background:#d7d0c2;overflow:hidden}.mainpic img{width:100%;height:100%;object-fit:cover}.thumbs{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin-top:10px}.thumb{border:1px solid transparent;padding:0;background:#d7d0c2;aspect-ratio:1;overflow:hidden}.thumb.active{border-color:#111}.thumb img{width:100%;height:100%;object-fit:cover}
+.kicker{font-size:10px;letter-spacing:.3em;text-transform:uppercase;color:var(--muted)}h1{margin-top:15px;font-size:clamp(48px,6vw,88px);line-height:.86;letter-spacing:-.07em;text-transform:uppercase}h1 em{font:400 .7em "DM Serif Display";color:var(--red);text-transform:none}.price{margin-top:22px;font-size:20px;font-weight:700}.desc{max-width:510px;margin-top:28px;color:#655f57;font-size:13px;line-height:1.9}.rule{height:1px;background:var(--line);margin:30px 0}.label{font-size:10px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;margin-bottom:12px}.sizes{display:flex;gap:8px}.size{width:52px;height:44px;border:1px solid #aaa297;background:none;font-size:10px}.size.active,.size:hover{background:#111;color:#fff;border-color:#111}.buyrow{display:flex;gap:10px;margin-top:24px}.qty{display:flex;border:1px solid #aaa297}.qty button{width:42px;border:0;background:none}.qty span{width:35px;display:grid;place-items:center}.add{flex:1;border:0;background:#111;color:#fff;font-size:10px;font-weight:800;letter-spacing:.18em;text-transform:uppercase}.add:hover{background:var(--red)}.buy{width:100%;height:50px;margin-top:10px;background:none;border:1px solid #111;font-size:10px;font-weight:800;letter-spacing:.18em;text-transform:uppercase}.buy:hover{background:#111;color:#fff}
+.details .row{border-bottom:1px solid var(--line)}.detail{width:100%;padding:18px 0;border:0;background:none;display:flex;justify-content:space-between;text-transform:uppercase;letter-spacing:.16em;font-size:10px;font-weight:700}.content{display:none;padding:0 20px 20px 0;color:#6b655d;font-size:12px;line-height:1.8}.row.open .content{display:block}
+.preview{margin-top:90px;padding:75px 5vw;background:#171614;color:#fff}.preview-head{text-align:center}.preview-head h2{margin-top:15px;font-size:clamp(45px,7vw,100px);line-height:.85;letter-spacing:-.07em;text-transform:uppercase}.preview-head em{font:400 .72em "DM Serif Display";color:#b48a4d;text-transform:none}.stage{max-width:1200px;margin:45px auto 0;display:grid;grid-template-columns:1fr 1fr;min-height:600px;background:#0c0c0b}.avatarbox{position:relative;min-height:600px;display:flex;align-items:flex-end;justify-content:center;background:radial-gradient(circle at 50% 30%,rgba(162,122,59,.18),transparent 42%),linear-gradient(#1c1b18,#090909);overflow:hidden}.avatar{position:relative;width:390px;height:560px}.head{position:absolute;z-index:4;top:55px;left:122px;width:145px;height:165px;border-radius:48%;background:linear-gradient(90deg,#533729,#a87554 50%,#4d3024)}.hair{position:absolute;z-index:5;top:35px;left:100px;width:190px;height:105px;border-radius:55%;background:#17120f;box-shadow:-28px 18px #17120f,28px 10px #17120f}.bandana{position:absolute;z-index:6;top:102px;left:112px;width:168px;height:38px;background:#751313;border-top:3px solid var(--gold);transform:rotate(-3deg)}.body{position:absolute;z-index:1;bottom:0;left:40px;width:310px;height:370px;background:linear-gradient(90deg,#101010,#302920,#0b0b0b);border-radius:40% 40% 3% 3%}.coat{position:absolute;z-index:2;bottom:0;left:20px;width:350px;height:355px;background:linear-gradient(90deg,#101010,#28231d,#0b0b0b);clip-path:polygon(20% 0,80% 0,100% 100%,0 100%);border-top:1px solid #4d4438}.shirt{position:absolute;z-index:3;top:225px;left:115px;width:160px;height:210px;background:#d2c8b8;clip-path:polygon(50% 0,85% 12%,100% 100%,0 100%,15% 12%)}.vest{position:absolute;z-index:4;top:230px;left:128px;width:135px;height:205px;background:#181513;clip-path:polygon(20% 0,50% 16%,80% 0,100% 100%,0 100%)}.belt{position:absolute;z-index:7;top:370px;left:50px;width:290px;height:32px;background:#1a120c;border:4px solid #72562d}.buckle{position:absolute;z-index:8;top:364px;left:171px;width:48px;height:45px;border:6px solid #a27a3b;background:#20160d}.boots{position:absolute;z-index:8;bottom:0;left:20px;width:350px;height:65px;background:#090909;border-top:3px solid #4d4031}.controls{padding:55px;display:flex;flex-direction:column;justify-content:center}.controls h3{font:600 30px Cinzel}.controls p{margin-top:15px;color:#aaa;font-size:12px;line-height:1.8}.options{margin-top:28px;display:grid;gap:9px}.option{padding:15px;border:1px solid #383632;display:flex;justify-content:space-between}.option.active{border-color:#a27a3b}.option button{border:0;background:none;color:#b48a4d;font-size:10px}.note{margin-top:25px;color:#888;font-size:10px;line-height:1.7}
+footer{padding:55px 5vw 28px;background:#0c0c0c;color:#fff}.foot{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:30px}.footbrand{font:800 clamp(28px,4.5vw,65px) Cinzel;line-height:.85}.foot h4{color:#777;font-size:9px;letter-spacing:.2em;margin-bottom:18px}.foot a{display:block;color:#aaa;font-size:11px;margin-bottom:11px}.bottom{display:flex;justify-content:space-between;margin-top:50px;padding-top:20px;border-top:1px solid #282828;color:#666;font-size:9px;letter-spacing:.15em}
+.overlay{position:fixed;inset:0;z-index:2990;background:#0009;opacity:0;visibility:hidden;transition:.3s}.overlay.show{opacity:1;visibility:visible}.drawer{position:fixed;z-index:3100;top:0;right:0;width:min(460px,92vw);height:100dvh;background:#111;color:#fff;padding:28px;transform:translateX(105%);transition:.4s;display:flex;flex-direction:column}.drawer.open{transform:none}.drawerhead{display:flex;justify-content:space-between;border-bottom:1px solid #292929;padding-bottom:20px}.close{border:0;background:none;color:#fff;font-size:28px}.items{flex:1;overflow:auto}.empty{text-align:center;color:#888;margin-top:80px}.item{display:flex;justify-content:space-between;border-bottom:1px solid #292929;padding:18px 0;font-size:11px}.drawerfoot{border-top:1px solid #292929;padding-top:20px}.checkout{width:100%;padding:16px;margin-top:15px;border:0;background:#fff;font-size:10px;font-weight:800;letter-spacing:.15em}.checkout:disabled{opacity:.3}
+.mobile{position:fixed;z-index:3000;left:0;top:0;width:min(390px,88vw);height:100dvh;padding:30px;background:#111;color:#fff;transform:translateX(-105%);transition:.4s}.mobile.open{transform:none}.mobilehead{display:flex;justify-content:space-between;border-bottom:1px solid #333;padding-bottom:20px;font:800 13px Cinzel}.mobile a{display:flex;justify-content:space-between;padding:18px 0;border-bottom:1px solid #292929;font:20px Cinzel}
+@media(max-width:900px){.nav{display:none}.menu{display:block}.brand{position:absolute;left:50%;transform:translateX(-50%);min-width:0}.brand span{display:none}.actions{min-width:50px}.cart span{display:none}.head{padding:0 14px}.page{padding:100px 18px 55px}.layout{grid-template-columns:1fr;gap:40px}.gallery{position:static}.stage{grid-template-columns:1fr}.avatarbox{min-height:520px}.controls{padding:40px 28px}.foot{grid-template-columns:1fr 1fr}.footbrand{grid-column:1/-1}}
+@media(max-width:600px){header{height:64px}.page{padding:88px 12px 45px}.stage{margin-top:35px}.avatar{transform:scale(.78);transform-origin:bottom center}.avatarbox{min-height:450px}.controls{padding:35px 22px}.foot{grid-template-columns:1fr}.footbrand{grid-column:auto}.bottom{display:block;line-height:2}}
+</style>
+</head>
+<body>
+
+<header id="header"><div class="head">
+<button class="menu" id="menu"><span></span><span></span><span></span></button>
+<a class="brand" href="index.html"><img src="logo.webp" alt="Captain Abdullah"><span>CAPTAIN ABDULLAH</span></a>
+<nav class="nav"><a href="index.html#shop">Shop</a><a href="index.html#collections">Collections</a><a href="index.html#story">The Code</a><a href="index.html#newsletter">Journal</a></nav>
+<div class="actions"><button class="cart" id="cart">Bag <b id="count">0</b></button></div>
+</div></header>
+
+<div class="overlay" id="overlay"></div>
+<aside class="mobile" id="mobile"><div class="mobilehead"><span>CAPTAIN ABDULLAH</span><button class="close" id="mclose">&times;</button></div><a href="index.html#shop">Shop <span>→</span></a><a href="index.html#collections">Collections <span>→</span></a><a href="index.html#story">The Code <span>→</span></a></aside>
+
+<main class="page">
+<div class="crumb"><a href="index.html">Home</a> / <a href="index.html#shop">Shop</a> / The Captain Shirt</div>
+<section class="layout">
+<div class="gallery">
+<div class="mainpic"><img id="main" src="captain-shirt.webp" alt="The Captain Shirt"></div>
+<div class="thumbs">
+<button class="thumb active" data-img="captain-shirt.webp"><img src="captain-shirt.webp" alt=""></button>
+<button class="thumb" data-img="2.webp"><img src="2.webp" alt=""></button>
+<button class="thumb" data-img="2.1.webp"><img src="2.1.webp" alt=""></button>
+</div>
+</div>
+<div>
+<div class="kicker">01 / Black Tide Collection</div>
+<h1>The Captain <em>Shirt.</em></h1>
+<div class="price">$89.00 USD</div>
+<p class="desc">A relaxed captain-inspired shirt designed for movement, layered styling and modern adventure. Its visual language combines weathered character with a clean contemporary silhouette.</p>
+<div class="rule"></div>
+<div class="label">Select size</div>
+<div class="sizes"><button class="size">XS</button><button class="size">S</button><button class="size active">M</button><button class="size">L</button><button class="size">XL</button></div>
+<div class="buyrow"><div class="qty"><button id="minus">−</button><span id="qty">1</span><button id="plus">+</button></div><button class="add" id="add">Add to bag — $89</button></div>
+<button class="buy" id="buy">Buy this piece now</button>
+<div class="rule"></div>
+<div class="details">
+<div class="row open"><button class="detail">The details <i class="fa-solid fa-plus"></i></button><div class="content">Relaxed silhouette, reinforced seams and antique-inspired detailing. Replace this copy with your final manufacturing specifications.</div></div>
+<div class="row"><button class="detail">Composition <i class="fa-solid fa-plus"></i></button><div class="content">Add the final fabric composition and care instructions here.</div></div>
+<div class="row"><button class="detail">Shipping & returns <i class="fa-solid fa-plus"></i></button><div class="content">Add your final delivery times, shipping regions and return policy here.</div></div>
+</div>
+</div>
+</section>
+
+<section class="preview">
+<div class="preview-head"><div class="kicker">See it in character</div><h2>The Captain <em>Preview.</em></h2></div>
+<div class="stage">
+<div class="avatarbox"><div class="avatar" id="avatar"><div class="hair"></div><div class="head"></div><div class="bandana"></div><div class="body"></div><div class="coat"></div><div class="shirt" id="shirt"></div><div class="vest"></div><div class="belt"></div><div class="buckle"></div><div class="boots"></div></div></div>
+<div class="controls"><div class="kicker">Interactive styling</div><h3>Build the Captain.</h3><p>An original fictional fashion avatar for Captain Abdullah. Use the controls to preview different color directions for the garment.</p>
+<div class="options"><div class="option active"><span>Captain Shirt</span><button onclick="styleAvatar('cream',this)">Selected</button></div><div class="option"><span>Black Tide</span><button onclick="styleAvatar('black',this)">Preview</button></div><div class="option"><span>Red Voyage</span><button onclick="styleAvatar('red',this)">Preview</button></div></div>
+<div class="note">The avatar is an original brand character and is not a depiction of any existing film character.</div></div>
+</div>
+</section>
+</main>
+
+<footer><div class="foot"><div class="footbrand">CAPTAIN<br>ABDULLAH</div><div><h4>Explore</h4><a href="index.html#shop">Shop</a><a href="index.html#collections">Collections</a></div><div><h4>Support</h4><a href="#">Contact</a><a href="#">Shipping</a><a href="#">Returns</a></div><div><h4>Follow</h4><a href="#">Instagram</a><a href="#">TikTok</a><a href="#">YouTube</a></div></div><div class="bottom"><span>© 2026 CAPTAIN ABDULLAH</span><span>Made for the ones who roam.</span></div></footer>
+
+<div class="overlay" id="cartOverlay"></div>
+<aside class="drawer" id="drawer"><div class="drawerhead"><strong>SHOPPING BAG</strong><button class="close" id="cartClose">&times;</button></div><div class="items" id="items"><div class="empty">Your bag is empty.</div></div><div class="drawerfoot"><div style="display:flex;justify-content:space-between"><span>Subtotal</span><strong id="total">$0.00</strong></div><button class="checkout" id="checkout" disabled>Proceed to checkout</button></div></aside>
+
+<script>
+const main=document.getElementById('main');
+document.querySelectorAll('.thumb').forEach(x=>x.onclick=()=>{main.src=x.dataset.img;document.querySelectorAll('.thumb').forEach(y=>y.classList.remove('active'));x.classList.add('active')});
+document.querySelectorAll('.size').forEach(x=>x.onclick=()=>{document.querySelectorAll('.size').forEach(y=>y.classList.remove('active'));x.classList.add('active')});
+document.querySelectorAll('.detail').forEach(x=>x.onclick=()=>x.parentElement.classList.toggle('open'));
+let qty=1,bag=[];
+document.getElementById('minus').onclick=()=>{qty=Math.max(1,qty-1);document.getElementById('qty').textContent=qty};
+document.getElementById('plus').onclick=()=>{qty++;document.getElementById('qty').textContent=qty};
+function add(){let x=bag.find(a=>a.name==='The Captain Shirt');if(x)x.qty+=qty;else bag.push({name:'The Captain Shirt',price:89,qty:qty});render();openCart()}
+document.getElementById('add').onclick=add;document.getElementById('buy').onclick=add;
+function render(){let n=bag.reduce((s,x)=>s+x.qty,0),t=bag.reduce((s,x)=>s+x.qty*x.price,0);document.getElementById('count').textContent=n;document.getElementById('total').textContent='$'+t.toFixed(2);document.getElementById('checkout').disabled=!bag.length;document.getElementById('items').innerHTML=bag.length?bag.map((x,i)=>'<div class="item"><span>'+x.name+' × '+x.qty+'</span><button style="background:none;border:0;color:#888" onclick="removeItem('+i+')">Remove</button></div>').join(''):'<div class="empty">Your bag is empty.</div>'}
+function removeItem(i){bag.splice(i,1);render()}
+const drawer=document.getElementById('drawer'),cartOverlay=document.getElementById('cartOverlay');
+function openCart(){closeMenu();drawer.classList.add('open');cartOverlay.classList.add('show');document.body.classList.add('lock')}
+function closeCart(){drawer.classList.remove('open');cartOverlay.classList.remove('show');unlock()}
+document.getElementById('cart').onclick=openCart;document.getElementById('cartClose').onclick=closeCart;cartOverlay.onclick=closeCart;
+const mobile=document.getElementById('mobile'),overlay=document.getElementById('overlay');
+function openMenu(){closeCart();mobile.classList.add('open');overlay.classList.add('show');document.body.classList.add('lock')}
+function closeMenu(){mobile.classList.remove('open');overlay.classList.remove('show');unlock()}
+function unlock(){if(!mobile.classList.contains('open')&&!drawer.classList.contains('open'))document.body.classList.remove('lock')}
+document.getElementById('menu').onclick=openMenu;document.getElementById('mclose').onclick=closeMenu;overlay.onclick=closeMenu;document.querySelectorAll('.mobile a').forEach(a=>a.onclick=closeMenu);
+function styleAvatar(type,button){document.querySelectorAll('.option').forEach(x=>x.classList.remove('active'));button.parentElement.classList.add('active');let s=document.getElementById('shirt');s.style.background=type==='black'?'#141414':type==='red'?'linear-gradient(90deg,#4e0909,#8d1515,#320707)':'linear-gradient(90deg,#d7cdbc,#aaa092,#e2d9c8)'}
+window.addEventListener('scroll',()=>document.getElementById('header').style.boxShadow=scrollY>30?'0 8px 30px #0001':'none');
+document.getElementById('checkout').onclick=()=>alert('Checkout is ready to connect to your payment gateway.');
+render();
+</script>
+</body>
+</html>
