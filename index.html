@@ -1,44 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-
 <meta charset="UTF-8">
-
-<meta
-  name="viewport"
-  content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>CAPTAIN ABDULLAH — Born to Roam</title>
 
-<meta
-  name="description"
-  content="Captain Abdullah — independent fashion for those who choose their own horizon.">
-
-
-<!-- ======================================================
-     GOOGLE FONTS
-====================================================== -->
+<meta name="description"
+content="Captain Abdullah — independent fashion for those who choose their own horizon.">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-<link
-  rel="preconnect"
-  href="https://fonts.gstatic.com"
-  crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800;900&family=Cinzel:wght@500;600;700;800&family=DM+Serif+Display:ital@0;1&display=swap"
+rel="stylesheet">
 
-<link
-  href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800;900&family=Cinzel:wght@500;600;700;800&family=DM+Serif+Display:ital@0;1&display=swap"
-  rel="stylesheet">
-
-
-<!-- ======================================================
-     FONT AWESOME
-====================================================== -->
-
-<link
-  rel="stylesheet"
-  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 
 
 <style>
@@ -71,63 +49,40 @@
 ========================================================= */
 
 *{
-
   margin:0;
   padding:0;
-
   box-sizing:border-box;
-
 }
-
 
 html{
-
   scroll-behavior:smooth;
-
 }
 
-
 body{
-
   background:var(--paper);
-
   color:var(--ink);
 
   font-family:"Archivo",sans-serif;
 
   overflow-x:hidden;
-
 }
-
 
 body.locked{
-
   overflow:hidden;
-
 }
-
 
 a{
-
   color:inherit;
-
   text-decoration:none;
-
 }
-
 
 button,
 input{
-
   font:inherit;
-
 }
 
-
 button{
-
   cursor:pointer;
-
 }
 
 
@@ -139,50 +94,42 @@ button{
 
   position:fixed;
 
-  z-index:1000;
-
   top:0;
   left:0;
 
   width:100%;
-
   height:78px;
 
+  z-index:1000;
+
+  /* Completely transparent before scrolling */
   background:transparent;
 
   border-bottom:1px solid transparent;
 
   backdrop-filter:none;
-
   -webkit-backdrop-filter:none;
 
   transition:
-
-    background .35s ease,
-
-    border-color .35s ease,
-
-    box-shadow .35s ease,
-
-    backdrop-filter .35s ease;
-
+    background .4s ease,
+    border-color .4s ease,
+    box-shadow .4s ease,
+    backdrop-filter .4s ease;
 }
 
 
-/* WHITE AFTER SCROLL */
+/* WHITE HEADER AFTER SCROLL */
 
 .site-header.scrolled{
 
-  background:rgba(255,255,255,.96);
+  background:rgba(255,255,255,.97);
 
   border-bottom:1px solid rgba(0,0,0,.10);
 
   backdrop-filter:blur(18px);
-
   -webkit-backdrop-filter:blur(18px);
 
   box-shadow:0 8px 30px rgba(0,0,0,.08);
-
 }
 
 
@@ -201,9 +148,12 @@ button{
   align-items:center;
 
   justify-content:space-between;
-
 }
 
+
+/* =========================================================
+   LOGO
+========================================================= */
 
 .brand-mark{
 
@@ -222,9 +172,7 @@ button{
   letter-spacing:.16em;
 
   font-size:13px;
-
 }
-
 
 .brand-mark .logo{
 
@@ -232,9 +180,12 @@ button{
   height:55px;
 
   object-fit:contain;
-
 }
 
+
+/* =========================================================
+   DESKTOP NAV
+========================================================= */
 
 .desktop-nav{
 
@@ -245,9 +196,7 @@ button{
   justify-content:center;
 
   gap:42px;
-
 }
-
 
 .desktop-nav a{
 
@@ -260,9 +209,7 @@ button{
   letter-spacing:.18em;
 
   text-transform:uppercase;
-
 }
-
 
 .desktop-nav a:after{
 
@@ -282,16 +229,16 @@ button{
   transform:scaleX(0);
 
   transition:.3s;
-
 }
-
 
 .desktop-nav a:hover:after{
-
   transform:scaleX(1);
-
 }
 
+
+/* =========================================================
+   HEADER ACTIONS
+========================================================= */
 
 .header-actions{
 
@@ -300,9 +247,7 @@ button{
   display:flex;
 
   justify-content:flex-end;
-
 }
-
 
 .cart-button,
 .menu-toggle{
@@ -312,9 +257,7 @@ button{
   background:none;
 
   color:var(--ink);
-
 }
-
 
 .cart-button{
 
@@ -335,9 +278,7 @@ button{
   letter-spacing:.14em;
 
   text-transform:uppercase;
-
 }
-
 
 .cart-button b{
 
@@ -355,9 +296,12 @@ button{
   color:#fff;
 
   font-size:9px;
-
 }
 
+
+/* =========================================================
+   MOBILE MENU BUTTON
+========================================================= */
 
 .menu-toggle{
 
@@ -365,9 +309,7 @@ button{
 
   width:44px;
   height:44px;
-
 }
-
 
 .menu-toggle span{
 
@@ -379,7 +321,6 @@ button{
   background:#111;
 
   margin:5px auto;
-
 }
 
 
@@ -409,16 +350,11 @@ button{
   transform:translateX(-105%);
 
   transition:.4s cubic-bezier(.22,.8,.2,1);
-
 }
-
 
 .mobile-menu.open{
-
   transform:translateX(0);
-
 }
-
 
 .menu-overlay,
 .cart-overlay{
@@ -438,9 +374,7 @@ button{
   pointer-events:none;
 
   transition:.3s;
-
 }
-
 
 .menu-overlay.show,
 .cart-overlay.show{
@@ -450,9 +384,7 @@ button{
   visibility:visible;
 
   pointer-events:auto;
-
 }
-
 
 .mobile-menu-head{
 
@@ -473,9 +405,7 @@ button{
   font-weight:800;
 
   letter-spacing:.18em;
-
 }
-
 
 .menu-close{
 
@@ -486,22 +416,15 @@ button{
   color:#fff;
 
   font-size:30px;
-
 }
-
 
 .mobile-links{
-
   margin-top:25px;
-
 }
-
 
 .mobile-links a{
 
-  display:flex;
-
-  justify-content:space-between;
+  display:block;
 
   padding:18px 0;
 
@@ -510,7 +433,6 @@ button{
   font-size:20px;
 
   font-family:Cinzel,serif;
-
 }
 
 
@@ -529,9 +451,7 @@ button{
   grid-template-columns:46% 54%;
 
   border-bottom:1px solid var(--line);
-
 }
-
 
 .hero-copy{
 
@@ -542,9 +462,7 @@ button{
   flex-direction:column;
 
   justify-content:center;
-
 }
-
 
 .kicker{
 
@@ -557,9 +475,7 @@ button{
   letter-spacing:.3em;
 
   text-transform:uppercase;
-
 }
-
 
 .hero h1{
 
@@ -572,9 +488,7 @@ button{
   font-weight:900;
 
   text-transform:uppercase;
-
 }
-
 
 .hero h1 span{
 
@@ -589,9 +503,7 @@ button{
   font-weight:400;
 
   color:var(--red);
-
 }
-
 
 .hero-text{
 
@@ -604,9 +516,7 @@ button{
   font-size:13px;
 
   line-height:1.9;
-
 }
-
 
 .hero-btn{
 
@@ -625,16 +535,13 @@ button{
   text-transform:uppercase;
 
   transition:.3s;
-
 }
-
 
 .hero-btn:hover{
 
   background:#111;
 
   color:#fff;
-
 }
 
 
@@ -654,35 +561,13 @@ button{
 
   justify-content:center;
 
-  overflow:hidden;
-
   background:
-
     linear-gradient(
       90deg,
       rgba(0,0,0,.08),
       rgba(0,0,0,.02)
     ),
-
     url("2.1.webp") center/cover no-repeat;
-
-}
-
-
-/* IMAGE DARK OVERLAY */
-
-.hero-visual:before{
-
-  content:"";
-
-  position:absolute;
-
-  inset:0;
-
-  background:rgba(0,0,0,.08);
-
-  pointer-events:none;
-
 }
 
 
@@ -694,17 +579,17 @@ button{
 
   z-index:5;
 
-  display:flex;
+  display:inline-flex;
 
   align-items:center;
 
   justify-content:center;
 
-  gap:14px;
+  min-width:170px;
 
-  min-width:190px;
+  height:58px;
 
-  padding:18px 30px;
+  padding:0 30px;
 
   background:#fff;
 
@@ -712,33 +597,16 @@ button{
 
   border:1px solid #fff;
 
-  font-size:11px;
+  font-size:10px;
 
   font-weight:700;
 
-  letter-spacing:.25em;
+  letter-spacing:.22em;
 
   text-transform:uppercase;
 
-  transition:
-
-    background .3s ease,
-
-    color .3s ease,
-
-    transform .3s ease;
-
+  transition:.3s ease;
 }
-
-
-.hero-shop-button span{
-
-  font-size:16px;
-
-  transition:transform .3s ease;
-
-}
-
 
 .hero-shop-button:hover{
 
@@ -748,15 +616,7 @@ button{
 
   border-color:#111;
 
-  transform:translateY(-4px);
-
-}
-
-
-.hero-shop-button:hover span{
-
-  transform:translateX(5px);
-
+  transform:translateY(-3px);
 }
 
 
@@ -775,7 +635,6 @@ button{
   font-size:9px;
 
   letter-spacing:.25em;
-
 }
 
 
@@ -792,9 +651,7 @@ button{
   background:#111;
 
   color:#fff;
-
 }
-
 
 .marquee-track{
 
@@ -803,9 +660,7 @@ button{
   padding:18px 0;
 
   animation:marquee 28s linear infinite;
-
 }
-
 
 .marquee span{
 
@@ -814,31 +669,23 @@ button{
   font-size:11px;
 
   letter-spacing:.25em;
-
 }
-
 
 .marquee i{
 
   color:var(--gold);
 
   font-size:7px;
-
 }
-
 
 @keyframes marquee{
 
   from{
-
     transform:translateX(0);
-
   }
 
   to{
-
     transform:translateX(-50%);
-
   }
 
 }
@@ -849,29 +696,22 @@ button{
 ========================================================= */
 
 .section{
-
   padding:90px 24px;
-
 }
-
 
 .shop-section{
 
   padding-top:70px;
 
   background:var(--paper);
-
 }
-
 
 .shop-heading{
 
   text-align:center;
 
   margin-bottom:38px;
-
 }
-
 
 .shop-kicker{
 
@@ -886,9 +726,7 @@ button{
   text-transform:uppercase;
 
   color:var(--muted);
-
 }
-
 
 .shop-tabs{
 
@@ -897,9 +735,7 @@ button{
   justify-content:center;
 
   gap:55px;
-
 }
-
 
 .shop-tabs button{
 
@@ -920,9 +756,7 @@ button{
   letter-spacing:.16em;
 
   text-transform:uppercase;
-
 }
-
 
 .shop-tabs button.active:after{
 
@@ -938,7 +772,6 @@ button{
   height:2px;
 
   background:#111;
-
 }
 
 
@@ -956,13 +789,10 @@ button{
 
   display:grid;
 
-  grid-template-columns:
-    repeat(2,minmax(0,1fr));
+  grid-template-columns:repeat(2,minmax(0,1fr));
 
   gap:26px 28px;
-
 }
-
 
 .product{
 
@@ -973,9 +803,7 @@ button{
   background:var(--white);
 
   border:1px solid rgba(0,0,0,.06);
-
 }
-
 
 .product-image{
 
@@ -986,29 +814,23 @@ button{
   height:clamp(340px,31vw,500px);
 
   background:#ddd7ca;
-
 }
-
 
 .product-image-link{
 
   display:flex;
 
   width:100%;
-
   height:100%;
 
   align-items:center;
 
   justify-content:center;
-
 }
-
 
 .product-image-link img{
 
   width:100%;
-
   height:100%;
 
   display:block;
@@ -1016,16 +838,14 @@ button{
   object-fit:cover;
 
   transition:transform .5s;
-
 }
-
 
 .product-image-link:hover img{
-
   transform:scale(1.025);
-
 }
 
+
+/* PRODUCT BADGE */
 
 .badge{
 
@@ -1047,9 +867,14 @@ button{
   letter-spacing:.14em;
 
   text-transform:uppercase;
-
 }
 
+.badge.sale{
+  color:var(--red);
+}
+
+
+/* PRODUCT PLUS */
 
 .product-cart{
 
@@ -1078,9 +903,7 @@ button{
   font-weight:300;
 
   transition:.25s;
-
 }
-
 
 .product-cart:hover{
 
@@ -1089,9 +912,10 @@ button{
   color:#fff;
 
   transform:translateY(-3px);
-
 }
 
+
+/* PRODUCT INFO */
 
 .product-info{
 
@@ -1102,9 +926,7 @@ button{
   background:#fff;
 
   border-top:1px solid rgba(0,0,0,.05);
-
 }
-
 
 .product-brand{
 
@@ -1119,9 +941,7 @@ button{
   font-weight:700;
 
   letter-spacing:.16em;
-
 }
-
 
 .product-name{
 
@@ -1132,9 +952,7 @@ button{
   font-weight:400;
 
   line-height:1.35;
-
 }
-
 
 .product-price{
 
@@ -1143,12 +961,363 @@ button{
   font-size:18px;
 
   font-weight:700;
-
 }
 
 
 /* =========================================================
-   COLLECTION
+   PRODUCT SIZE WINDOW
+   APPROX 55% OF VIEWPORT
+========================================================= */
+
+.product-modal-overlay{
+
+  position:fixed;
+
+  inset:0;
+
+  z-index:5000;
+
+  background:rgba(0,0,0,.48);
+
+  opacity:0;
+
+  visibility:hidden;
+
+  pointer-events:none;
+
+  transition:.35s ease;
+}
+
+.product-modal-overlay.show{
+
+  opacity:1;
+
+  visibility:visible;
+
+  pointer-events:auto;
+}
+
+
+.product-modal{
+
+  position:fixed;
+
+  left:0;
+  bottom:0;
+
+  width:100%;
+
+  height:55vh;
+
+  min-height:430px;
+
+  max-height:760px;
+
+  z-index:5100;
+
+  background:#fffdf5;
+
+  color:#111;
+
+  transform:translateY(105%);
+
+  transition:
+    transform .45s cubic-bezier(.22,.8,.2,1);
+
+  overflow-y:auto;
+}
+
+.product-modal.open{
+  transform:translateY(0);
+}
+
+
+/* MODAL HEADER */
+
+.product-modal-head{
+
+  height:82px;
+
+  display:flex;
+
+  align-items:center;
+
+  justify-content:center;
+
+  position:relative;
+
+  border-bottom:1px solid rgba(0,0,0,.12);
+}
+
+.product-modal-head h2{
+
+  font-size:clamp(18px,2vw,26px);
+
+  font-weight:400;
+
+  letter-spacing:.22em;
+
+  text-transform:uppercase;
+}
+
+.product-modal-close{
+
+  position:absolute;
+
+  right:30px;
+
+  top:50%;
+
+  transform:translateY(-50%);
+
+  width:45px;
+  height:45px;
+
+  border:0;
+
+  background:none;
+
+  color:#111;
+
+  font-size:34px;
+
+  font-weight:200;
+}
+
+
+/* MODAL CONTENT */
+
+.product-modal-content{
+
+  width:min(1180px,92%);
+
+  margin:auto;
+
+  padding:38px 0 45px;
+
+  display:grid;
+
+  grid-template-columns:260px 1fr;
+
+  gap:45px;
+
+  align-items:center;
+}
+
+
+/* MODAL IMAGE */
+
+.modal-product-image{
+
+  width:260px;
+
+  height:300px;
+
+  background:#e6e0d5;
+
+  overflow:hidden;
+}
+
+.modal-product-image img{
+
+  width:100%;
+  height:100%;
+
+  object-fit:cover;
+
+  display:block;
+}
+
+
+/* MODAL DETAILS */
+
+.modal-details{
+
+  min-width:0;
+}
+
+.modal-brand{
+
+  display:block;
+
+  margin-bottom:9px;
+
+  font-family:Cinzel,serif;
+
+  font-size:10px;
+
+  font-weight:700;
+
+  letter-spacing:.18em;
+}
+
+.modal-product-name{
+
+  font-size:clamp(24px,3vw,42px);
+
+  line-height:1.05;
+
+  font-weight:500;
+
+  max-width:650px;
+}
+
+.modal-product-price{
+
+  margin-top:15px;
+
+  font-size:15px;
+
+  letter-spacing:.18em;
+
+  color:#666;
+}
+
+
+/* SIZE AREA */
+
+.size-area{
+
+  margin-top:30px;
+
+  padding-top:25px;
+
+  border-top:1px solid rgba(0,0,0,.12);
+}
+
+.size-title-row{
+
+  display:flex;
+
+  justify-content:space-between;
+
+  align-items:center;
+
+  margin-bottom:15px;
+}
+
+.size-title{
+
+  font-family:Cinzel,serif;
+
+  font-size:13px;
+
+  letter-spacing:.12em;
+
+  text-transform:uppercase;
+}
+
+.size-chart{
+
+  border:0;
+
+  border-bottom:1px solid #111;
+
+  background:none;
+
+  color:#111;
+
+  font-size:11px;
+
+  letter-spacing:.12em;
+
+  text-transform:uppercase;
+}
+
+
+/* SIZE BUTTONS */
+
+.size-options{
+
+  display:flex;
+
+  flex-wrap:wrap;
+
+  gap:10px;
+}
+
+.size-option{
+
+  min-width:70px;
+
+  height:52px;
+
+  padding:0 20px;
+
+  border:1px solid #d3cec4;
+
+  background:#fffdf5;
+
+  color:#555;
+
+  font-size:13px;
+
+  letter-spacing:.08em;
+
+  transition:.2s;
+}
+
+.size-option:hover{
+
+  border-color:#111;
+
+  color:#111;
+}
+
+.size-option.selected{
+
+  background:#111;
+
+  border-color:#111;
+
+  color:#fff;
+}
+
+
+/* ADD BUTTON */
+
+.modal-add-button{
+
+  width:100%;
+
+  height:58px;
+
+  margin-top:25px;
+
+  border:1px solid #111;
+
+  background:#111;
+
+  color:#fff;
+
+  font-size:11px;
+
+  font-weight:700;
+
+  letter-spacing:.22em;
+
+  text-transform:uppercase;
+
+  transition:.25s;
+}
+
+.modal-add-button:hover{
+
+  background:#fff;
+
+  color:#111;
+}
+
+.modal-add-button:disabled{
+
+  opacity:.35;
+
+  cursor:not-allowed;
+}
+
+
+/* =========================================================
+   COLLECTION FEATURE
 ========================================================= */
 
 .feature{
@@ -1162,22 +1331,16 @@ button{
   background:#171614;
 
   color:#fff;
-
 }
-
 
 .feature-image{
 
   background:
-
     url("captain-collection.webp")
-
     center/cover no-repeat;
 
   min-height:500px;
-
 }
-
 
 .feature-copy{
 
@@ -1188,16 +1351,11 @@ button{
   flex-direction:column;
 
   justify-content:center;
-
 }
-
 
 .feature-copy .shop-kicker{
-
   color:#a7a097;
-
 }
-
 
 .feature-copy h2{
 
@@ -1208,9 +1366,7 @@ button{
   letter-spacing:-.07em;
 
   text-transform:uppercase;
-
 }
-
 
 .feature-copy h2 em{
 
@@ -1219,9 +1375,7 @@ button{
   color:#b48a4d;
 
   font-weight:400;
-
 }
-
 
 .feature-copy p{
 
@@ -1234,9 +1388,7 @@ button{
   font-size:13px;
 
   line-height:1.9;
-
 }
-
 
 .light-btn{
 
@@ -1251,16 +1403,13 @@ button{
   letter-spacing:.18em;
 
   text-transform:uppercase;
-
 }
-
 
 .light-btn:hover{
 
   background:#fff;
 
   color:#111;
-
 }
 
 
@@ -1283,9 +1432,7 @@ button{
   padding:100px 7vw;
 
   background:var(--paper-2);
-
 }
-
 
 .manifesto-small{
 
@@ -1298,9 +1445,7 @@ button{
   letter-spacing:.3em;
 
   text-transform:uppercase;
-
 }
-
 
 .manifesto h2{
 
@@ -1313,9 +1458,7 @@ button{
   letter-spacing:-.07em;
 
   text-transform:uppercase;
-
 }
-
 
 .manifesto em{
 
@@ -1324,7 +1467,6 @@ button{
   font-family:"DM Serif Display",serif;
 
   font-weight:400;
-
 }
 
 
@@ -1341,9 +1483,7 @@ button{
   background:#111;
 
   color:#fff;
-
 }
-
 
 .newsletter h2{
 
@@ -1356,9 +1496,7 @@ button{
   letter-spacing:-.07em;
 
   text-transform:uppercase;
-
 }
-
 
 .newsletter h2 em{
 
@@ -1367,9 +1505,7 @@ button{
   font-family:"DM Serif Display",serif;
 
   font-weight:400;
-
 }
-
 
 .newsletter p{
 
@@ -1382,9 +1518,7 @@ button{
   font-size:12px;
 
   line-height:1.8;
-
 }
-
 
 .email-form{
 
@@ -1395,9 +1529,7 @@ button{
   display:flex;
 
   border-bottom:1px solid #555;
-
 }
-
 
 .email-form input{
 
@@ -1412,9 +1544,7 @@ button{
   background:none;
 
   color:#fff;
-
 }
-
 
 .email-form button{
 
@@ -1429,7 +1559,6 @@ button{
   letter-spacing:.16em;
 
   text-transform:uppercase;
-
 }
 
 
@@ -1444,21 +1573,16 @@ footer{
   background:#0c0c0c;
 
   color:#fff;
-
 }
-
 
 .footer-grid{
 
   display:grid;
 
-  grid-template-columns:
-    2fr 1fr 1fr 1fr;
+  grid-template-columns:2fr 1fr 1fr 1fr;
 
   gap:40px;
-
 }
-
 
 .footer-brand{
 
@@ -1471,9 +1595,7 @@ footer{
   letter-spacing:-.04em;
 
   line-height:.85;
-
 }
-
 
 .footer-column h4{
 
@@ -1486,9 +1608,7 @@ footer{
   letter-spacing:.2em;
 
   text-transform:uppercase;
-
 }
-
 
 .footer-column a{
 
@@ -1499,16 +1619,11 @@ footer{
   color:#aaa;
 
   font-size:11px;
-
 }
-
 
 .footer-column a:hover{
-
   color:#fff;
-
 }
-
 
 .footer-bottom{
 
@@ -1527,12 +1642,11 @@ footer{
   font-size:9px;
 
   letter-spacing:.15em;
-
 }
 
 
 /* =========================================================
-   CART
+   CART DRAWER
 ========================================================= */
 
 .cart-drawer{
@@ -1561,16 +1675,11 @@ footer{
   transform:translateX(105%);
 
   transition:.4s cubic-bezier(.22,.8,.2,1);
-
 }
-
 
 .cart-drawer.open{
-
   transform:translateX(0);
-
 }
-
 
 .cart-head{
 
@@ -1581,9 +1690,7 @@ footer{
   padding-bottom:20px;
 
   border-bottom:1px solid #292929;
-
 }
-
 
 .cart-eyebrow{
 
@@ -1598,9 +1705,7 @@ footer{
   letter-spacing:.2em;
 
   text-transform:uppercase;
-
 }
-
 
 .close{
 
@@ -1611,9 +1716,7 @@ footer{
   color:#fff;
 
   font-size:27px;
-
 }
-
 
 .cart-items{
 
@@ -1622,9 +1725,7 @@ footer{
   overflow-y:auto;
 
   padding:20px 0;
-
 }
-
 
 .cart-empty{
 
@@ -1633,9 +1734,7 @@ footer{
   text-align:center;
 
   color:#888;
-
 }
-
 
 .cart-empty i{
 
@@ -1646,9 +1745,7 @@ footer{
   color:#fff;
 
   font-size:30px;
-
 }
-
 
 .cart-item{
 
@@ -1661,9 +1758,7 @@ footer{
   padding:18px 0;
 
   border-bottom:1px solid #292929;
-
 }
-
 
 .cart-item-name{
 
@@ -1672,20 +1767,7 @@ footer{
   letter-spacing:.08em;
 
   text-transform:uppercase;
-
 }
-
-
-.cart-item-price{
-
-  margin-top:7px;
-
-  color:#aaa;
-
-  font-size:11px;
-
-}
-
 
 .cart-item-size{
 
@@ -1698,9 +1780,16 @@ footer{
   letter-spacing:.12em;
 
   text-transform:uppercase;
-
 }
 
+.cart-item-price{
+
+  margin-top:7px;
+
+  color:#aaa;
+
+  font-size:11px;
+}
 
 .qty-control{
 
@@ -1711,9 +1800,7 @@ footer{
   gap:13px;
 
   margin-top:12px;
-
 }
-
 
 .qty-control button{
 
@@ -1725,9 +1812,7 @@ footer{
   background:#181818;
 
   color:#fff;
-
 }
-
 
 .remove-item{
 
@@ -1738,18 +1823,14 @@ footer{
   color:#888;
 
   font-size:10px;
-
 }
-
 
 .cart-footer{
 
   padding-top:20px;
 
   border-top:1px solid #292929;
-
 }
-
 
 .cart-total-row{
 
@@ -1758,9 +1839,7 @@ footer{
   justify-content:space-between;
 
   font-size:14px;
-
 }
-
 
 .checkout-btn{
 
@@ -1783,454 +1862,13 @@ footer{
   letter-spacing:.15em;
 
   text-transform:uppercase;
-
 }
-
 
 .checkout-btn:disabled{
 
   opacity:.35;
 
   cursor:not-allowed;
-
-}
-
-
-/* =========================================================
-   PRODUCT OPTIONS WINDOW
-========================================================= */
-
-.options-overlay{
-
-  position:fixed;
-
-  inset:0;
-
-  z-index:5000;
-
-  background:rgba(0,0,0,.48);
-
-  opacity:0;
-
-  visibility:hidden;
-
-  pointer-events:none;
-
-  transition:.35s ease;
-
-}
-
-
-.options-overlay.show{
-
-  opacity:1;
-
-  visibility:visible;
-
-  pointer-events:auto;
-
-}
-
-
-.options-window{
-
-  position:fixed;
-
-  left:50%;
-  bottom:0;
-
-  z-index:5001;
-
-  width:min(700px,100%);
-
-  max-height:92dvh;
-
-  overflow-y:auto;
-
-  background:#fffdf0;
-
-  color:#111;
-
-  transform:translate(-50%,105%);
-
-  transition:
-
-    transform .45s cubic-bezier(.22,.8,.2,1);
-
-}
-
-
-.options-window.open{
-
-  transform:translate(-50%,0);
-
-}
-
-
-.options-head{
-
-  height:96px;
-
-  display:flex;
-
-  align-items:center;
-
-  justify-content:center;
-
-  position:relative;
-
-  border-bottom:1px solid rgba(0,0,0,.13);
-
-}
-
-
-.options-head h2{
-
-  font-family:"Archivo",sans-serif;
-
-  font-size:25px;
-
-  font-weight:400;
-
-  letter-spacing:.22em;
-
-  text-align:center;
-
-}
-
-
-.options-close{
-
-  position:absolute;
-
-  right:28px;
-
-  top:50%;
-
-  transform:translateY(-50%);
-
-  width:42px;
-  height:42px;
-
-  border:0;
-
-  background:none;
-
-  font-size:35px;
-
-  font-weight:200;
-
-}
-
-
-.options-content{
-
-  padding:36px 38px 40px;
-
-}
-
-
-.options-product-image{
-
-  width:325px;
-  height:410px;
-
-  margin:0 auto 38px;
-
-  background:#ddd7ca;
-
-}
-
-
-.options-product-image img{
-
-  width:100%;
-  height:100%;
-
-  object-fit:cover;
-
-  display:block;
-
-}
-
-
-.options-product-name{
-
-  max-width:650px;
-
-  margin:auto;
-
-  text-align:center;
-
-  font-size:20px;
-
-  line-height:1.8;
-
-  letter-spacing:.22em;
-
-  text-transform:uppercase;
-
-}
-
-
-.options-product-price{
-
-  margin-top:18px;
-
-  text-align:center;
-
-  color:#777;
-
-  font-size:17px;
-
-  letter-spacing:.22em;
-
-}
-
-
-.options-selection{
-
-  margin-top:42px;
-
-  padding-top:35px;
-
-  border-top:1px solid rgba(0,0,0,.13);
-
-}
-
-
-.options-size-head{
-
-  display:flex;
-
-  align-items:center;
-
-  justify-content:space-between;
-
-  margin-bottom:20px;
-
-}
-
-
-.options-size-head label{
-
-  font-family:"DM Serif Display",serif;
-
-  font-size:24px;
-
-}
-
-
-.size-chart{
-
-  border:0;
-
-  border-bottom:1px solid #111;
-
-  background:none;
-
-  padding:0 0 4px;
-
-  font-size:14px;
-
-}
-
-
-.size-buttons{
-
-  display:flex;
-
-  gap:18px;
-
-}
-
-
-.size-button{
-
-  width:76px;
-  height:76px;
-
-  border:1px solid rgba(0,0,0,.16);
-
-  background:transparent;
-
-  font-size:18px;
-
-  transition:.2s;
-
-}
-
-
-.size-button:hover,
-.size-button.selected{
-
-  background:#111;
-
-  color:#fff;
-
-  border-color:#111;
-
-}
-
-
-.options-quantity{
-
-  display:flex;
-
-  align-items:center;
-
-  justify-content:space-between;
-
-  margin-top:30px;
-
-}
-
-
-.quantity-title{
-
-  font-size:17px;
-
-  letter-spacing:.08em;
-
-}
-
-
-.quantity-control{
-
-  display:flex;
-
-  align-items:center;
-
-  border:1px solid rgba(0,0,0,.18);
-
-}
-
-
-.quantity-control button{
-
-  width:44px;
-  height:44px;
-
-  border:0;
-
-  background:none;
-
-  font-size:22px;
-
-}
-
-
-.quantity-control span{
-
-  width:45px;
-
-  text-align:center;
-
-  font-size:15px;
-
-}
-
-
-.options-add{
-
-  width:100%;
-
-  margin-top:30px;
-
-  padding:21px;
-
-  border:0;
-
-  background:#08070c;
-
-  color:#fffdf0;
-
-  font-size:14px;
-
-  letter-spacing:.28em;
-
-  text-transform:uppercase;
-
-  transition:.25s;
-
-}
-
-
-.options-add:hover{
-
-  background:#8d1515;
-
-}
-
-
-.options-add:disabled{
-
-  opacity:.4;
-
-  cursor:not-allowed;
-
-}
-
-
-/* =========================================================
-   SIZE CHART
-========================================================= */
-
-.size-chart-box{
-
-  display:none;
-
-  margin-top:25px;
-
-  padding:22px;
-
-  background:#eee9df;
-
-  border:1px solid rgba(0,0,0,.1);
-
-}
-
-
-.size-chart-box.show{
-
-  display:block;
-
-}
-
-
-.size-chart-box h3{
-
-  margin-bottom:15px;
-
-  font-family:Cinzel,serif;
-
-  font-size:13px;
-
-  letter-spacing:.15em;
-
-}
-
-
-.size-chart-table{
-
-  width:100%;
-
-  border-collapse:collapse;
-
-  font-size:12px;
-
-}
-
-
-.size-chart-table th,
-.size-chart-table td{
-
-  padding:10px;
-
-  border-bottom:1px solid rgba(0,0,0,.1);
-
-  text-align:left;
-
 }
 
 
@@ -2241,25 +1879,16 @@ footer{
 @media(max-width:900px){
 
   .site-header{
-
     height:68px;
-
   }
-
 
   .header-inner{
-
     padding:0 14px;
-
   }
-
 
   .menu-toggle{
-
     display:block;
-
   }
-
 
   .brand-mark{
 
@@ -2270,55 +1899,40 @@ footer{
     transform:translateX(-50%);
 
     min-width:0;
-
   }
-
 
   .brand-mark span{
-
     display:none;
-
   }
-
 
   .desktop-nav{
-
     display:none;
-
   }
-
 
   .header-actions{
-
     min-width:50px;
-
   }
-
 
   .cart-button span{
-
     display:none;
-
   }
 
+
+  /* HERO */
 
   .hero{
 
     padding-top:68px;
 
     grid-template-columns:1fr;
-
   }
-
 
   .hero-visual{
 
     min-height:100vh;
 
     order:1;
-
   }
-
 
   .hero-copy{
 
@@ -2327,48 +1941,39 @@ footer{
     padding:60px 25px;
 
     order:2;
-
   }
 
+
+  /* FEATURE */
 
   .feature{
-
     grid-template-columns:1fr;
-
   }
-
 
   .feature-image{
-
     min-height:55vh;
-
   }
 
+
+  /* PRODUCTS */
 
   .products{
-
     gap:14px;
-
   }
-
 
   .product-image{
 
     height:42vw;
 
     min-height:250px;
-
   }
-
 
   .product-info{
 
     min-height:145px;
 
     padding:20px;
-
   }
-
 
   .product-cart{
 
@@ -2379,21 +1984,54 @@ footer{
     bottom:14px;
 
     font-size:28px;
-
   }
 
+
+  /* MODAL */
+
+  .product-modal{
+
+    height:55vh;
+
+    min-height:420px;
+  }
+
+  .product-modal-content{
+
+    grid-template-columns:190px 1fr;
+
+    gap:30px;
+
+    width:92%;
+
+    padding-top:30px;
+  }
+
+  .modal-product-image{
+
+    width:190px;
+
+    height:240px;
+  }
+
+  .product-modal-head{
+    height:70px;
+  }
+
+  .product-modal-close{
+    right:18px;
+  }
+
+
+  /* FOOTER */
 
   .footer-grid{
 
     grid-template-columns:1fr 1fr;
-
   }
 
-
   .footer-brand{
-
     grid-column:1/-1;
-
   }
 
 }
@@ -2402,77 +2040,63 @@ footer{
 @media(max-width:600px){
 
   .site-header{
-
     height:64px;
-
   }
-
 
   .hero{
-
     padding-top:64px;
-
   }
 
+
+  /* HERO SHOP */
 
   .hero-shop-button{
 
-    min-width:170px;
+    min-width:150px;
 
-    padding:16px 24px;
+    height:52px;
 
-    font-size:10px;
+    padding:0 24px;
 
+    font-size:9px;
   }
 
 
   .section{
-
     padding:55px 12px;
-
   }
-
 
   .shop-section{
-
     padding-top:45px;
-
   }
-
 
   .shop-tabs{
-
     gap:28px;
-
   }
-
 
   .shop-tabs button{
 
     font-size:16px;
 
     letter-spacing:.12em;
-
   }
 
+
+  /* PRODUCTS */
 
   .products{
 
     grid-template-columns:1fr 1fr;
 
     gap:8px;
-
   }
-
 
   .product-image{
 
     height:55vw;
 
     min-height:200px;
-
   }
-
 
   .badge{
 
@@ -2482,9 +2106,7 @@ footer{
     padding:7px 9px;
 
     font-size:8px;
-
   }
-
 
   .product-cart{
 
@@ -2495,158 +2117,197 @@ footer{
     bottom:8px;
 
     font-size:24px;
-
   }
-
 
   .product-info{
 
     min-height:125px;
 
     padding:15px 12px 17px;
-
   }
-
 
   .product-brand{
-
     font-size:8px;
-
   }
-
 
   .product-name{
-
     font-size:12px;
-
   }
-
 
   .product-price{
 
     margin-top:9px;
 
     font-size:14px;
-
   }
 
+
+  /* PRODUCT MODAL */
+
+  .product-modal{
+
+    height:55vh;
+
+    min-height:400px;
+
+    max-height:none;
+  }
+
+  .product-modal-head{
+
+    height:62px;
+  }
+
+  .product-modal-head h2{
+
+    font-size:14px;
+
+    letter-spacing:.18em;
+  }
+
+  .product-modal-close{
+
+    right:10px;
+
+    width:40px;
+    height:40px;
+
+    font-size:30px;
+  }
+
+  .product-modal-content{
+
+    width:calc(100% - 30px);
+
+    padding:22px 0 30px;
+
+    display:block;
+  }
+
+  .modal-product-image{
+
+    width:125px;
+
+    height:150px;
+
+    margin:0 auto 20px;
+  }
+
+  .modal-brand{
+
+    text-align:center;
+
+    font-size:8px;
+  }
+
+  .modal-product-name{
+
+    text-align:center;
+
+    font-size:20px;
+  }
+
+  .modal-product-price{
+
+    text-align:center;
+
+    font-size:12px;
+  }
+
+  .size-area{
+
+    margin-top:20px;
+
+    padding-top:18px;
+  }
+
+  .size-title{
+
+    font-size:11px;
+  }
+
+  .size-options{
+
+    gap:7px;
+  }
+
+  .size-option{
+
+    min-width:54px;
+
+    height:43px;
+
+    padding:0 13px;
+
+    font-size:11px;
+  }
+
+  .modal-add-button{
+
+    height:52px;
+
+    margin-top:18px;
+
+    font-size:9px;
+  }
+
+
+  /* FOOTER */
 
   .footer-grid{
-
     grid-template-columns:1fr;
-
   }
-
 
   .footer-brand{
-
     grid-column:auto;
-
   }
-
 
   .footer-bottom{
 
     display:block;
 
     line-height:2.2;
-
   }
 
+}
 
-  /* PRODUCT OPTIONS MOBILE */
 
-  .options-window{
+/* =========================================================
+   VERY SMALL PHONES
+========================================================= */
 
-    width:100%;
+@media(max-width:380px){
 
-    max-height:90dvh;
+  .product-modal{
 
+    height:55vh;
+
+    min-height:380px;
   }
 
+  .modal-product-image{
 
-  .options-head{
+    width:105px;
 
-    height:90px;
-
+    height:125px;
   }
 
-
-  .options-head h2{
-
-    font-size:19px;
-
-    letter-spacing:.15em;
-
+  .modal-product-name{
+    font-size:17px;
   }
 
+  .size-option{
 
-  .options-close{
+    min-width:48px;
 
-    right:14px;
+    height:40px;
 
-    font-size:32px;
-
-  }
-
-
-  .options-content{
-
-    padding:30px 20px 25px;
-
-  }
-
-
-  .options-product-image{
-
-    width:100%;
-
-    max-width:324px;
-
-    height:407px;
-
-  }
-
-
-  .options-product-name{
-
-    font-size:15px;
-
-    line-height:1.8;
-
-    letter-spacing:.16em;
-
-  }
-
-
-  .options-product-price{
-
-    font-size:14px;
-
-  }
-
-
-  .size-buttons{
-
-    gap:9px;
-
-  }
-
-
-  .size-button{
-
-    flex:1;
-
-    width:auto;
-
-    height:64px;
-
+    padding:0 10px;
   }
 
 }
 
 </style>
-
 </head>
 
 
@@ -2657,13 +2318,12 @@ footer{
      HEADER
 ====================================================== -->
 
-<header
-  class="site-header"
-  id="siteHeader">
-
+<header class="site-header" id="siteHeader">
 
   <div class="header-inner">
 
+
+    <!-- MOBILE MENU -->
 
     <button
       class="menu-toggle"
@@ -2676,6 +2336,8 @@ footer{
 
     </button>
 
+
+    <!-- LOGO -->
 
     <a
       href="#"
@@ -2693,9 +2355,11 @@ footer{
     </a>
 
 
+    <!-- DESKTOP NAV -->
+
     <nav class="desktop-nav">
 
-      <a href="shop.html">
+      <a href="#shop">
         Shop
       </a>
 
@@ -2714,13 +2378,15 @@ footer{
     </nav>
 
 
+    <!-- CART -->
+
     <div class="header-actions">
 
       <button
         class="cart-button"
         id="cartButton">
 
-        <i class="fa-solid fa-shopping-cart"></i>
+        <i class="fa-solid fa-shopping-bag"></i>
 
         <span>
           Bag
@@ -2753,13 +2419,11 @@ footer{
   class="mobile-menu"
   id="mobileMenu">
 
-
   <div class="mobile-menu-head">
 
     <span>
       CAPTAIN ABDULLAH
     </span>
-
 
     <button
       class="menu-close"
@@ -2774,47 +2438,20 @@ footer{
 
   <div class="mobile-links">
 
-    <a href="shop.html">
-
+    <a href="#shop">
       Shop
-
-      <span>
-        →
-      </span>
-
     </a>
-
 
     <a href="#collections">
-
       Collections
-
-      <span>
-        →
-      </span>
-
     </a>
-
 
     <a href="#story">
-
       The Code
-
-      <span>
-        →
-      </span>
-
     </a>
 
-
     <a href="#newsletter">
-
       Journal
-
-      <span>
-        →
-      </span>
-
     </a>
 
   </div>
@@ -2838,11 +2475,8 @@ footer{
 
   <div class="hero-copy">
 
-
     <div class="kicker">
-
       Independent / Est. 2026 / Dhaka
-
     </div>
 
 
@@ -2870,33 +2504,28 @@ footer{
 
 
     <a
-      href="shop.html"
+      href="#shop"
       class="hero-btn">
 
-      Explore the collection →
+      Explore the collection
 
     </a>
-
 
   </div>
 
 
-  <!-- ====================================================
-       HERO IMAGE + CENTER SHOP BUTTON
-  ===================================================== -->
+  <!-- HERO IMAGE -->
 
   <div class="hero-visual">
 
+
+    <!-- CENTER SHOP BUTTON -->
 
     <a
       href="shop.html"
       class="hero-shop-button">
 
       SHOP
-
-      <span>
-        →
-      </span>
 
     </a>
 
@@ -2914,13 +2543,11 @@ footer{
 
   <div class="marquee-track">
 
-
     <span>
       CAPTAIN ABDULLAH
     </span>
 
     <i class="fa-solid fa-star"></i>
-
 
     <span>
       NO ORDINARY HORIZONS
@@ -2928,20 +2555,17 @@ footer{
 
     <i class="fa-solid fa-star"></i>
 
-
     <span>
       WILD BY CHOICE
     </span>
 
     <i class="fa-solid fa-star"></i>
 
-
     <span>
       WEAR YOUR ADVENTURE
     </span>
 
     <i class="fa-solid fa-star"></i>
-
 
     <span>
       CAPTAIN ABDULLAH
@@ -2949,13 +2573,11 @@ footer{
 
     <i class="fa-solid fa-star"></i>
 
-
     <span>
       NO ORDINARY HORIZONS
     </span>
 
     <i class="fa-solid fa-star"></i>
-
 
     <span>
       WILD BY CHOICE
@@ -2963,11 +2585,9 @@ footer{
 
     <i class="fa-solid fa-star"></i>
 
-
     <span>
       WEAR YOUR ADVENTURE
     </span>
-
 
   </div>
 
@@ -2985,16 +2605,12 @@ footer{
 
   <div class="shop-heading">
 
-
     <span class="shop-kicker">
-
       01 / The Captain's Wardrobe
-
     </span>
 
 
     <div class="shop-tabs">
-
 
       <button
         class="active"
@@ -3020,7 +2636,6 @@ footer{
 
       </button>
 
-
     </div>
 
   </div>
@@ -3032,12 +2647,11 @@ footer{
 
   </div>
 
-
 </section>
 
 
 <!-- ======================================================
-     COLLECTION FEATURE
+     COLLECTION
 ====================================================== -->
 
 <section
@@ -3051,11 +2665,8 @@ footer{
 
   <div class="feature-copy">
 
-
     <span class="shop-kicker">
-
       02 / The Black Tide Collection
-
     </span>
 
 
@@ -3086,13 +2697,12 @@ footer{
 
 
     <a
-      href="shop.html"
+      href="#shop"
       class="light-btn">
 
-      View the collection →
+      View the collection
 
     </a>
-
 
   </div>
 
@@ -3107,14 +2717,10 @@ footer{
   class="manifesto"
   id="story">
 
-
   <div>
 
-
     <div class="manifesto-small">
-
       The Captain Abdullah Code
-
     </div>
 
 
@@ -3134,7 +2740,6 @@ footer{
 
     </h2>
 
-
   </div>
 
 </section>
@@ -3150,9 +2755,7 @@ footer{
 
 
   <span class="shop-kicker">
-
     Private dispatches
-
   </span>
 
 
@@ -3181,19 +2784,14 @@ footer{
     class="email-form"
     onsubmit="subscribe(event)">
 
-
     <input
       type="email"
       placeholder="YOUR EMAIL"
       required>
 
-
     <button type="submit">
-
-      Join →
-
+      Join
     </button>
-
 
   </form>
 
@@ -3208,7 +2806,6 @@ footer{
 ====================================================== -->
 
 <footer>
-
 
   <div class="footer-grid">
 
@@ -3226,104 +2823,80 @@ footer{
 
     <div class="footer-column">
 
-
       <h4>
         Explore
       </h4>
 
-
-      <a href="shop.html">
+      <a href="#shop">
         Shop
       </a>
-
 
       <a href="#collections">
         Collections
       </a>
 
-
       <a href="#story">
         The Code
       </a>
-
 
     </div>
 
 
     <div class="footer-column">
-
 
       <h4>
         Support
       </h4>
 
-
       <a href="#">
         Contact
       </a>
-
 
       <a href="#">
         Shipping
       </a>
 
-
       <a href="#">
         Returns
       </a>
-
 
     </div>
 
 
     <div class="footer-column">
 
-
       <h4>
         Follow
       </h4>
-
 
       <a href="#">
         Instagram
       </a>
 
-
       <a href="#">
         TikTok
       </a>
-
 
       <a href="#">
         YouTube
       </a>
 
-
     </div>
-
 
   </div>
 
 
   <div class="footer-bottom">
 
-
     <span>
-
       © 2026 CAPTAIN ABDULLAH
-
     </span>
-
 
     <span>
-
       Made for the ones who roam.
-
     </span>
-
 
   </div>
-
 
 </footer>
 
@@ -3349,23 +2922,15 @@ footer{
 
   <div class="cart-head">
 
-
     <div>
 
-
       <span class="cart-eyebrow">
-
         Your selection
-
       </span>
 
-
       <strong>
-
         SHOPPING BAG
-
       </strong>
-
 
     </div>
 
@@ -3378,7 +2943,6 @@ footer{
 
     </button>
 
-
   </div>
 
 
@@ -3390,21 +2954,15 @@ footer{
 
   <div class="cart-footer">
 
-
     <div class="cart-total-row">
-
 
       <span>
         Subtotal
       </span>
 
-
       <strong id="cartTotal">
-
         $0.00
-
       </strong>
-
 
     </div>
 
@@ -3418,339 +2976,136 @@ footer{
 
     </button>
 
-
   </div>
 
 </aside>
 
 
 <!-- ======================================================
-     PRODUCT OPTIONS OVERLAY
+     PRODUCT SIZE MODAL OVERLAY
 ====================================================== -->
 
 <div
-  class="options-overlay"
-  id="optionsOverlay">
+  class="product-modal-overlay"
+  id="productModalOverlay">
 </div>
 
 
 <!-- ======================================================
-     PRODUCT OPTIONS WINDOW
+     PRODUCT SIZE MODAL
+     55% VIEWPORT HEIGHT
 ====================================================== -->
 
-<section
-  class="options-window"
-  id="optionsWindow">
+<aside
+  class="product-modal"
+  id="productModal">
 
 
-  <div class="options-head">
-
+  <div class="product-modal-head">
 
     <h2>
-
-      CHOOSE OPTIONS
-
+      Choose Options
     </h2>
 
 
     <button
-      class="options-close"
-      id="optionsClose">
+      class="product-modal-close"
+      id="productModalClose">
 
       &times;
 
     </button>
 
-
   </div>
 
 
-  <div class="options-content">
+  <div class="product-modal-content">
 
 
     <!-- PRODUCT IMAGE -->
 
-    <div class="options-product-image">
-
+    <div class="modal-product-image">
 
       <img
-        id="optionsImage"
+        id="modalProductImage"
         src=""
-        alt="Product">
-
-
-    </div>
-
-
-    <!-- PRODUCT NAME -->
-
-    <h3
-      class="options-product-name"
-      id="optionsProductName">
-
-    </h3>
-
-
-    <!-- PRODUCT PRICE -->
-
-    <div
-      class="options-product-price"
-      id="optionsProductPrice">
+        alt="">
 
     </div>
 
 
-    <!-- OPTIONS -->
+    <!-- PRODUCT DETAILS -->
 
-    <div class="options-selection">
-
-
-      <div class="options-size-head">
+    <div class="modal-details">
 
 
-        <label>
-          Size:
-        </label>
+      <span
+        class="modal-brand"
+        id="modalProductBrand">
+
+      </span>
 
 
-        <button
-          class="size-chart"
-          id="sizeChartButton">
+      <h3
+        class="modal-product-name"
+        id="modalProductName">
 
-          Size chart
+      </h3>
 
-        </button>
-
-
-      </div>
-
-
-      <!-- SIZES -->
 
       <div
-        class="size-buttons"
-        id="sizeButtons">
-
-
-        <button
-          class="size-button"
-          data-size="S">
-
-          S
-
-        </button>
-
-
-        <button
-          class="size-button"
-          data-size="M">
-
-          M
-
-        </button>
-
-
-        <button
-          class="size-button"
-          data-size="L">
-
-          L
-
-        </button>
-
-
-        <button
-          class="size-button"
-          data-size="XL">
-
-          XL
-
-        </button>
-
+        class="modal-product-price"
+        id="modalProductPrice">
 
       </div>
 
 
-      <!-- SIZE CHART -->
+      <!-- SIZE -->
 
-      <div
-        class="size-chart-box"
-        id="sizeChartBox">
+      <div class="size-area">
 
 
-        <h3>
+        <div class="size-title-row">
 
-          CAPTAIN ABDULLAH — SIZE GUIDE
-
-        </h3>
-
-
-        <table class="size-chart-table">
-
-
-          <thead>
-
-            <tr>
-
-              <th>
-                Size
-              </th>
-
-              <th>
-                Chest
-              </th>
-
-              <th>
-                Waist
-              </th>
-
-            </tr>
-
-          </thead>
-
-
-          <tbody>
-
-
-            <tr>
-
-              <td>
-                S
-              </td>
-
-              <td>
-                36–38"
-              </td>
-
-              <td>
-                30–32"
-              </td>
-
-            </tr>
-
-
-            <tr>
-
-              <td>
-                M
-              </td>
-
-              <td>
-                38–40"
-              </td>
-
-              <td>
-                32–34"
-              </td>
-
-            </tr>
-
-
-            <tr>
-
-              <td>
-                L
-              </td>
-
-              <td>
-                40–42"
-              </td>
-
-              <td>
-                34–36"
-              </td>
-
-            </tr>
-
-
-            <tr>
-
-              <td>
-                XL
-              </td>
-
-              <td>
-                42–44"
-              </td>
-
-              <td>
-                36–38"
-              </td>
-
-            </tr>
-
-
-          </tbody>
-
-
-        </table>
-
-
-      </div>
-
-
-      <!-- QUANTITY -->
-
-      <div class="options-quantity">
-
-
-        <span class="quantity-title">
-
-          Quantity:
-
-        </span>
-
-
-        <div class="quantity-control">
-
-
-          <button
-            id="optionQtyMinus">
-
-            −
-
-          </button>
-
-
-          <span id="optionQty">
-
-            1
-
+          <span class="size-title">
+            Size
           </span>
 
 
           <button
-            id="optionQtyPlus">
+            class="size-chart"
+            onclick="showSizeChart()">
 
-            +
+            Size chart
 
           </button>
-
 
         </div>
 
 
+        <div
+          class="size-options"
+          id="sizeOptions">
+
+        </div>
+
+
+        <button
+          class="modal-add-button"
+          id="modalAddButton"
+          disabled>
+
+          Add to cart
+
+        </button>
+
       </div>
-
-
-      <!-- ADD TO CART -->
-
-      <button
-        class="options-add"
-        id="optionsAddButton"
-        disabled>
-
-        SELECT A SIZE — ADD TO CART
-
-      </button>
-
 
     </div>
 
-
   </div>
 
-</section>
+</aside>
 
 
 <!-- ======================================================
@@ -3762,9 +3117,9 @@ footer{
 "use strict";
 
 
-/* ======================================================
-   PRODUCTS
-====================================================== */
+/* =========================================================
+   PRODUCT DATA
+========================================================= */
 
 const productsData = [
 
@@ -3774,19 +3129,17 @@ const productsData = [
     name:"The Captain Shirt",
     price:899,
     category:"outerwear",
-    badge:"Limited (800)"
+    badge:"Limited 800"
   },
-
 
   {
     image:"2.webp",
     brand:"CAPTAIN ABDULLAH",
-    name:"The Captain Shirt (Brown)",
+    name:"The Captain Shirt Brown",
     price:985,
     category:"outerwear",
-    badge:"Limited (Only 700)"
+    badge:"Limited 700"
   },
-
 
   {
     image:"3.webp",
@@ -3794,9 +3147,8 @@ const productsData = [
     name:"Hunter Signature Shirt",
     price:999,
     category:"essentials",
-    badge:"Limited (Only 699)"
+    badge:"Limited 699"
   },
-
 
   {
     image:"captain-jacket.webp",
@@ -3807,7 +3159,6 @@ const productsData = [
     badge:"Limited"
   },
 
-
   {
     image:"captain-pants.webp",
     brand:"CAPTAIN ABDULLAH",
@@ -3816,7 +3167,6 @@ const productsData = [
     category:"essentials",
     badge:""
   },
-
 
   {
     image:"captain-hoodie.webp",
@@ -3830,410 +3180,325 @@ const productsData = [
 ];
 
 
-/* ======================================================
+/* =========================================================
    SHOP VARIABLES
-====================================================== */
+========================================================= */
 
 const productsGrid =
   document.getElementById("productsGrid");
 
-
 let currentFilter = "all";
-
 
 const cart = [];
 
+let selectedProductIndex = null;
 
-/* ======================================================
+let selectedSize = null;
+
+
+/* =========================================================
    RENDER PRODUCTS
-====================================================== */
+========================================================= */
 
 function renderProducts(){
 
-
   const visible =
     productsData.filter(
-
-      p =>
-
+      product =>
         currentFilter === "all" ||
-
-        p.category === currentFilter
-
+        product.category === currentFilter
     );
 
 
-  productsGrid.innerHTML =
+  productsGrid.innerHTML = visible.map(product => {
+
+    const index =
+      productsData.indexOf(product);
 
 
-    visible.map(p => {
+    return `
+
+      <article class="product">
 
 
-      const index =
-        productsData.indexOf(p);
-
-
-      return `
-
-        <article class="product">
-
-
-          ${
-            p.badge
-
-              ? `<div class="badge">
-                   ${p.badge}
-                 </div>`
-
-              : ""
-
-          }
-
-
-          <div class="product-image">
-
-
-            <!-- IMAGE GOES TO 1.HTML, 2.HTML, 3.HTML ETC -->
-
-            <a
-              class="product-image-link"
-              href="${index + 1}.html">
-
-
-              <img
-                src="${p.image}"
-                alt="${p.name}"
-                loading="lazy">
-
-
-            </a>
-
-
-            <!-- PLUS OPENS PRODUCT OPTIONS -->
-
-            <button
-              class="product-cart"
-              onclick="openProductOptions(${index})"
-              aria-label="Choose options">
-
-
-              +
-
-
-            </button>
-
-
-          </div>
-
-
-          <div class="product-info">
-
-
-            <span class="product-brand">
-
-              ${p.brand}
-
-            </span>
-
-
-            <h3 class="product-name">
-
-              ${p.name}
-
-            </h3>
-
-
-            <div class="product-price">
-
-              $${p.price.toFixed(2)} USD
-
+        ${
+          product.badge
+          ? `
+            <div class="badge">
+              ${product.badge}
             </div>
+          `
+          : ""
+        }
 
+
+        <div class="product-image">
+
+
+          <!--
+             IMAGE LINK
+
+             1st product = 1.html
+             2nd product = 2.html
+             3rd product = 3.html
+             etc.
+          -->
+
+          <a
+            class="product-image-link"
+            href="${index + 1}.html">
+
+            <img
+              src="${product.image}"
+              alt="${product.name}"
+              loading="lazy">
+
+          </a>
+
+
+          <!-- PLUS OPENS SIZE WINDOW -->
+
+          <button
+            class="product-cart"
+            onclick="openProductOptions(${index})"
+            aria-label="Choose product options">
+
+            +
+
+          </button>
+
+        </div>
+
+
+        <div class="product-info">
+
+
+          <span class="product-brand">
+
+            ${product.brand}
+
+          </span>
+
+
+          <h3 class="product-name">
+
+            ${product.name}
+
+          </h3>
+
+
+          <div class="product-price">
+
+            $${product.price.toFixed(2)} USD
 
           </div>
 
 
-        </article>
+        </div>
 
-      `;
+      </article>
 
+    `;
 
-    }).join("");
-
+  }).join("");
 
 }
 
 
-/* ======================================================
-   SHOP FILTER
-====================================================== */
+/* =========================================================
+   FILTER
+========================================================= */
 
 document
-  .querySelectorAll(".shop-tabs button")
-  .forEach(btn => {
+.querySelectorAll(".shop-tabs button")
+.forEach(button => {
+
+  button.addEventListener("click", () => {
 
 
-    btn.addEventListener("click", () => {
+    document
+    .querySelectorAll(".shop-tabs button")
+    .forEach(item => {
 
-
-      document
-        .querySelectorAll(".shop-tabs button")
-        .forEach(b =>
-          b.classList.remove("active")
-        );
-
-
-      btn.classList.add("active");
-
-
-      currentFilter =
-        btn.dataset.filter;
-
-
-      renderProducts();
-
+      item.classList.remove("active");
 
     });
 
 
+    button.classList.add("active");
+
+
+    currentFilter =
+      button.dataset.filter;
+
+
+    renderProducts();
+
   });
 
-
-/* ======================================================
-   PRODUCT OPTIONS
-====================================================== */
-
-const optionsWindow =
-  document.getElementById("optionsWindow");
+});
 
 
-const optionsOverlay =
-  document.getElementById("optionsOverlay");
+/* =========================================================
+   PRODUCT SIZE WINDOW
+========================================================= */
+
+const productModal =
+  document.getElementById("productModal");
+
+const productModalOverlay =
+  document.getElementById("productModalOverlay");
 
 
-const optionsImage =
-  document.getElementById("optionsImage");
+const modalProductImage =
+  document.getElementById("modalProductImage");
+
+const modalProductBrand =
+  document.getElementById("modalProductBrand");
+
+const modalProductName =
+  document.getElementById("modalProductName");
+
+const modalProductPrice =
+  document.getElementById("modalProductPrice");
+
+const sizeOptions =
+  document.getElementById("sizeOptions");
+
+const modalAddButton =
+  document.getElementById("modalAddButton");
 
 
-const optionsProductName =
-  document.getElementById("optionsProductName");
+/* AVAILABLE SIZES */
+
+const availableSizes = [
+  "XS",
+  "S",
+  "M",
+  "L",
+  "XL",
+  "XXL"
+];
 
 
-const optionsProductPrice =
-  document.getElementById("optionsProductPrice");
-
-
-const optionsAddButton =
-  document.getElementById("optionsAddButton");
-
-
-const optionQty =
-  document.getElementById("optionQty");
-
-
-let selectedProductIndex = null;
-
-let selectedSize = "";
-
-let selectedQuantity = 1;
-
-
-/* ======================================================
+/* =========================================================
    OPEN PRODUCT OPTIONS
-====================================================== */
+========================================================= */
 
 function openProductOptions(index){
 
-
   selectedProductIndex = index;
 
-  selectedSize = "";
-
-  selectedQuantity = 1;
+  selectedSize = null;
 
 
   const product =
     productsData[index];
 
 
-  optionsImage.src =
+  modalProductImage.src =
     product.image;
 
-
-  optionsImage.alt =
+  modalProductImage.alt =
     product.name;
 
 
-  optionsProductName.textContent =
+  modalProductBrand.textContent =
+    product.brand;
+
+
+  modalProductName.textContent =
     product.name;
 
 
-  optionsProductPrice.textContent =
+  modalProductPrice.textContent =
     "$" + product.price.toFixed(2) + " USD";
 
 
-  optionQty.textContent =
-    selectedQuantity;
+  /* SIZE BUTTONS */
+
+  sizeOptions.innerHTML =
+    availableSizes.map(size => `
+
+      <button
+        type="button"
+        class="size-option"
+        onclick="selectSize('${size}', this)">
+
+        ${size}
+
+      </button>
+
+    `).join("");
 
 
-  document
-    .querySelectorAll(".size-button")
-    .forEach(button => {
-
-      button.classList.remove("selected");
-
-    });
+  modalAddButton.disabled = true;
 
 
-  optionsAddButton.disabled =
-    true;
+  productModal.classList.add("open");
 
-
-  optionsAddButton.textContent =
-    "SELECT A SIZE — ADD TO CART";
-
-
-  document
-    .getElementById("sizeChartBox")
-    .classList.remove("show");
-
-
-  optionsWindow.classList.add("open");
-
-  optionsOverlay.classList.add("show");
+  productModalOverlay.classList.add("show");
 
   document.body.classList.add("locked");
 
 }
 
 
-/* ======================================================
+/* =========================================================
+   SELECT SIZE
+========================================================= */
+
+function selectSize(size, button){
+
+  selectedSize = size;
+
+
+  document
+  .querySelectorAll(".size-option")
+  .forEach(item => {
+
+    item.classList.remove("selected");
+
+  });
+
+
+  button.classList.add("selected");
+
+
+  modalAddButton.disabled = false;
+
+}
+
+
+/* =========================================================
    CLOSE PRODUCT OPTIONS
-====================================================== */
+========================================================= */
 
 function closeProductOptions(){
 
+  productModal.classList.remove("open");
 
-  optionsWindow.classList.remove("open");
-
-  optionsOverlay.classList.remove("show");
+  productModalOverlay.classList.remove("show");
 
   unlock();
-
 
 }
 
 
 document
-  .getElementById("optionsClose")
-  .onclick =
+.getElementById("productModalClose")
+.onclick = closeProductOptions;
+
+
+productModalOverlay.onclick =
   closeProductOptions;
 
 
-optionsOverlay.onclick =
-  closeProductOptions;
-
-
-/* ======================================================
-   SIZE SELECTION
-====================================================== */
-
-document
-  .querySelectorAll(".size-button")
-  .forEach(button => {
-
-
-    button.addEventListener("click", () => {
-
-
-      document
-        .querySelectorAll(".size-button")
-        .forEach(b =>
-          b.classList.remove("selected")
-        );
-
-
-      button.classList.add("selected");
-
-
-      selectedSize =
-        button.dataset.size;
-
-
-      optionsAddButton.disabled =
-        false;
-
-
-      optionsAddButton.textContent =
-        "ADD TO CART — " + selectedSize;
-
-
-    });
-
-
-  });
-
-
-/* ======================================================
-   SIZE CHART
-====================================================== */
-
-document
-  .getElementById("sizeChartButton")
-  .onclick = () => {
-
-
-    document
-      .getElementById("sizeChartBox")
-      .classList.toggle("show");
-
-
-  };
-
-
-/* ======================================================
-   QUANTITY
-====================================================== */
-
-document
-  .getElementById("optionQtyMinus")
-  .onclick = () => {
-
-
-    if(selectedQuantity > 1){
-
-      selectedQuantity--;
-
-      optionQty.textContent =
-        selectedQuantity;
-
-    }
-
-
-  };
-
-
-document
-  .getElementById("optionQtyPlus")
-  .onclick = () => {
-
-
-    selectedQuantity++;
-
-
-    optionQty.textContent =
-      selectedQuantity;
-
-
-  };
-
-
-/* ======================================================
+/* =========================================================
    ADD SELECTED PRODUCT TO CART
-====================================================== */
+========================================================= */
 
-optionsAddButton.onclick = () => {
-
+modalAddButton.onclick = function(){
 
   if(
     selectedProductIndex === null ||
@@ -4249,27 +3514,26 @@ optionsAddButton.onclick = () => {
     productsData[selectedProductIndex];
 
 
+  /*
+     Same product + same size
+     will increase quantity.
+
+     Same product + different size
+     becomes separate cart item.
+  */
+
   const existing =
-    cart.find(
-
-      item =>
-
-        item.name === product.name &&
-
-        item.size === selectedSize
-
+    cart.find(item =>
+      item.name === product.name &&
+      item.size === selectedSize
     );
 
 
   if(existing){
 
-
-    existing.qty +=
-      selectedQuantity;
-
+    existing.qty++;
 
   }else{
-
 
     cart.push({
 
@@ -4277,151 +3541,178 @@ optionsAddButton.onclick = () => {
 
       size:selectedSize,
 
-      qty:selectedQuantity
+      qty:1
 
     });
-
 
   }
 
 
   renderCart();
 
-
   closeProductOptions();
 
-
   openCart();
-
 
 };
 
 
-/* ======================================================
-   CART RENDER
-====================================================== */
+/* =========================================================
+   SIZE CHART
+========================================================= */
+
+function showSizeChart(){
+
+  alert(
+    "SIZE CHART\n\n" +
+    "XS — Extra Small\n" +
+    "S — Small\n" +
+    "M — Medium\n" +
+    "L — Large\n" +
+    "XL — Extra Large\n" +
+    "XXL — Double Extra Large"
+  );
+
+}
+
+
+/* =========================================================
+   CART
+========================================================= */
+
+function addToCart(index, size = "M"){
+
+  const product =
+    productsData[index];
+
+
+  const existing =
+    cart.find(item =>
+      item.name === product.name &&
+      item.size === size
+    );
+
+
+  if(existing){
+
+    existing.qty++;
+
+  }else{
+
+    cart.push({
+
+      ...product,
+
+      size:size,
+
+      qty:1
+
+    });
+
+  }
+
+
+  renderCart();
+
+}
+
+
+/* =========================================================
+   RENDER CART
+========================================================= */
 
 function renderCart(){
 
-
   const count =
-
     cart.reduce(
-
       (sum,item) =>
-
         sum + item.qty,
-
       0
-
     );
 
 
   const total =
-
     cart.reduce(
-
       (sum,item) =>
-
         sum + item.price * item.qty,
-
       0
-
     );
 
 
   document
-    .getElementById("cartCount")
-    .textContent = count;
+  .getElementById("cartCount")
+  .textContent = count;
 
 
   document
-    .getElementById("cartTotal")
-    .textContent =
-      "$" + total.toFixed(2);
+  .getElementById("cartTotal")
+  .textContent =
+    "$" + total.toFixed(2);
 
 
   document
-    .getElementById("checkoutBtn")
-    .disabled =
-      cart.length === 0;
+  .getElementById("checkoutBtn")
+  .disabled =
+    cart.length === 0;
 
 
   document
-    .getElementById("cartItems")
-    .innerHTML =
-
+  .getElementById("cartItems")
+  .innerHTML =
 
     cart.length
 
+    ?
 
-      ? cart.map((item,index) => `
+    cart.map((item,index) => `
 
-
-          <div class="cart-item">
-
-
-            <div>
+      <div class="cart-item">
 
 
-              <div class="cart-item-name">
-
-                ${item.name}
-
-              </div>
+        <div>
 
 
-              <div class="cart-item-price">
+          <div class="cart-item-name">
 
-                $${item.price.toFixed(2)}
+            ${item.name}
 
-              </div>
-
-
-              <div class="cart-item-size">
-
-                SIZE: ${item.size}
-
-              </div>
+          </div>
 
 
-              <div class="qty-control">
+          <div class="cart-item-size">
+
+            Size: ${item.size}
+
+          </div>
 
 
-                <button
-                  onclick="changeQty(${index},-1)">
+          <div class="cart-item-price">
 
-                  −
+            $${item.price.toFixed(2)}
 
-                </button>
-
-
-                <span>
-
-                  ${item.qty}
-
-                </span>
+          </div>
 
 
-                <button
-                  onclick="changeQty(${index},1)">
-
-                  +
-
-                </button>
-
-
-              </div>
-
-
-            </div>
+          <div class="qty-control">
 
 
             <button
-              class="remove-item"
-              onclick="removeItem(${index})">
+              onclick="changeQty(${index},-1)">
 
-              Remove
+              −
+
+            </button>
+
+
+            <span>
+              ${item.qty}
+            </span>
+
+
+            <button
+              onclick="changeQty(${index},1)">
+
+              +
 
             </button>
 
@@ -4429,40 +3720,46 @@ function renderCart(){
           </div>
 
 
-        `).join("")
+        </div>
 
 
-      : `
+        <button
+          class="remove-item"
+          onclick="removeItem(${index})">
+
+          Remove
+
+        </button>
 
 
-          <div class="cart-empty">
+      </div>
 
+    `).join("")
 
-            <i class="fa-solid fa-compass"></i>
+    :
 
+    `
 
-            <p>
+      <div class="cart-empty">
 
-              Your bag is empty.
+        <i class="fa-solid fa-compass"></i>
 
-            </p>
+        <p>
+          Your bag is empty.
+        </p>
 
+      </div>
 
-          </div>
-
-
-        `;
-
+    `;
 
 }
 
 
-/* ======================================================
+/* =========================================================
    CART QUANTITY
-====================================================== */
+========================================================= */
 
-function changeQty(index,amount){
-
+function changeQty(index, amount){
 
   cart[index].qty += amount;
 
@@ -4476,36 +3773,30 @@ function changeQty(index,amount){
 
   renderCart();
 
-
 }
 
 
 function removeItem(index){
 
-
   cart.splice(index,1);
 
-
   renderCart();
-
 
 }
 
 
-/* ======================================================
+/* =========================================================
    CART DRAWER
-====================================================== */
+========================================================= */
 
 const cartDrawer =
   document.getElementById("cartDrawer");
-
 
 const cartOverlay =
   document.getElementById("cartOverlay");
 
 
 function openCart(){
-
 
   closeMenu();
 
@@ -4516,12 +3807,10 @@ function openCart(){
 
   document.body.classList.add("locked");
 
-
 }
 
 
 function closeCart(){
-
 
   cartDrawer.classList.remove("open");
 
@@ -4529,40 +3818,34 @@ function closeCart(){
 
   unlock();
 
-
 }
 
 
 document
-  .getElementById("cartButton")
-  .onclick =
-  openCart;
+.getElementById("cartButton")
+.onclick = openCart;
 
 
 document
-  .getElementById("cartClose")
-  .onclick =
-  closeCart;
+.getElementById("cartClose")
+.onclick = closeCart;
 
 
-cartOverlay.onclick =
-  closeCart;
+cartOverlay.onclick = closeCart;
 
 
-/* ======================================================
+/* =========================================================
    MOBILE MENU
-====================================================== */
+========================================================= */
 
 const mobileMenu =
   document.getElementById("mobileMenu");
-
 
 const menuOverlay =
   document.getElementById("menuOverlay");
 
 
 function openMenu(){
-
 
   closeCart();
 
@@ -4573,12 +3856,10 @@ function openMenu(){
 
   document.body.classList.add("locked");
 
-
 }
 
 
 function closeMenu(){
-
 
   mobileMenu.classList.remove("open");
 
@@ -4586,12 +3867,10 @@ function closeMenu(){
 
   unlock();
 
-
 }
 
 
 function unlock(){
-
 
   if(
 
@@ -4599,7 +3878,7 @@ function unlock(){
 
     !cartDrawer.classList.contains("open") &&
 
-    !optionsWindow.classList.contains("open")
+    !productModal.classList.contains("open")
 
   ){
 
@@ -4607,67 +3886,55 @@ function unlock(){
 
   }
 
-
 }
 
 
 document
-  .getElementById("menuToggle")
-  .onclick =
-  openMenu;
+.getElementById("menuToggle")
+.onclick = openMenu;
 
 
 document
-  .getElementById("menuClose")
-  .onclick =
-  closeMenu;
+.getElementById("menuClose")
+.onclick = closeMenu;
 
 
-menuOverlay.onclick =
-  closeMenu;
+menuOverlay.onclick = closeMenu;
 
 
 document
-  .querySelectorAll(".mobile-links a")
-  .forEach(a => {
+.querySelectorAll(".mobile-links a")
+.forEach(link => {
+
+  link.onclick = closeMenu;
+
+});
 
 
-    a.onclick =
-      closeMenu;
-
-
-  });
-
-
-/* ======================================================
+/* =========================================================
    CHECKOUT
-====================================================== */
+========================================================= */
 
 document
-  .getElementById("checkoutBtn")
-  .onclick = () => {
+.getElementById("checkoutBtn")
+.onclick = () => {
+
+  if(cart.length){
+
+    alert(
+      "Checkout is ready to connect to your payment gateway."
+    );
+
+  }
+
+};
 
 
-    if(cart.length){
-
-
-      alert(
-        "Checkout is ready to connect to your payment gateway."
-      );
-
-
-    }
-
-
-  };
-
-
-/* ======================================================
+/* =========================================================
    NEWSLETTER
-====================================================== */
+========================================================= */
 
 function subscribe(event){
-
 
   event.preventDefault();
 
@@ -4677,47 +3944,51 @@ function subscribe(event){
 
 
   button.textContent =
-    "SUBSCRIBED ✓";
+    "SUBSCRIBED";
 
 
   event.target.reset();
 
-
 }
 
 
-/* ======================================================
+/* =========================================================
    HEADER SCROLL EFFECT
-====================================================== */
+========================================================= */
 
 const siteHeader =
   document.getElementById("siteHeader");
 
 
-window.addEventListener("scroll",() => {
+function updateHeader(){
+
+  if(window.scrollY > 30){
+
+    siteHeader.classList.add("scrolled");
+
+  }else{
+
+    siteHeader.classList.remove("scrolled");
+
+  }
+
+}
 
 
-  siteHeader.classList.toggle(
-
-    "scrolled",
-
-    window.scrollY > 30
-
-  );
+window.addEventListener(
+  "scroll",
+  updateHeader,
+  {passive:true}
+);
 
 
-});
-
-
-/* ======================================================
+/* =========================================================
    ESCAPE KEY
-====================================================== */
+========================================================= */
 
-document.addEventListener("keydown",e => {
+document.addEventListener("keydown", event => {
 
-
-  if(e.key === "Escape"){
-
+  if(event.key === "Escape"){
 
     closeMenu();
 
@@ -4725,23 +3996,23 @@ document.addEventListener("keydown",e => {
 
     closeProductOptions();
 
-
   }
-
 
 });
 
 
-/* ======================================================
+/* =========================================================
    INITIALIZE
-====================================================== */
+========================================================= */
 
 renderProducts();
 
 renderCart();
 
+updateHeader();
 
 </script>
+
 
 </body>
 </html>
