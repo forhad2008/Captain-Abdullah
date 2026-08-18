@@ -1,66 +1,133 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<meta
+  name="viewport"
+  content="width=device-width, initial-scale=1.0">
 
 <title>CAPTAIN ABDULLAH — Born to Roam</title>
-<meta name="description" content="Captain Abdullah — independent fashion for those who choose their own horizon.">
+
+<meta
+  name="description"
+  content="Captain Abdullah — independent fashion for those who choose their own horizon.">
+
+
+<!-- ======================================================
+     GOOGLE FONTS
+====================================================== -->
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800;900&family=Cinzel:wght@500;600;700;800&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet">
+<link
+  rel="preconnect"
+  href="https://fonts.gstatic.com"
+  crossorigin>
 
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+<link
+  href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800;900&family=Cinzel:wght@500;600;700;800&family=DM+Serif+Display:ital@0;1&display=swap"
+  rel="stylesheet">
+
+
+<!-- ======================================================
+     FONT AWESOME
+====================================================== -->
+
+<link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
 
 <style>
 
+/* =========================================================
+   ROOT
+========================================================= */
+
 :root{
+
   --paper:#eee9df;
   --paper-2:#e5dfd3;
   --white:#fffdf8;
+
   --ink:#121212;
   --muted:#777066;
+
   --red:#8d1515;
   --gold:#a27a3b;
+
   --dark:#10100f;
+
   --line:rgba(18,18,18,.13);
+
 }
+
+
+/* =========================================================
+   RESET
+========================================================= */
 
 *{
+
   margin:0;
   padding:0;
+
   box-sizing:border-box;
+
 }
+
 
 html{
+
   scroll-behavior:smooth;
+
 }
+
 
 body{
+
   background:var(--paper);
+
   color:var(--ink);
+
   font-family:"Archivo",sans-serif;
+
   overflow-x:hidden;
+
 }
+
 
 body.locked{
+
   overflow:hidden;
+
 }
 
+
 a{
+
   color:inherit;
+
   text-decoration:none;
+
 }
+
 
 button,
 input{
+
   font:inherit;
+
 }
 
+
 button{
+
   cursor:pointer;
+
 }
 
 
@@ -69,156 +136,241 @@ button{
 ========================================================= */
 
 .site-header{
+
   position:fixed;
+
   z-index:1000;
+
   top:0;
   left:0;
+
   width:100%;
+
   height:78px;
 
-  /* Transparent before scrolling */
   background:transparent;
+
   border-bottom:1px solid transparent;
 
   backdrop-filter:none;
+
   -webkit-backdrop-filter:none;
 
   transition:
+
     background .35s ease,
+
     border-color .35s ease,
+
     box-shadow .35s ease,
+
     backdrop-filter .35s ease;
+
 }
 
-/* White header after scrolling */
+
+/* WHITE AFTER SCROLL */
 
 .site-header.scrolled{
+
   background:rgba(255,255,255,.96);
+
   border-bottom:1px solid rgba(0,0,0,.10);
 
   backdrop-filter:blur(18px);
+
   -webkit-backdrop-filter:blur(18px);
 
   box-shadow:0 8px 30px rgba(0,0,0,.08);
+
 }
 
+
 .header-inner{
+
   height:100%;
+
   max-width:1500px;
+
   margin:auto;
+
   padding:0 38px;
 
   display:flex;
+
   align-items:center;
+
   justify-content:space-between;
+
 }
 
+
 .brand-mark{
+
   display:flex;
+
   align-items:center;
+
   gap:11px;
 
   min-width:240px;
 
   font-family:Cinzel,serif;
+
   font-weight:800;
+
   letter-spacing:.16em;
+
   font-size:13px;
+
 }
+
 
 .brand-mark .logo{
+
   width:55px;
   height:55px;
+
   object-fit:contain;
+
 }
 
+
 .desktop-nav{
+
   flex:1;
 
   display:flex;
+
   justify-content:center;
+
   gap:42px;
+
 }
 
+
 .desktop-nav a{
+
   position:relative;
 
   font-size:10px;
+
   font-weight:700;
+
   letter-spacing:.18em;
+
   text-transform:uppercase;
+
 }
 
+
 .desktop-nav a:after{
+
   content:"";
 
   position:absolute;
+
   left:0;
   right:0;
+
   bottom:-9px;
 
   height:1px;
+
   background:var(--red);
 
   transform:scaleX(0);
+
   transition:.3s;
+
 }
+
 
 .desktop-nav a:hover:after{
+
   transform:scaleX(1);
+
 }
 
+
 .header-actions{
+
   min-width:210px;
 
   display:flex;
+
   justify-content:flex-end;
+
 }
+
 
 .cart-button,
 .menu-toggle{
+
   border:0;
+
   background:none;
+
   color:var(--ink);
+
 }
 
+
 .cart-button{
+
   height:48px;
 
   display:flex;
+
   align-items:center;
+
   gap:9px;
 
   padding:0 10px;
 
   font-size:10px;
+
   font-weight:700;
+
   letter-spacing:.14em;
+
   text-transform:uppercase;
+
 }
 
+
 .cart-button b{
+
   width:24px;
   height:24px;
 
   display:grid;
+
   place-items:center;
 
   border-radius:50%;
 
   background:#111;
+
   color:#fff;
 
   font-size:9px;
+
 }
+
 
 .menu-toggle{
+
   display:none;
+
   width:44px;
   height:44px;
+
 }
 
+
 .menu-toggle span{
+
   display:block;
 
   width:22px;
@@ -227,6 +379,7 @@ button{
   background:#111;
 
   margin:5px auto;
+
 }
 
 
@@ -235,12 +388,14 @@ button{
 ========================================================= */
 
 .mobile-menu{
+
   position:fixed;
 
   top:0;
   left:0;
 
   width:min(390px,88vw);
+
   height:100dvh;
 
   z-index:3000;
@@ -248,20 +403,28 @@ button{
   padding:30px;
 
   background:#111;
+
   color:#fff;
 
   transform:translateX(-105%);
 
   transition:.4s cubic-bezier(.22,.8,.2,1);
+
 }
 
+
 .mobile-menu.open{
+
   transform:translateX(0);
+
 }
+
 
 .menu-overlay,
 .cart-overlay{
+
   position:fixed;
+
   inset:0;
 
   z-index:2990;
@@ -269,22 +432,34 @@ button{
   background:rgba(0,0,0,.58);
 
   opacity:0;
+
   visibility:hidden;
+
   pointer-events:none;
 
   transition:.3s;
+
 }
+
 
 .menu-overlay.show,
 .cart-overlay.show{
+
   opacity:1;
+
   visibility:visible;
+
   pointer-events:auto;
+
 }
 
+
 .mobile-menu-head{
+
   display:flex;
+
   align-items:center;
+
   justify-content:space-between;
 
   padding-bottom:22px;
@@ -292,24 +467,40 @@ button{
   border-bottom:1px solid rgba(255,255,255,.15);
 
   font-family:Cinzel,serif;
+
   font-size:13px;
+
   font-weight:800;
+
   letter-spacing:.18em;
+
 }
+
 
 .menu-close{
+
   border:0;
+
   background:none;
+
   color:#fff;
+
   font-size:30px;
+
 }
+
 
 .mobile-links{
+
   margin-top:25px;
+
 }
 
+
 .mobile-links a{
+
   display:flex;
+
   justify-content:space-between;
 
   padding:18px 0;
@@ -317,7 +508,9 @@ button{
   border-bottom:1px solid rgba(255,255,255,.12);
 
   font-size:20px;
+
   font-family:Cinzel,serif;
+
 }
 
 
@@ -326,57 +519,82 @@ button{
 ========================================================= */
 
 .hero{
+
   min-height:100svh;
 
   padding-top:78px;
 
   display:grid;
+
   grid-template-columns:46% 54%;
 
   border-bottom:1px solid var(--line);
+
 }
 
+
 .hero-copy{
+
   padding:70px 7vw;
 
   display:flex;
+
   flex-direction:column;
+
   justify-content:center;
+
 }
 
+
 .kicker{
+
   margin-bottom:25px;
 
   color:var(--muted);
 
   font-size:10px;
+
   letter-spacing:.3em;
+
   text-transform:uppercase;
+
 }
 
+
 .hero h1{
+
   font-size:clamp(58px,9.5vw,158px);
 
   line-height:.78;
+
   letter-spacing:-.075em;
 
   font-weight:900;
+
   text-transform:uppercase;
+
 }
 
+
 .hero h1 span{
+
   display:block;
 
   margin-left:30px;
 
   font-family:"DM Serif Display",serif;
+
   font-style:italic;
+
   font-weight:400;
 
   color:var(--red);
+
 }
 
+
 .hero-text{
+
   max-width:430px;
 
   margin-top:42px;
@@ -384,10 +602,14 @@ button{
   color:#625d56;
 
   font-size:13px;
+
   line-height:1.9;
+
 }
 
+
 .hero-btn{
+
   width:max-content;
 
   margin-top:35px;
@@ -397,43 +619,163 @@ button{
   border:1px solid var(--ink);
 
   font-size:10px;
+
   letter-spacing:.2em;
+
   text-transform:uppercase;
 
   transition:.3s;
+
 }
+
 
 .hero-btn:hover{
+
   background:#111;
+
   color:#fff;
+
 }
 
+
+/* =========================================================
+   HERO VISUAL
+========================================================= */
+
 .hero-visual{
-  min-height: 100vh;
+
+  min-height:100vh;
+
+  position:relative;
+
+  display:flex;
+
+  align-items:center;
+
+  justify-content:center;
+
+  overflow:hidden;
 
   background:
+
     linear-gradient(
       90deg,
       rgba(0,0,0,.08),
       rgba(0,0,0,.02)
     ),
+
     url("2.1.webp") center/cover no-repeat;
 
-  position:relative;
 }
 
+
+/* IMAGE DARK OVERLAY */
+
+.hero-visual:before{
+
+  content:"";
+
+  position:absolute;
+
+  inset:0;
+
+  background:rgba(0,0,0,.08);
+
+  pointer-events:none;
+
+}
+
+
+/* HERO SHOP BUTTON */
+
+.hero-shop-button{
+
+  position:relative;
+
+  z-index:5;
+
+  display:flex;
+
+  align-items:center;
+
+  justify-content:center;
+
+  gap:14px;
+
+  min-width:190px;
+
+  padding:18px 30px;
+
+  background:#fff;
+
+  color:#111;
+
+  border:1px solid #fff;
+
+  font-size:11px;
+
+  font-weight:700;
+
+  letter-spacing:.25em;
+
+  text-transform:uppercase;
+
+  transition:
+
+    background .3s ease,
+
+    color .3s ease,
+
+    transform .3s ease;
+
+}
+
+
+.hero-shop-button span{
+
+  font-size:16px;
+
+  transition:transform .3s ease;
+
+}
+
+
+.hero-shop-button:hover{
+
+  background:#111;
+
+  color:#fff;
+
+  border-color:#111;
+
+  transform:translateY(-4px);
+
+}
+
+
+.hero-shop-button:hover span{
+
+  transform:translateX(5px);
+
+}
+
+
 .hero-visual:after{
+
   content:"CAPTAIN ABDULLAH / 01";
 
   position:absolute;
 
   right:25px;
+
   bottom:22px;
 
   color:#fff;
 
   font-size:9px;
+
   letter-spacing:.25em;
+
 }
 
 
@@ -442,41 +784,63 @@ button{
 ========================================================= */
 
 .marquee{
+
   overflow:hidden;
+
   white-space:nowrap;
 
   background:#111;
+
   color:#fff;
+
 }
 
+
 .marquee-track{
+
   display:inline-block;
 
   padding:18px 0;
 
   animation:marquee 28s linear infinite;
+
 }
 
+
 .marquee span{
+
   margin:0 30px;
 
   font-size:11px;
+
   letter-spacing:.25em;
+
 }
+
 
 .marquee i{
+
   color:var(--gold);
+
   font-size:7px;
+
 }
 
+
 @keyframes marquee{
+
   from{
+
     transform:translateX(0);
+
   }
 
   to{
+
     transform:translateX(-50%);
+
   }
+
 }
 
 
@@ -485,44 +849,68 @@ button{
 ========================================================= */
 
 .section{
+
   padding:90px 24px;
+
 }
+
 
 .shop-section{
+
   padding-top:70px;
+
   background:var(--paper);
+
 }
+
 
 .shop-heading{
+
   text-align:center;
+
   margin-bottom:38px;
+
 }
 
+
 .shop-kicker{
+
   display:block;
 
   margin-bottom:22px;
 
   font-size:10px;
+
   letter-spacing:.38em;
+
   text-transform:uppercase;
 
   color:var(--muted);
+
 }
+
 
 .shop-tabs{
+
   display:flex;
+
   justify-content:center;
+
   gap:55px;
+
 }
 
+
 .shop-tabs button{
+
   position:relative;
 
   padding:0 0 12px;
 
   border:0;
+
   background:none;
+
   color:#222;
 
   font-family:Cinzel,serif;
@@ -530,21 +918,27 @@ button{
   font-size:clamp(18px,2vw,28px);
 
   letter-spacing:.16em;
+
   text-transform:uppercase;
+
 }
 
+
 .shop-tabs button.active:after{
+
   content:"";
 
   position:absolute;
 
   left:0;
   right:0;
+
   bottom:0;
 
   height:2px;
 
   background:#111;
+
 }
 
 
@@ -553,7 +947,9 @@ button{
 ========================================================= */
 
 .products{
+
   width:100%;
+
   max-width:1500px;
 
   margin:auto;
@@ -564,9 +960,12 @@ button{
     repeat(2,minmax(0,1fr));
 
   gap:26px 28px;
+
 }
 
+
 .product{
+
   position:relative;
 
   overflow:hidden;
@@ -574,29 +973,42 @@ button{
   background:var(--white);
 
   border:1px solid rgba(0,0,0,.06);
+
 }
 
+
 .product-image{
+
   position:relative;
 
   width:100%;
+
   height:clamp(340px,31vw,500px);
 
   background:#ddd7ca;
+
 }
 
+
 .product-image-link{
+
   display:flex;
 
   width:100%;
+
   height:100%;
 
   align-items:center;
+
   justify-content:center;
+
 }
 
+
 .product-image-link img{
+
   width:100%;
+
   height:100%;
 
   display:block;
@@ -604,13 +1016,19 @@ button{
   object-fit:cover;
 
   transition:transform .5s;
+
 }
+
 
 .product-image-link:hover img{
+
   transform:scale(1.025);
+
 }
 
+
 .badge{
+
   position:absolute;
 
   top:17px;
@@ -623,16 +1041,18 @@ button{
   background:rgba(255,253,248,.86);
 
   font-size:10px;
+
   font-weight:600;
+
   letter-spacing:.14em;
+
   text-transform:uppercase;
+
 }
 
-.badge.sale{
-  color:var(--red);
-}
 
 .product-cart{
+
   position:absolute;
 
   right:18px;
@@ -644,27 +1064,37 @@ button{
   height:62px;
 
   display:grid;
+
   place-items:center;
 
   border:1px solid rgba(0,0,0,.12);
 
   background:#fff;
+
   color:#171717;
 
   font-size:38px;
+
   font-weight:300;
 
   transition:.25s;
+
 }
 
+
 .product-cart:hover{
+
   background:#111;
+
   color:#fff;
 
   transform:translateY(-3px);
+
 }
 
+
 .product-info{
+
   min-height:155px;
 
   padding:27px 25px 28px;
@@ -672,9 +1102,12 @@ button{
   background:#fff;
 
   border-top:1px solid rgba(0,0,0,.05);
+
 }
 
+
 .product-brand{
+
   display:block;
 
   margin-bottom:9px;
@@ -682,11 +1115,16 @@ button{
   font-family:Cinzel,serif;
 
   font-size:11px;
+
   font-weight:700;
+
   letter-spacing:.16em;
+
 }
 
+
 .product-name{
+
   max-width:90%;
 
   font-size:clamp(16px,1.4vw,22px);
@@ -694,21 +1132,27 @@ button{
   font-weight:400;
 
   line-height:1.35;
+
 }
 
+
 .product-price{
+
   margin-top:12px;
 
   font-size:18px;
+
   font-weight:700;
+
 }
 
 
 /* =========================================================
-   COLLECTION FEATURE
+   COLLECTION
 ========================================================= */
 
 .feature{
+
   display:grid;
 
   grid-template-columns:1fr 1fr;
@@ -716,47 +1160,71 @@ button{
   min-height:75vh;
 
   background:#171614;
+
   color:#fff;
+
 }
 
+
 .feature-image{
+
   background:
+
     url("captain-collection.webp")
+
     center/cover no-repeat;
 
   min-height:500px;
+
 }
 
+
 .feature-copy{
+
   padding:8vw;
 
   display:flex;
+
   flex-direction:column;
+
   justify-content:center;
+
 }
+
 
 .feature-copy .shop-kicker{
+
   color:#a7a097;
+
 }
 
+
 .feature-copy h2{
+
   font-size:clamp(50px,7vw,110px);
 
   line-height:.82;
+
   letter-spacing:-.07em;
 
   text-transform:uppercase;
+
 }
 
+
 .feature-copy h2 em{
+
   font-family:"DM Serif Display",serif;
 
   color:#b48a4d;
 
   font-weight:400;
+
 }
 
+
 .feature-copy p{
+
   max-width:430px;
 
   margin:30px 0;
@@ -764,10 +1232,14 @@ button{
   color:#aaa39a;
 
   font-size:13px;
+
   line-height:1.9;
+
 }
 
+
 .light-btn{
+
   width:max-content;
 
   border:1px solid #777;
@@ -775,14 +1247,20 @@ button{
   padding:15px 26px;
 
   font-size:10px;
+
   letter-spacing:.18em;
 
   text-transform:uppercase;
+
 }
 
+
 .light-btn:hover{
+
   background:#fff;
+
   color:#111;
+
 }
 
 
@@ -791,10 +1269,13 @@ button{
 ========================================================= */
 
 .manifesto{
+
   min-height:70vh;
 
   display:flex;
+
   align-items:center;
+
   justify-content:center;
 
   text-align:center;
@@ -802,36 +1283,48 @@ button{
   padding:100px 7vw;
 
   background:var(--paper-2);
+
 }
 
+
 .manifesto-small{
+
   margin-bottom:25px;
 
   color:#777;
 
   font-size:10px;
+
   letter-spacing:.3em;
 
   text-transform:uppercase;
+
 }
 
+
 .manifesto h2{
+
   max-width:1100px;
 
   font-size:clamp(45px,8vw,120px);
 
   line-height:.88;
+
   letter-spacing:-.07em;
 
   text-transform:uppercase;
+
 }
 
+
 .manifesto em{
+
   color:var(--red);
 
   font-family:"DM Serif Display",serif;
 
   font-weight:400;
+
 }
 
 
@@ -840,34 +1333,46 @@ button{
 ========================================================= */
 
 .newsletter{
+
   padding:110px 25px;
 
   text-align:center;
 
   background:#111;
+
   color:#fff;
+
 }
 
+
 .newsletter h2{
+
   margin-top:20px;
 
   font-size:clamp(48px,7vw,100px);
 
   line-height:.85;
+
   letter-spacing:-.07em;
 
   text-transform:uppercase;
+
 }
 
+
 .newsletter h2 em{
+
   color:#b48a4d;
 
   font-family:"DM Serif Display",serif;
 
   font-weight:400;
+
 }
 
+
 .newsletter p{
+
   max-width:450px;
 
   margin:28px auto;
@@ -875,10 +1380,14 @@ button{
   color:#aaa;
 
   font-size:12px;
+
   line-height:1.8;
+
 }
 
+
 .email-form{
+
   width:min(520px,100%);
 
   margin:auto;
@@ -886,30 +1395,41 @@ button{
   display:flex;
 
   border-bottom:1px solid #555;
+
 }
 
+
 .email-form input{
+
   flex:1;
 
   padding:17px 5px;
 
   border:0;
+
   outline:0;
 
   background:none;
+
   color:#fff;
+
 }
 
+
 .email-form button{
+
   border:0;
+
   background:none;
 
   color:#fff;
 
   font-size:10px;
+
   letter-spacing:.16em;
 
   text-transform:uppercase;
+
 }
 
 
@@ -918,22 +1438,30 @@ button{
 ========================================================= */
 
 footer{
+
   padding:65px 5vw 30px;
 
   background:#0c0c0c;
+
   color:#fff;
+
 }
 
+
 .footer-grid{
+
   display:grid;
 
   grid-template-columns:
     2fr 1fr 1fr 1fr;
 
   gap:40px;
+
 }
 
+
 .footer-brand{
+
   font-family:Cinzel,serif;
 
   font-size:clamp(28px,4.5vw,65px);
@@ -943,20 +1471,27 @@ footer{
   letter-spacing:-.04em;
 
   line-height:.85;
+
 }
 
+
 .footer-column h4{
+
   margin-bottom:20px;
 
   color:#777;
 
   font-size:9px;
+
   letter-spacing:.2em;
 
   text-transform:uppercase;
+
 }
 
+
 .footer-column a{
+
   display:block;
 
   margin-bottom:12px;
@@ -964,13 +1499,19 @@ footer{
   color:#aaa;
 
   font-size:11px;
+
 }
+
 
 .footer-column a:hover{
+
   color:#fff;
+
 }
 
+
 .footer-bottom{
+
   display:flex;
 
   justify-content:space-between;
@@ -984,7 +1525,9 @@ footer{
   color:#666;
 
   font-size:9px;
+
   letter-spacing:.15em;
+
 }
 
 
@@ -993,6 +1536,7 @@ footer{
 ========================================================= */
 
 .cart-drawer{
+
   position:fixed;
 
   top:0;
@@ -1001,26 +1545,35 @@ footer{
   z-index:3101;
 
   width:min(460px,92vw);
+
   height:100dvh;
 
   padding:28px;
 
   display:flex;
+
   flex-direction:column;
 
   background:#111;
+
   color:#fff;
 
   transform:translateX(105%);
 
   transition:.4s cubic-bezier(.22,.8,.2,1);
+
 }
+
 
 .cart-drawer.open{
+
   transform:translateX(0);
+
 }
 
+
 .cart-head{
+
   display:flex;
 
   justify-content:space-between;
@@ -1028,9 +1581,12 @@ footer{
   padding-bottom:20px;
 
   border-bottom:1px solid #292929;
+
 }
 
+
 .cart-eyebrow{
+
   display:block;
 
   margin-bottom:8px;
@@ -1038,37 +1594,51 @@ footer{
   color:#888;
 
   font-size:12px;
+
   letter-spacing:.2em;
 
   text-transform:uppercase;
+
 }
 
+
 .close{
+
   border:0;
+
   background:none;
 
   color:#fff;
 
   font-size:27px;
+
 }
 
+
 .cart-items{
+
   flex:1;
 
   overflow-y:auto;
 
   padding:20px 0;
+
 }
 
+
 .cart-empty{
+
   margin-top:70px;
 
   text-align:center;
 
   color:#888;
+
 }
 
+
 .cart-empty i{
+
   display:block;
 
   margin-bottom:20px;
@@ -1076,9 +1646,12 @@ footer{
   color:#fff;
 
   font-size:30px;
+
 }
 
+
 .cart-item{
+
   display:grid;
 
   grid-template-columns:1fr auto;
@@ -1088,25 +1661,49 @@ footer{
   padding:18px 0;
 
   border-bottom:1px solid #292929;
+
 }
 
+
 .cart-item-name{
+
   font-size:11px;
 
   letter-spacing:.08em;
 
   text-transform:uppercase;
+
 }
 
+
 .cart-item-price{
+
   margin-top:7px;
 
   color:#aaa;
 
   font-size:11px;
+
 }
 
+
+.cart-item-size{
+
+  margin-top:6px;
+
+  color:#aaa;
+
+  font-size:10px;
+
+  letter-spacing:.12em;
+
+  text-transform:uppercase;
+
+}
+
+
 .qty-control{
+
   display:flex;
 
   align-items:center;
@@ -1114,42 +1711,59 @@ footer{
   gap:13px;
 
   margin-top:12px;
+
 }
 
+
 .qty-control button{
+
   width:28px;
   height:28px;
 
   border:1px solid #333;
 
   background:#181818;
+
   color:#fff;
+
 }
 
+
 .remove-item{
+
   border:0;
+
   background:none;
 
   color:#888;
 
   font-size:10px;
+
 }
 
+
 .cart-footer{
+
   padding-top:20px;
 
   border-top:1px solid #292929;
+
 }
 
+
 .cart-total-row{
+
   display:flex;
 
   justify-content:space-between;
 
   font-size:14px;
+
 }
 
+
 .checkout-btn{
+
   width:100%;
 
   margin-top:17px;
@@ -1159,20 +1773,464 @@ footer{
   border:0;
 
   background:#fff;
+
   color:#111;
 
   font-size:10px;
+
   font-weight:800;
 
   letter-spacing:.15em;
 
   text-transform:uppercase;
+
 }
 
+
 .checkout-btn:disabled{
+
   opacity:.35;
 
   cursor:not-allowed;
+
+}
+
+
+/* =========================================================
+   PRODUCT OPTIONS WINDOW
+========================================================= */
+
+.options-overlay{
+
+  position:fixed;
+
+  inset:0;
+
+  z-index:5000;
+
+  background:rgba(0,0,0,.48);
+
+  opacity:0;
+
+  visibility:hidden;
+
+  pointer-events:none;
+
+  transition:.35s ease;
+
+}
+
+
+.options-overlay.show{
+
+  opacity:1;
+
+  visibility:visible;
+
+  pointer-events:auto;
+
+}
+
+
+.options-window{
+
+  position:fixed;
+
+  left:50%;
+  bottom:0;
+
+  z-index:5001;
+
+  width:min(700px,100%);
+
+  max-height:92dvh;
+
+  overflow-y:auto;
+
+  background:#fffdf0;
+
+  color:#111;
+
+  transform:translate(-50%,105%);
+
+  transition:
+
+    transform .45s cubic-bezier(.22,.8,.2,1);
+
+}
+
+
+.options-window.open{
+
+  transform:translate(-50%,0);
+
+}
+
+
+.options-head{
+
+  height:96px;
+
+  display:flex;
+
+  align-items:center;
+
+  justify-content:center;
+
+  position:relative;
+
+  border-bottom:1px solid rgba(0,0,0,.13);
+
+}
+
+
+.options-head h2{
+
+  font-family:"Archivo",sans-serif;
+
+  font-size:25px;
+
+  font-weight:400;
+
+  letter-spacing:.22em;
+
+  text-align:center;
+
+}
+
+
+.options-close{
+
+  position:absolute;
+
+  right:28px;
+
+  top:50%;
+
+  transform:translateY(-50%);
+
+  width:42px;
+  height:42px;
+
+  border:0;
+
+  background:none;
+
+  font-size:35px;
+
+  font-weight:200;
+
+}
+
+
+.options-content{
+
+  padding:36px 38px 40px;
+
+}
+
+
+.options-product-image{
+
+  width:325px;
+  height:410px;
+
+  margin:0 auto 38px;
+
+  background:#ddd7ca;
+
+}
+
+
+.options-product-image img{
+
+  width:100%;
+  height:100%;
+
+  object-fit:cover;
+
+  display:block;
+
+}
+
+
+.options-product-name{
+
+  max-width:650px;
+
+  margin:auto;
+
+  text-align:center;
+
+  font-size:20px;
+
+  line-height:1.8;
+
+  letter-spacing:.22em;
+
+  text-transform:uppercase;
+
+}
+
+
+.options-product-price{
+
+  margin-top:18px;
+
+  text-align:center;
+
+  color:#777;
+
+  font-size:17px;
+
+  letter-spacing:.22em;
+
+}
+
+
+.options-selection{
+
+  margin-top:42px;
+
+  padding-top:35px;
+
+  border-top:1px solid rgba(0,0,0,.13);
+
+}
+
+
+.options-size-head{
+
+  display:flex;
+
+  align-items:center;
+
+  justify-content:space-between;
+
+  margin-bottom:20px;
+
+}
+
+
+.options-size-head label{
+
+  font-family:"DM Serif Display",serif;
+
+  font-size:24px;
+
+}
+
+
+.size-chart{
+
+  border:0;
+
+  border-bottom:1px solid #111;
+
+  background:none;
+
+  padding:0 0 4px;
+
+  font-size:14px;
+
+}
+
+
+.size-buttons{
+
+  display:flex;
+
+  gap:18px;
+
+}
+
+
+.size-button{
+
+  width:76px;
+  height:76px;
+
+  border:1px solid rgba(0,0,0,.16);
+
+  background:transparent;
+
+  font-size:18px;
+
+  transition:.2s;
+
+}
+
+
+.size-button:hover,
+.size-button.selected{
+
+  background:#111;
+
+  color:#fff;
+
+  border-color:#111;
+
+}
+
+
+.options-quantity{
+
+  display:flex;
+
+  align-items:center;
+
+  justify-content:space-between;
+
+  margin-top:30px;
+
+}
+
+
+.quantity-title{
+
+  font-size:17px;
+
+  letter-spacing:.08em;
+
+}
+
+
+.quantity-control{
+
+  display:flex;
+
+  align-items:center;
+
+  border:1px solid rgba(0,0,0,.18);
+
+}
+
+
+.quantity-control button{
+
+  width:44px;
+  height:44px;
+
+  border:0;
+
+  background:none;
+
+  font-size:22px;
+
+}
+
+
+.quantity-control span{
+
+  width:45px;
+
+  text-align:center;
+
+  font-size:15px;
+
+}
+
+
+.options-add{
+
+  width:100%;
+
+  margin-top:30px;
+
+  padding:21px;
+
+  border:0;
+
+  background:#08070c;
+
+  color:#fffdf0;
+
+  font-size:14px;
+
+  letter-spacing:.28em;
+
+  text-transform:uppercase;
+
+  transition:.25s;
+
+}
+
+
+.options-add:hover{
+
+  background:#8d1515;
+
+}
+
+
+.options-add:disabled{
+
+  opacity:.4;
+
+  cursor:not-allowed;
+
+}
+
+
+/* =========================================================
+   SIZE CHART
+========================================================= */
+
+.size-chart-box{
+
+  display:none;
+
+  margin-top:25px;
+
+  padding:22px;
+
+  background:#eee9df;
+
+  border:1px solid rgba(0,0,0,.1);
+
+}
+
+
+.size-chart-box.show{
+
+  display:block;
+
+}
+
+
+.size-chart-box h3{
+
+  margin-bottom:15px;
+
+  font-family:Cinzel,serif;
+
+  font-size:13px;
+
+  letter-spacing:.15em;
+
+}
+
+
+.size-chart-table{
+
+  width:100%;
+
+  border-collapse:collapse;
+
+  font-size:12px;
+
+}
+
+
+.size-chart-table th,
+.size-chart-table td{
+
+  padding:10px;
+
+  border-bottom:1px solid rgba(0,0,0,.1);
+
+  text-align:left;
+
 }
 
 
@@ -1183,18 +2241,28 @@ footer{
 @media(max-width:900px){
 
   .site-header{
+
     height:68px;
+
   }
+
 
   .header-inner{
+
     padding:0 14px;
+
   }
+
 
   .menu-toggle{
+
     display:block;
+
   }
 
+
   .brand-mark{
+
     position:absolute;
 
     left:50%;
@@ -1202,68 +2270,108 @@ footer{
     transform:translateX(-50%);
 
     min-width:0;
+
   }
+
 
   .brand-mark span{
+
     display:none;
+
   }
+
 
   .desktop-nav{
+
     display:none;
+
   }
+
 
   .header-actions{
+
     min-width:50px;
+
   }
+
 
   .cart-button span{
+
     display:none;
+
   }
 
+
   .hero{
+
     padding-top:68px;
 
     grid-template-columns:1fr;
+
   }
+
 
   .hero-visual{
-    min-height: 100vh;
+
+    min-height:100vh;
 
     order:1;
+
   }
 
+
   .hero-copy{
+
     min-height:55vh;
 
     padding:60px 25px;
 
     order:2;
+
   }
+
 
   .feature{
+
     grid-template-columns:1fr;
+
   }
+
 
   .feature-image{
+
     min-height:55vh;
+
   }
+
 
   .products{
+
     gap:14px;
+
   }
+
 
   .product-image{
+
     height:42vw;
+
     min-height:250px;
+
   }
 
+
   .product-info{
+
     min-height:145px;
 
     padding:20px;
+
   }
 
+
   .product-cart{
+
     width:40px;
     height:40px;
 
@@ -1271,68 +2379,115 @@ footer{
     bottom:14px;
 
     font-size:28px;
+
   }
+
 
   .footer-grid{
+
     grid-template-columns:1fr 1fr;
+
   }
 
+
   .footer-brand{
+
     grid-column:1/-1;
+
   }
+
 }
 
 
 @media(max-width:600px){
 
   .site-header{
+
     height:64px;
+
   }
+
 
   .hero{
+
     padding-top:64px;
+
   }
+
+
+  .hero-shop-button{
+
+    min-width:170px;
+
+    padding:16px 24px;
+
+    font-size:10px;
+
+  }
+
 
   .section{
+
     padding:55px 12px;
+
   }
+
 
   .shop-section{
+
     padding-top:45px;
+
   }
+
 
   .shop-tabs{
+
     gap:28px;
+
   }
 
+
   .shop-tabs button{
+
     font-size:16px;
 
     letter-spacing:.12em;
+
   }
 
+
   .products{
+
     grid-template-columns:1fr 1fr;
 
     gap:8px;
+
   }
 
+
   .product-image{
+
     height:55vw;
 
     min-height:200px;
+
   }
 
+
   .badge{
+
     top:9px;
     left:9px;
 
     padding:7px 9px;
 
     font-size:8px;
+
   }
 
+
   .product-cart{
+
     width:36px;
     height:36px;
 
@@ -1340,45 +2495,158 @@ footer{
     bottom:8px;
 
     font-size:24px;
+
   }
 
+
   .product-info{
+
     min-height:125px;
 
     padding:15px 12px 17px;
+
   }
+
 
   .product-brand{
+
     font-size:8px;
+
   }
+
 
   .product-name{
+
     font-size:12px;
+
   }
 
+
   .product-price{
+
     margin-top:9px;
 
     font-size:14px;
+
   }
+
 
   .footer-grid{
+
     grid-template-columns:1fr;
+
   }
+
 
   .footer-brand{
+
     grid-column:auto;
+
   }
 
+
   .footer-bottom{
+
     display:block;
 
     line-height:2.2;
+
+  }
+
+
+  /* PRODUCT OPTIONS MOBILE */
+
+  .options-window{
+
+    width:100%;
+
+    max-height:90dvh;
+
+  }
+
+
+  .options-head{
+
+    height:90px;
+
+  }
+
+
+  .options-head h2{
+
+    font-size:19px;
+
+    letter-spacing:.15em;
+
+  }
+
+
+  .options-close{
+
+    right:14px;
+
+    font-size:32px;
+
+  }
+
+
+  .options-content{
+
+    padding:30px 20px 25px;
+
+  }
+
+
+  .options-product-image{
+
+    width:100%;
+
+    max-width:324px;
+
+    height:407px;
+
+  }
+
+
+  .options-product-name{
+
+    font-size:15px;
+
+    line-height:1.8;
+
+    letter-spacing:.16em;
+
+  }
+
+
+  .options-product-price{
+
+    font-size:14px;
+
+  }
+
+
+  .size-buttons{
+
+    gap:9px;
+
+  }
+
+
+  .size-button{
+
+    flex:1;
+
+    width:auto;
+
+    height:64px;
+
   }
 
 }
 
 </style>
+
 </head>
 
 
@@ -1389,9 +2657,13 @@ footer{
      HEADER
 ====================================================== -->
 
-<header class="site-header" id="siteHeader">
+<header
+  class="site-header"
+  id="siteHeader">
+
 
   <div class="header-inner">
+
 
     <button
       class="menu-toggle"
@@ -1405,7 +2677,9 @@ footer{
     </button>
 
 
-    <a href="#" class="brand-mark">
+    <a
+      href="#"
+      class="brand-mark">
 
       <img
         src="logo.webp"
@@ -1421,7 +2695,7 @@ footer{
 
     <nav class="desktop-nav">
 
-      <a href="#shop">
+      <a href="shop.html">
         Shop
       </a>
 
@@ -1479,11 +2753,13 @@ footer{
   class="mobile-menu"
   id="mobileMenu">
 
+
   <div class="mobile-menu-head">
 
     <span>
       CAPTAIN ABDULLAH
     </span>
+
 
     <button
       class="menu-close"
@@ -1498,24 +2774,47 @@ footer{
 
   <div class="mobile-links">
 
-    <a href="#shop">
+    <a href="shop.html">
+
       Shop
-      <span>→</span>
+
+      <span>
+        →
+      </span>
+
     </a>
+
 
     <a href="#collections">
+
       Collections
-      <span>→</span>
+
+      <span>
+        →
+      </span>
+
     </a>
+
 
     <a href="#story">
+
       The Code
-      <span>→</span>
+
+      <span>
+        →
+      </span>
+
     </a>
 
+
     <a href="#newsletter">
+
       Journal
-      <span>→</span>
+
+      <span>
+        →
+      </span>
+
     </a>
 
   </div>
@@ -1530,21 +2829,35 @@ footer{
 <main>
 
 
-<!-- HERO -->
+<!-- ======================================================
+     HERO
+====================================================== -->
 
 <section class="hero">
 
+
   <div class="hero-copy">
 
+
     <div class="kicker">
+
       Independent / Est. 2026 / Dhaka
+
     </div>
 
+
     <h1>
+
       Born
+
       <br>
-      <span>to Roam.</span>
+
+      <span>
+        to Roam.
+      </span>
+
     </h1>
+
 
     <p class="hero-text">
 
@@ -1555,18 +2868,39 @@ footer{
 
     </p>
 
+
     <a
-      href="#shop"
+      href="shop.html"
       class="hero-btn">
 
       Explore the collection →
 
     </a>
 
+
   </div>
 
 
+  <!-- ====================================================
+       HERO IMAGE + CENTER SHOP BUTTON
+  ===================================================== -->
+
   <div class="hero-visual">
+
+
+    <a
+      href="shop.html"
+      class="hero-shop-button">
+
+      SHOP
+
+      <span>
+        →
+      </span>
+
+    </a>
+
+
   </div>
 
 </section>
@@ -1580,29 +2914,6 @@ footer{
 
   <div class="marquee-track">
 
-    <span>
-      CAPTAIN ABDULLAH
-    </span>
-
-    <i class="fa-solid fa-star"></i>
-
-    <span>
-      NO ORDINARY HORIZONS
-    </span>
-
-    <i class="fa-solid fa-star"></i>
-
-    <span>
-      WILD BY CHOICE
-    </span>
-
-    <i class="fa-solid fa-star"></i>
-
-    <span>
-      WEAR YOUR ADVENTURE
-    </span>
-
-    <i class="fa-solid fa-star"></i>
 
     <span>
       CAPTAIN ABDULLAH
@@ -1610,11 +2921,13 @@ footer{
 
     <i class="fa-solid fa-star"></i>
 
+
     <span>
       NO ORDINARY HORIZONS
     </span>
 
     <i class="fa-solid fa-star"></i>
+
 
     <span>
       WILD BY CHOICE
@@ -1622,9 +2935,39 @@ footer{
 
     <i class="fa-solid fa-star"></i>
 
+
     <span>
       WEAR YOUR ADVENTURE
     </span>
+
+    <i class="fa-solid fa-star"></i>
+
+
+    <span>
+      CAPTAIN ABDULLAH
+    </span>
+
+    <i class="fa-solid fa-star"></i>
+
+
+    <span>
+      NO ORDINARY HORIZONS
+    </span>
+
+    <i class="fa-solid fa-star"></i>
+
+
+    <span>
+      WILD BY CHOICE
+    </span>
+
+    <i class="fa-solid fa-star"></i>
+
+
+    <span>
+      WEAR YOUR ADVENTURE
+    </span>
+
 
   </div>
 
@@ -1642,12 +2985,16 @@ footer{
 
   <div class="shop-heading">
 
+
     <span class="shop-kicker">
+
       01 / The Captain's Wardrobe
+
     </span>
 
 
     <div class="shop-tabs">
+
 
       <button
         class="active"
@@ -1673,6 +3020,7 @@ footer{
 
       </button>
 
+
     </div>
 
   </div>
@@ -1683,6 +3031,7 @@ footer{
     id="productsGrid">
 
   </div>
+
 
 </section>
 
@@ -1702,16 +3051,28 @@ footer{
 
   <div class="feature-copy">
 
+
     <span class="shop-kicker">
+
       02 / The Black Tide Collection
+
     </span>
 
+
     <h2>
+
       Rule
+
       <br>
-      <em>your</em>
+
+      <em>
+        your
+      </em>
+
       <br>
+
       horizon.
+
     </h2>
 
 
@@ -1725,12 +3086,13 @@ footer{
 
 
     <a
-      href="#shop"
+      href="shop.html"
       class="light-btn">
 
       View the collection →
 
     </a>
+
 
   </div>
 
@@ -1745,19 +3107,33 @@ footer{
   class="manifesto"
   id="story">
 
+
   <div>
 
+
     <div class="manifesto-small">
+
       The Captain Abdullah Code
+
     </div>
 
+
     <h2>
+
       Don't follow
+
       <br>
-      <em>the map.</em>
+
+      <em>
+        the map.
+      </em>
+
       <br>
+
       Make the voyage.
+
     </h2>
+
 
   </div>
 
@@ -1774,20 +3150,30 @@ footer{
 
 
   <span class="shop-kicker">
+
     Private dispatches
+
   </span>
 
 
   <h2>
+
     Stay
+
     <br>
-    <em>untamed.</em>
+
+    <em>
+      untamed.
+    </em>
+
   </h2>
 
 
   <p>
+
     New drops, limited releases and stories from
     the Captain's world.
+
   </p>
 
 
@@ -1795,14 +3181,19 @@ footer{
     class="email-form"
     onsubmit="subscribe(event)">
 
+
     <input
       type="email"
       placeholder="YOUR EMAIL"
       required>
 
+
     <button type="submit">
+
       Join →
+
     </button>
+
 
   </form>
 
@@ -1818,13 +3209,16 @@ footer{
 
 <footer>
 
+
   <div class="footer-grid">
 
 
     <div class="footer-brand">
 
       CAPTAIN
+
       <br>
+
       ABDULLAH
 
     </div>
@@ -1832,86 +3226,110 @@ footer{
 
     <div class="footer-column">
 
+
       <h4>
         Explore
       </h4>
 
-      <a href="#shop">
+
+      <a href="shop.html">
         Shop
       </a>
+
 
       <a href="#collections">
         Collections
       </a>
 
+
       <a href="#story">
         The Code
       </a>
+
 
     </div>
 
 
     <div class="footer-column">
+
 
       <h4>
         Support
       </h4>
 
+
       <a href="#">
         Contact
       </a>
+
 
       <a href="#">
         Shipping
       </a>
 
+
       <a href="#">
         Returns
       </a>
+
 
     </div>
 
 
     <div class="footer-column">
 
+
       <h4>
         Follow
       </h4>
+
 
       <a href="#">
         Instagram
       </a>
 
+
       <a href="#">
         TikTok
       </a>
+
 
       <a href="#">
         YouTube
       </a>
 
+
     </div>
+
 
   </div>
 
 
   <div class="footer-bottom">
 
-    <span>
-      © 2026 CAPTAIN ABDULLAH
-    </span>
 
     <span>
-      Made for the ones who roam.
+
+      © 2026 CAPTAIN ABDULLAH
+
     </span>
+
+
+    <span>
+
+      Made for the ones who roam.
+
+    </span>
+
 
   </div>
+
 
 </footer>
 
 
 <!-- ======================================================
-     CART
+     CART OVERLAY
 ====================================================== -->
 
 <div
@@ -1920,6 +3338,10 @@ footer{
 </div>
 
 
+<!-- ======================================================
+     CART DRAWER
+====================================================== -->
+
 <aside
   class="cart-drawer"
   id="cartDrawer">
@@ -1927,15 +3349,23 @@ footer{
 
   <div class="cart-head">
 
+
     <div>
 
+
       <span class="cart-eyebrow">
+
         Your selection
+
       </span>
 
+
       <strong>
+
         SHOPPING BAG
+
       </strong>
+
 
     </div>
 
@@ -1948,6 +3378,7 @@ footer{
 
     </button>
 
+
   </div>
 
 
@@ -1959,15 +3390,21 @@ footer{
 
   <div class="cart-footer">
 
+
     <div class="cart-total-row">
+
 
       <span>
         Subtotal
       </span>
 
+
       <strong id="cartTotal">
+
         $0.00
+
       </strong>
+
 
     </div>
 
@@ -1981,9 +3418,339 @@ footer{
 
     </button>
 
+
   </div>
 
 </aside>
+
+
+<!-- ======================================================
+     PRODUCT OPTIONS OVERLAY
+====================================================== -->
+
+<div
+  class="options-overlay"
+  id="optionsOverlay">
+</div>
+
+
+<!-- ======================================================
+     PRODUCT OPTIONS WINDOW
+====================================================== -->
+
+<section
+  class="options-window"
+  id="optionsWindow">
+
+
+  <div class="options-head">
+
+
+    <h2>
+
+      CHOOSE OPTIONS
+
+    </h2>
+
+
+    <button
+      class="options-close"
+      id="optionsClose">
+
+      &times;
+
+    </button>
+
+
+  </div>
+
+
+  <div class="options-content">
+
+
+    <!-- PRODUCT IMAGE -->
+
+    <div class="options-product-image">
+
+
+      <img
+        id="optionsImage"
+        src=""
+        alt="Product">
+
+
+    </div>
+
+
+    <!-- PRODUCT NAME -->
+
+    <h3
+      class="options-product-name"
+      id="optionsProductName">
+
+    </h3>
+
+
+    <!-- PRODUCT PRICE -->
+
+    <div
+      class="options-product-price"
+      id="optionsProductPrice">
+
+    </div>
+
+
+    <!-- OPTIONS -->
+
+    <div class="options-selection">
+
+
+      <div class="options-size-head">
+
+
+        <label>
+          Size:
+        </label>
+
+
+        <button
+          class="size-chart"
+          id="sizeChartButton">
+
+          Size chart
+
+        </button>
+
+
+      </div>
+
+
+      <!-- SIZES -->
+
+      <div
+        class="size-buttons"
+        id="sizeButtons">
+
+
+        <button
+          class="size-button"
+          data-size="S">
+
+          S
+
+        </button>
+
+
+        <button
+          class="size-button"
+          data-size="M">
+
+          M
+
+        </button>
+
+
+        <button
+          class="size-button"
+          data-size="L">
+
+          L
+
+        </button>
+
+
+        <button
+          class="size-button"
+          data-size="XL">
+
+          XL
+
+        </button>
+
+
+      </div>
+
+
+      <!-- SIZE CHART -->
+
+      <div
+        class="size-chart-box"
+        id="sizeChartBox">
+
+
+        <h3>
+
+          CAPTAIN ABDULLAH — SIZE GUIDE
+
+        </h3>
+
+
+        <table class="size-chart-table">
+
+
+          <thead>
+
+            <tr>
+
+              <th>
+                Size
+              </th>
+
+              <th>
+                Chest
+              </th>
+
+              <th>
+                Waist
+              </th>
+
+            </tr>
+
+          </thead>
+
+
+          <tbody>
+
+
+            <tr>
+
+              <td>
+                S
+              </td>
+
+              <td>
+                36–38"
+              </td>
+
+              <td>
+                30–32"
+              </td>
+
+            </tr>
+
+
+            <tr>
+
+              <td>
+                M
+              </td>
+
+              <td>
+                38–40"
+              </td>
+
+              <td>
+                32–34"
+              </td>
+
+            </tr>
+
+
+            <tr>
+
+              <td>
+                L
+              </td>
+
+              <td>
+                40–42"
+              </td>
+
+              <td>
+                34–36"
+              </td>
+
+            </tr>
+
+
+            <tr>
+
+              <td>
+                XL
+              </td>
+
+              <td>
+                42–44"
+              </td>
+
+              <td>
+                36–38"
+              </td>
+
+            </tr>
+
+
+          </tbody>
+
+
+        </table>
+
+
+      </div>
+
+
+      <!-- QUANTITY -->
+
+      <div class="options-quantity">
+
+
+        <span class="quantity-title">
+
+          Quantity:
+
+        </span>
+
+
+        <div class="quantity-control">
+
+
+          <button
+            id="optionQtyMinus">
+
+            −
+
+          </button>
+
+
+          <span id="optionQty">
+
+            1
+
+          </span>
+
+
+          <button
+            id="optionQtyPlus">
+
+            +
+
+          </button>
+
+
+        </div>
+
+
+      </div>
+
+
+      <!-- ADD TO CART -->
+
+      <button
+        class="options-add"
+        id="optionsAddButton"
+        disabled>
+
+        SELECT A SIZE — ADD TO CART
+
+      </button>
+
+
+    </div>
+
+
+  </div>
+
+</section>
 
 
 <!-- ======================================================
@@ -2007,17 +3774,19 @@ const productsData = [
     name:"The Captain Shirt",
     price:899,
     category:"outerwear",
-    badge:"Limited(800)"
+    badge:"Limited (800)"
   },
+
 
   {
     image:"2.webp",
     brand:"CAPTAIN ABDULLAH",
-    name:"The Captain Shirt(Brown)",
+    name:"The Captain Shirt (Brown)",
     price:985,
     category:"outerwear",
-    badge:"Limited(Only 700)"
+    badge:"Limited (Only 700)"
   },
+
 
   {
     image:"3.webp",
@@ -2025,8 +3794,9 @@ const productsData = [
     name:"Hunter Signature Shirt",
     price:999,
     category:"essentials",
-    badge:"Limited(Only 699)"
+    badge:"Limited (Only 699)"
   },
+
 
   {
     image:"captain-jacket.webp",
@@ -2037,6 +3807,7 @@ const productsData = [
     badge:"Limited"
   },
 
+
   {
     image:"captain-pants.webp",
     brand:"CAPTAIN ABDULLAH",
@@ -2045,6 +3816,7 @@ const productsData = [
     category:"essentials",
     badge:""
   },
+
 
   {
     image:"captain-hoodie.webp",
@@ -2065,7 +3837,9 @@ const productsData = [
 const productsGrid =
   document.getElementById("productsGrid");
 
+
 let currentFilter = "all";
+
 
 const cart = [];
 
@@ -2076,16 +3850,24 @@ const cart = [];
 
 function renderProducts(){
 
+
   const visible =
     productsData.filter(
+
       p =>
+
         currentFilter === "all" ||
+
         p.category === currentFilter
+
     );
 
 
   productsGrid.innerHTML =
+
+
     visible.map(p => {
+
 
       const index =
         productsData.indexOf(p);
@@ -2095,69 +3877,89 @@ function renderProducts(){
 
         <article class="product">
 
+
           ${
             p.badge
-            ? `<div class="badge">${p.badge}</div>`
-            : ""
+
+              ? `<div class="badge">
+                   ${p.badge}
+                 </div>`
+
+              : ""
+
           }
 
 
           <div class="product-image">
 
-            <!--
-              PRODUCT PAGE LINK
 
-              1st product = 1.html
-              2nd product = 2.html
-              3rd product = 3.html
-              etc.
-            -->
+            <!-- IMAGE GOES TO 1.HTML, 2.HTML, 3.HTML ETC -->
 
             <a
               class="product-image-link"
               href="${index + 1}.html">
+
 
               <img
                 src="${p.image}"
                 alt="${p.name}"
                 loading="lazy">
 
+
             </a>
 
 
+            <!-- PLUS OPENS PRODUCT OPTIONS -->
+
             <button
               class="product-cart"
-              onclick="addToCart(${index})"
-              aria-label="Add ${p.name}">
+              onclick="openProductOptions(${index})"
+              aria-label="Choose options">
+
 
               +
 
+
             </button>
+
 
           </div>
 
 
           <div class="product-info">
 
+
             <span class="product-brand">
+
               ${p.brand}
+
             </span>
 
+
             <h3 class="product-name">
+
               ${p.name}
+
             </h3>
 
+
             <div class="product-price">
+
               $${p.price.toFixed(2)} USD
+
             </div>
 
+
           </div>
+
 
         </article>
 
       `;
 
+
     }).join("");
+
 
 }
 
@@ -2170,7 +3972,9 @@ document
   .querySelectorAll(".shop-tabs button")
   .forEach(btn => {
 
+
     btn.addEventListener("click", () => {
+
 
       document
         .querySelectorAll(".shop-tabs button")
@@ -2188,103 +3992,401 @@ document
 
       renderProducts();
 
+
     });
+
 
   });
 
 
 /* ======================================================
-   ADD TO CART
+   PRODUCT OPTIONS
 ====================================================== */
 
-function addToCart(index){
+const optionsWindow =
+  document.getElementById("optionsWindow");
+
+
+const optionsOverlay =
+  document.getElementById("optionsOverlay");
+
+
+const optionsImage =
+  document.getElementById("optionsImage");
+
+
+const optionsProductName =
+  document.getElementById("optionsProductName");
+
+
+const optionsProductPrice =
+  document.getElementById("optionsProductPrice");
+
+
+const optionsAddButton =
+  document.getElementById("optionsAddButton");
+
+
+const optionQty =
+  document.getElementById("optionQty");
+
+
+let selectedProductIndex = null;
+
+let selectedSize = "";
+
+let selectedQuantity = 1;
+
+
+/* ======================================================
+   OPEN PRODUCT OPTIONS
+====================================================== */
+
+function openProductOptions(index){
+
+
+  selectedProductIndex = index;
+
+  selectedSize = "";
+
+  selectedQuantity = 1;
+
 
   const product =
     productsData[index];
 
 
+  optionsImage.src =
+    product.image;
+
+
+  optionsImage.alt =
+    product.name;
+
+
+  optionsProductName.textContent =
+    product.name;
+
+
+  optionsProductPrice.textContent =
+    "$" + product.price.toFixed(2) + " USD";
+
+
+  optionQty.textContent =
+    selectedQuantity;
+
+
+  document
+    .querySelectorAll(".size-button")
+    .forEach(button => {
+
+      button.classList.remove("selected");
+
+    });
+
+
+  optionsAddButton.disabled =
+    true;
+
+
+  optionsAddButton.textContent =
+    "SELECT A SIZE — ADD TO CART";
+
+
+  document
+    .getElementById("sizeChartBox")
+    .classList.remove("show");
+
+
+  optionsWindow.classList.add("open");
+
+  optionsOverlay.classList.add("show");
+
+  document.body.classList.add("locked");
+
+}
+
+
+/* ======================================================
+   CLOSE PRODUCT OPTIONS
+====================================================== */
+
+function closeProductOptions(){
+
+
+  optionsWindow.classList.remove("open");
+
+  optionsOverlay.classList.remove("show");
+
+  unlock();
+
+
+}
+
+
+document
+  .getElementById("optionsClose")
+  .onclick =
+  closeProductOptions;
+
+
+optionsOverlay.onclick =
+  closeProductOptions;
+
+
+/* ======================================================
+   SIZE SELECTION
+====================================================== */
+
+document
+  .querySelectorAll(".size-button")
+  .forEach(button => {
+
+
+    button.addEventListener("click", () => {
+
+
+      document
+        .querySelectorAll(".size-button")
+        .forEach(b =>
+          b.classList.remove("selected")
+        );
+
+
+      button.classList.add("selected");
+
+
+      selectedSize =
+        button.dataset.size;
+
+
+      optionsAddButton.disabled =
+        false;
+
+
+      optionsAddButton.textContent =
+        "ADD TO CART — " + selectedSize;
+
+
+    });
+
+
+  });
+
+
+/* ======================================================
+   SIZE CHART
+====================================================== */
+
+document
+  .getElementById("sizeChartButton")
+  .onclick = () => {
+
+
+    document
+      .getElementById("sizeChartBox")
+      .classList.toggle("show");
+
+
+  };
+
+
+/* ======================================================
+   QUANTITY
+====================================================== */
+
+document
+  .getElementById("optionQtyMinus")
+  .onclick = () => {
+
+
+    if(selectedQuantity > 1){
+
+      selectedQuantity--;
+
+      optionQty.textContent =
+        selectedQuantity;
+
+    }
+
+
+  };
+
+
+document
+  .getElementById("optionQtyPlus")
+  .onclick = () => {
+
+
+    selectedQuantity++;
+
+
+    optionQty.textContent =
+      selectedQuantity;
+
+
+  };
+
+
+/* ======================================================
+   ADD SELECTED PRODUCT TO CART
+====================================================== */
+
+optionsAddButton.onclick = () => {
+
+
+  if(
+    selectedProductIndex === null ||
+    !selectedSize
+  ){
+
+    return;
+
+  }
+
+
+  const product =
+    productsData[selectedProductIndex];
+
+
   const existing =
     cart.find(
-      item => item.name === product.name
+
+      item =>
+
+        item.name === product.name &&
+
+        item.size === selectedSize
+
     );
 
 
   if(existing){
 
-    existing.qty++;
+
+    existing.qty +=
+      selectedQuantity;
+
 
   }else{
 
+
     cart.push({
+
       ...product,
-      qty:1
+
+      size:selectedSize,
+
+      qty:selectedQuantity
+
     });
+
 
   }
 
 
   renderCart();
 
+
+  closeProductOptions();
+
+
   openCart();
 
-}
+
+};
 
 
 /* ======================================================
-   RENDER CART
+   CART RENDER
 ====================================================== */
 
 function renderCart(){
 
+
   const count =
+
     cart.reduce(
-      (s,i) => s + i.qty,
+
+      (sum,item) =>
+
+        sum + item.qty,
+
       0
+
     );
 
 
   const total =
+
     cart.reduce(
-      (s,i) => s + i.price * i.qty,
+
+      (sum,item) =>
+
+        sum + item.price * item.qty,
+
       0
+
     );
 
 
-  document.getElementById("cartCount")
+  document
+    .getElementById("cartCount")
     .textContent = count;
 
 
-  document.getElementById("cartTotal")
+  document
+    .getElementById("cartTotal")
     .textContent =
       "$" + total.toFixed(2);
 
 
-  document.getElementById("checkoutBtn")
+  document
+    .getElementById("checkoutBtn")
     .disabled =
       cart.length === 0;
 
 
-  document.getElementById("cartItems")
+  document
+    .getElementById("cartItems")
     .innerHTML =
+
 
     cart.length
 
+
       ? cart.map((item,index) => `
+
 
           <div class="cart-item">
 
+
             <div>
 
+
               <div class="cart-item-name">
+
                 ${item.name}
+
               </div>
 
+
               <div class="cart-item-price">
+
                 $${item.price.toFixed(2)}
+
+              </div>
+
+
+              <div class="cart-item-size">
+
+                SIZE: ${item.size}
+
               </div>
 
 
               <div class="qty-control">
+
 
                 <button
                   onclick="changeQty(${index},-1)">
@@ -2295,7 +4397,9 @@ function renderCart(){
 
 
                 <span>
+
                   ${item.qty}
+
                 </span>
 
 
@@ -2306,7 +4410,9 @@ function renderCart(){
 
                 </button>
 
+
               </div>
+
 
             </div>
 
@@ -2319,24 +4425,34 @@ function renderCart(){
 
             </button>
 
+
           </div>
+
 
         `).join("")
 
 
       : `
 
+
           <div class="cart-empty">
+
 
             <i class="fa-solid fa-compass"></i>
 
+
             <p>
+
               Your bag is empty.
+
             </p>
+
 
           </div>
 
+
         `;
+
 
 }
 
@@ -2345,7 +4461,8 @@ function renderCart(){
    CART QUANTITY
 ====================================================== */
 
-function changeQty(index, amount){
+function changeQty(index,amount){
+
 
   cart[index].qty += amount;
 
@@ -2359,14 +4476,18 @@ function changeQty(index, amount){
 
   renderCart();
 
+
 }
 
 
 function removeItem(index){
 
+
   cart.splice(index,1);
 
+
   renderCart();
+
 
 }
 
@@ -2378,13 +4499,16 @@ function removeItem(index){
 const cartDrawer =
   document.getElementById("cartDrawer");
 
+
 const cartOverlay =
   document.getElementById("cartOverlay");
 
 
 function openCart(){
 
+
   closeMenu();
+
 
   cartDrawer.classList.add("open");
 
@@ -2392,10 +4516,12 @@ function openCart(){
 
   document.body.classList.add("locked");
 
+
 }
 
 
 function closeCart(){
+
 
   cartDrawer.classList.remove("open");
 
@@ -2403,20 +4529,24 @@ function closeCart(){
 
   unlock();
 
+
 }
 
 
 document
   .getElementById("cartButton")
-  .onclick = openCart;
+  .onclick =
+  openCart;
 
 
 document
   .getElementById("cartClose")
-  .onclick = closeCart;
+  .onclick =
+  closeCart;
 
 
-cartOverlay.onclick = closeCart;
+cartOverlay.onclick =
+  closeCart;
 
 
 /* ======================================================
@@ -2426,13 +4556,16 @@ cartOverlay.onclick = closeCart;
 const mobileMenu =
   document.getElementById("mobileMenu");
 
+
 const menuOverlay =
   document.getElementById("menuOverlay");
 
 
 function openMenu(){
 
+
   closeCart();
+
 
   mobileMenu.classList.add("open");
 
@@ -2440,10 +4573,12 @@ function openMenu(){
 
   document.body.classList.add("locked");
 
+
 }
 
 
 function closeMenu(){
+
 
   mobileMenu.classList.remove("open");
 
@@ -2451,41 +4586,55 @@ function closeMenu(){
 
   unlock();
 
+
 }
 
 
 function unlock(){
 
+
   if(
+
     !mobileMenu.classList.contains("open") &&
-    !cartDrawer.classList.contains("open")
+
+    !cartDrawer.classList.contains("open") &&
+
+    !optionsWindow.classList.contains("open")
+
   ){
 
     document.body.classList.remove("locked");
 
   }
 
+
 }
 
 
 document
   .getElementById("menuToggle")
-  .onclick = openMenu;
+  .onclick =
+  openMenu;
 
 
 document
   .getElementById("menuClose")
-  .onclick = closeMenu;
+  .onclick =
+  closeMenu;
 
 
-menuOverlay.onclick = closeMenu;
+menuOverlay.onclick =
+  closeMenu;
 
 
 document
   .querySelectorAll(".mobile-links a")
   .forEach(a => {
 
-    a.onclick = closeMenu;
+
+    a.onclick =
+      closeMenu;
+
 
   });
 
@@ -2498,13 +4647,17 @@ document
   .getElementById("checkoutBtn")
   .onclick = () => {
 
+
     if(cart.length){
+
 
       alert(
         "Checkout is ready to connect to your payment gateway."
       );
 
+
     }
+
 
   };
 
@@ -2514,6 +4667,7 @@ document
 ====================================================== */
 
 function subscribe(event){
+
 
   event.preventDefault();
 
@@ -2528,6 +4682,7 @@ function subscribe(event){
 
   event.target.reset();
 
+
 }
 
 
@@ -2539,12 +4694,17 @@ const siteHeader =
   document.getElementById("siteHeader");
 
 
-window.addEventListener("scroll", () => {
+window.addEventListener("scroll",() => {
+
 
   siteHeader.classList.toggle(
+
     "scrolled",
+
     window.scrollY > 30
+
   );
+
 
 });
 
@@ -2553,15 +4713,21 @@ window.addEventListener("scroll", () => {
    ESCAPE KEY
 ====================================================== */
 
-document.addEventListener("keydown", e => {
+document.addEventListener("keydown",e => {
+
 
   if(e.key === "Escape"){
+
 
     closeMenu();
 
     closeCart();
 
+    closeProductOptions();
+
+
   }
+
 
 });
 
@@ -2574,9 +4740,8 @@ renderProducts();
 
 renderCart();
 
-</script>
 
+</script>
 
 </body>
 </html>
-```
