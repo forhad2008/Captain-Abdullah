@@ -1,0 +1,3310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>The Captain Shirt (Brown) — Captain Abdullah</title>
+
+<meta
+  name="description"
+  content="The Captain Shirt (Brown) — Captain Abdullah."
+>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link
+  href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800;900&family=Cinzel:wght@500;600;700;800&family=DM+Serif+Display:ital@0;1&display=swap"
+  rel="stylesheet"
+>
+
+<link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+>
+
+<style>
+
+/* =========================================================
+   ROOT
+========================================================= */
+
+:root{
+  --paper:#eee9df;
+  --paper-2:#e5dfd3;
+  --white:#fffdf8;
+  --ink:#121212;
+  --muted:#777066;
+  --red:#8d1515;
+  --gold:#a27a3b;
+  --dark:#10100f;
+  --line:rgba(18,18,18,.13);
+
+  --header-height:78px;
+}
+
+
+/* =========================================================
+   RESET
+========================================================= */
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+html{
+  scroll-behavior:smooth;
+}
+
+body{
+  background:var(--paper);
+  color:var(--ink);
+  font-family:"Archivo",sans-serif;
+  overflow-x:hidden;
+}
+
+body.locked{
+  overflow:hidden;
+}
+
+a{
+  color:inherit;
+  text-decoration:none;
+}
+
+button{
+  font:inherit;
+  cursor:pointer;
+}
+
+
+/* =========================================================
+   HEADER
+   SAME STYLE AS INDEX.HTML
+========================================================= */
+
+.site-header{
+  position:fixed;
+  top:0;
+  left:0;
+  width:100%;
+  height:var(--header-height);
+
+  z-index:1000;
+
+  background:transparent;
+  border-bottom:1px solid transparent;
+
+  box-shadow:none;
+
+  backdrop-filter:none;
+  -webkit-backdrop-filter:none;
+
+  transition:
+    background .35s ease,
+    border-color .35s ease,
+    box-shadow .35s ease,
+    backdrop-filter .35s ease;
+}
+
+.site-header.scrolled{
+  background:rgba(255,255,255,.96);
+
+  border-bottom:1px solid rgba(0,0,0,.10);
+
+  box-shadow:
+    0 8px 30px rgba(0,0,0,.08);
+
+  backdrop-filter:blur(18px);
+  -webkit-backdrop-filter:blur(18px);
+}
+
+.header-inner{
+  width:100%;
+  max-width:1500px;
+  height:100%;
+  margin:auto;
+
+  padding:0 38px;
+
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+}
+
+
+/* =========================================================
+   BRAND
+========================================================= */
+
+.brand-mark{
+  display:flex;
+  align-items:center;
+  gap:11px;
+
+  min-width:240px;
+
+  font-family:Cinzel,serif;
+  font-weight:800;
+
+  letter-spacing:.16em;
+  font-size:13px;
+}
+
+.brand-mark .logo{
+  width:55px;
+  height:55px;
+  object-fit:contain;
+}
+
+
+/* =========================================================
+   DESKTOP NAV
+========================================================= */
+
+.desktop-nav{
+  flex:1;
+
+  display:flex;
+  justify-content:center;
+
+  gap:42px;
+}
+
+.desktop-nav a{
+  position:relative;
+
+  font-size:10px;
+  font-weight:700;
+
+  letter-spacing:.18em;
+  text-transform:uppercase;
+}
+
+.desktop-nav a::after{
+  content:"";
+
+  position:absolute;
+
+  left:0;
+  right:0;
+  bottom:-9px;
+
+  height:1px;
+
+  background:var(--red);
+
+  transform:scaleX(0);
+
+  transition:.3s;
+}
+
+.desktop-nav a:hover::after{
+  transform:scaleX(1);
+}
+
+
+/* =========================================================
+   HEADER CART
+========================================================= */
+
+.header-actions{
+  min-width:210px;
+
+  display:flex;
+  justify-content:flex-end;
+}
+
+.cart-button,
+.menu-toggle{
+  border:0;
+  background:none;
+  color:var(--ink);
+}
+
+.cart-button{
+  height:48px;
+
+  display:flex;
+  align-items:center;
+
+  gap:9px;
+  padding:0 10px;
+
+  font-size:10px;
+  font-weight:700;
+
+  letter-spacing:.14em;
+  text-transform:uppercase;
+}
+
+.cart-button b{
+  width:24px;
+  height:24px;
+
+  display:grid;
+  place-items:center;
+
+  border-radius:50%;
+
+  background:#111;
+  color:#fff;
+
+  font-size:9px;
+}
+
+
+/* =========================================================
+   MOBILE MENU BUTTON
+========================================================= */
+
+.menu-toggle{
+  display:none;
+
+  width:44px;
+  height:44px;
+}
+
+.menu-toggle span{
+  display:block;
+
+  width:22px;
+  height:1.5px;
+
+  background:currentColor;
+
+  margin:5px auto;
+}
+
+
+/* =========================================================
+   MOBILE MENU
+========================================================= */
+
+.mobile-menu{
+  position:fixed;
+
+  top:0;
+  left:0;
+
+  width:min(390px,88vw);
+  height:100dvh;
+
+  z-index:3000;
+
+  padding:30px;
+
+  background:#111;
+  color:#fff;
+
+  transform:translateX(-105%);
+
+  transition:
+    transform .4s cubic-bezier(.22,.8,.2,1);
+}
+
+.mobile-menu.open{
+  transform:translateX(0);
+}
+
+.menu-overlay,
+.cart-overlay{
+  position:fixed;
+
+  inset:0;
+
+  z-index:2990;
+
+  background:rgba(0,0,0,.58);
+
+  opacity:0;
+  visibility:hidden;
+
+  pointer-events:none;
+
+  transition:.3s;
+}
+
+.menu-overlay.show,
+.cart-overlay.show{
+  opacity:1;
+  visibility:visible;
+  pointer-events:auto;
+}
+
+.mobile-menu-head{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+
+  padding-bottom:22px;
+
+  border-bottom:1px solid rgba(255,255,255,.15);
+
+  font-family:Cinzel,serif;
+
+  font-size:13px;
+  font-weight:800;
+
+  letter-spacing:.18em;
+}
+
+.menu-close{
+  border:0;
+  background:none;
+
+  color:#fff;
+
+  font-size:30px;
+}
+
+.mobile-links{
+  margin-top:25px;
+}
+
+.mobile-links a{
+  display:flex;
+  justify-content:space-between;
+
+  padding:18px 0;
+
+  border-bottom:1px solid rgba(255,255,255,.12);
+
+  font-size:20px;
+  font-family:Cinzel,serif;
+}
+
+
+/* =========================================================
+   PRODUCT PAGE
+========================================================= */
+
+.product-page{
+  max-width:1500px;
+
+  margin:auto;
+
+  padding:
+    calc(var(--header-height) + 65px)
+    38px
+    100px;
+}
+
+
+/* =========================================================
+   BREADCRUMB
+========================================================= */
+
+.breadcrumb{
+  margin-bottom:35px;
+
+  color:#777;
+
+  font-size:9px;
+
+  letter-spacing:.20em;
+
+  text-transform:uppercase;
+}
+
+
+/* =========================================================
+   PRODUCT HERO
+========================================================= */
+
+.product-layout{
+  display:grid;
+
+  grid-template-columns:
+    minmax(0,1.08fr)
+    minmax(360px,.92fr);
+
+  gap:70px;
+
+  align-items:start;
+}
+
+
+/* =========================================================
+   GALLERY
+========================================================= */
+
+.gallery{
+  position:sticky;
+  top:105px;
+}
+
+.main-image{
+  width:100%;
+
+  aspect-ratio:1 / 1.08;
+
+  overflow:hidden;
+
+  background:#ddd7ca;
+}
+
+.main-image img{
+  width:100%;
+  height:100%;
+
+  object-fit:cover;
+
+  display:block;
+
+  transition:
+    transform .7s cubic-bezier(.2,.7,.2,1);
+}
+
+.main-image:hover img{
+  transform:scale(1.018);
+}
+
+.thumbnail-grid{
+  display:grid;
+
+  grid-template-columns:
+    repeat(4,1fr);
+
+  gap:8px;
+
+  margin-top:10px;
+}
+
+.thumbnail{
+  border:1px solid transparent;
+
+  padding:0;
+
+  background:#ddd7ca;
+
+  aspect-ratio:1;
+
+  overflow:hidden;
+}
+
+.thumbnail.active{
+  border-color:#111;
+}
+
+.thumbnail img{
+  width:100%;
+  height:100%;
+
+  display:block;
+
+  object-fit:cover;
+}
+
+
+/* =========================================================
+   PRODUCT INFORMATION
+========================================================= */
+
+.product-info-main{
+  padding-top:10px;
+}
+
+.product-kicker{
+  color:var(--muted);
+
+  font-size:10px;
+
+  letter-spacing:.30em;
+
+  text-transform:uppercase;
+}
+
+.product-number{
+  display:block;
+
+  margin-top:10px;
+
+  color:#999;
+
+  font-size:9px;
+
+  letter-spacing:.18em;
+}
+
+.product-title{
+  margin-top:18px;
+
+  max-width:800px;
+
+  font-size:
+    clamp(50px,6.5vw,100px);
+
+  line-height:.82;
+
+  letter-spacing:-.075em;
+
+  font-weight:900;
+
+  text-transform:uppercase;
+}
+
+.product-title em{
+  display:block;
+
+  margin-left:18px;
+
+  color:var(--red);
+
+  font-family:"DM Serif Display",serif;
+
+  font-style:italic;
+
+  font-weight:400;
+
+  text-transform:none;
+}
+
+.product-price{
+  margin-top:30px;
+
+  font-size:20px;
+
+  font-weight:700;
+
+  letter-spacing:.02em;
+}
+
+.product-description{
+  max-width:520px;
+
+  margin-top:27px;
+
+  color:#625d56;
+
+  font-size:13px;
+
+  line-height:1.95;
+}
+
+.product-description strong{
+  color:#222;
+}
+
+
+/* =========================================================
+   PRODUCT DETAILS
+========================================================= */
+
+.product-rule{
+  width:100%;
+  height:1px;
+
+  margin:32px 0;
+
+  background:var(--line);
+}
+
+.info-label{
+  margin-bottom:13px;
+
+  font-size:10px;
+  font-weight:700;
+
+  letter-spacing:.18em;
+
+  text-transform:uppercase;
+}
+
+.size-options{
+  display:flex;
+  flex-wrap:wrap;
+
+  gap:8px;
+}
+
+.size-option{
+  min-width:58px;
+  height:48px;
+
+  border:1px solid rgba(0,0,0,.20);
+
+  background:transparent;
+
+  color:#444;
+
+  font-size:10px;
+
+  letter-spacing:.15em;
+
+  transition:.25s;
+}
+
+.size-option:hover{
+  border-color:#111;
+}
+
+.size-option.active{
+  background:#111;
+  color:#fff;
+
+  border-color:#111;
+}
+
+
+/* =========================================================
+   ADD TO CART
+========================================================= */
+
+.purchase-row{
+  display:flex;
+
+  gap:10px;
+
+  margin-top:25px;
+}
+
+.quantity{
+  display:flex;
+
+  height:54px;
+
+  border:1px solid rgba(0,0,0,.18);
+}
+
+.quantity button{
+  width:45px;
+
+  border:0;
+
+  background:none;
+
+  color:#111;
+}
+
+.quantity span{
+  width:42px;
+
+  display:grid;
+  place-items:center;
+
+  font-size:12px;
+}
+
+.add-cart{
+  flex:1;
+
+  height:54px;
+
+  border:0;
+
+  background:#111;
+
+  color:#fff;
+
+  font-size:10px;
+  font-weight:800;
+
+  letter-spacing:.20em;
+
+  text-transform:uppercase;
+
+  transition:.25s;
+}
+
+.add-cart:hover{
+  background:var(--red);
+}
+
+.buy-now{
+  width:100%;
+
+  height:52px;
+
+  margin-top:10px;
+
+  border:1px solid #111;
+
+  background:transparent;
+
+  color:#111;
+
+  font-size:10px;
+  font-weight:800;
+
+  letter-spacing:.20em;
+
+  text-transform:uppercase;
+
+  transition:.25s;
+}
+
+.buy-now:hover{
+  background:#111;
+  color:#fff;
+}
+
+
+/* =========================================================
+   ACCORDION
+========================================================= */
+
+.product-accordion{
+  border-top:1px solid var(--line);
+}
+
+.accordion-row{
+  border-bottom:1px solid var(--line);
+}
+
+.accordion-button{
+  width:100%;
+
+  padding:19px 0;
+
+  border:0;
+
+  background:none;
+
+  display:flex;
+
+  align-items:center;
+  justify-content:space-between;
+
+  color:#111;
+
+  font-size:10px;
+  font-weight:700;
+
+  letter-spacing:.17em;
+
+  text-transform:uppercase;
+}
+
+.accordion-button i{
+  transition:.25s;
+}
+
+.accordion-row.open
+.accordion-button i{
+  transform:rotate(45deg);
+}
+
+.accordion-content{
+  display:none;
+
+  padding:
+    0
+    30px
+    20px
+    0;
+
+  color:#68625a;
+
+  font-size:12px;
+
+  line-height:1.9;
+}
+
+.accordion-row.open
+.accordion-content{
+  display:block;
+}
+
+
+/* =========================================================
+   PRODUCT STORY
+========================================================= */
+
+.product-story{
+  margin-top:100px;
+
+  padding:
+    90px 8vw;
+
+  background:#171614;
+
+  color:#fff;
+
+  display:grid;
+
+  grid-template-columns:
+    .8fr 1.2fr;
+
+  gap:80px;
+
+  align-items:center;
+}
+
+.story-label{
+  color:#aaa39a;
+
+  font-size:10px;
+
+  letter-spacing:.30em;
+
+  text-transform:uppercase;
+}
+
+.story-title{
+  margin-top:18px;
+
+  font-size:
+    clamp(50px,7vw,105px);
+
+  line-height:.82;
+
+  letter-spacing:-.07em;
+
+  text-transform:uppercase;
+}
+
+.story-title em{
+  color:#b48a4d;
+
+  font-family:"DM Serif Display",serif;
+
+  font-weight:400;
+}
+
+.story-copy{
+  max-width:600px;
+
+  color:#aaa39a;
+
+  font-size:13px;
+
+  line-height:2;
+}
+
+.story-copy p + p{
+  margin-top:22px;
+}
+
+.story-points{
+  margin-top:35px;
+
+  display:grid;
+
+  grid-template-columns:
+    repeat(3,1fr);
+
+  gap:12px;
+}
+
+.story-point{
+  padding:20px;
+
+  border:1px solid rgba(255,255,255,.12);
+}
+
+.story-point strong{
+  display:block;
+
+  margin-bottom:8px;
+
+  color:#fff;
+
+  font-family:Cinzel,serif;
+
+  font-size:11px;
+
+  letter-spacing:.13em;
+}
+
+.story-point span{
+  color:#888;
+
+  font-size:10px;
+
+  line-height:1.7;
+}
+
+
+/* =========================================================
+   COLLECTION COUNTER
+========================================================= */
+
+.collection-intro{
+  padding:100px 0 45px;
+
+  text-align:center;
+}
+
+.collection-kicker{
+  color:var(--muted);
+
+  font-size:10px;
+
+  letter-spacing:.35em;
+
+  text-transform:uppercase;
+}
+
+.collection-heading{
+  margin-top:18px;
+
+  font-size:
+    clamp(42px,6vw,85px);
+
+  line-height:.85;
+
+  letter-spacing:-.07em;
+
+  text-transform:uppercase;
+}
+
+.collection-heading em{
+  color:var(--red);
+
+  font-family:"DM Serif Display",serif;
+
+  font-weight:400;
+}
+
+
+/* =========================================================
+   ACCURATE PRODUCT COUNT
+========================================================= */
+
+.product-count{
+  margin-top:18px;
+
+  color:#777;
+
+  font-size:10px;
+
+  letter-spacing:.20em;
+
+  text-transform:uppercase;
+}
+
+
+/* =========================================================
+   RELATED PRODUCTS
+   SAME PRODUCT CARD LANGUAGE AS INDEX
+========================================================= */
+
+.related-products{
+  display:grid;
+
+  grid-template-columns:
+    repeat(2,minmax(0,1fr));
+
+  gap:26px 28px;
+
+  max-width:1500px;
+
+  margin:auto;
+}
+
+.related-card{
+  position:relative;
+
+  overflow:hidden;
+
+  background:#fff;
+
+  border:1px solid rgba(0,0,0,.06);
+}
+
+.related-image{
+  position:relative;
+
+  height:
+    clamp(330px,31vw,500px);
+
+  background:#ddd7ca;
+}
+
+.related-image a{
+  display:block;
+
+  width:100%;
+  height:100%;
+}
+
+.related-image img{
+  width:100%;
+  height:100%;
+
+  display:block;
+
+  object-fit:cover;
+
+  transition:.5s;
+}
+
+.related-card:hover
+.related-image img{
+  transform:scale(1.025);
+}
+
+.related-badge{
+  position:absolute;
+
+  top:17px;
+  left:17px;
+
+  z-index:3;
+
+  padding:10px 13px;
+
+  background:rgba(255,253,248,.88);
+
+  font-size:9px;
+  font-weight:600;
+
+  letter-spacing:.14em;
+
+  text-transform:uppercase;
+}
+
+.related-number{
+  position:absolute;
+
+  right:17px;
+  top:17px;
+
+  z-index:3;
+
+  color:#fff;
+
+  font-size:9px;
+
+  letter-spacing:.14em;
+
+  mix-blend-mode:difference;
+}
+
+.related-info{
+  min-height:150px;
+
+  padding:25px;
+
+  background:#fff;
+
+  border-top:1px solid rgba(0,0,0,.05);
+}
+
+.related-brand{
+  display:block;
+
+  margin-bottom:9px;
+
+  font-family:Cinzel,serif;
+
+  font-size:10px;
+  font-weight:700;
+
+  letter-spacing:.16em;
+}
+
+.related-name{
+  font-size:
+    clamp(16px,1.4vw,22px);
+
+  font-weight:400;
+
+  line-height:1.35;
+}
+
+.related-price{
+  margin-top:11px;
+
+  font-size:17px;
+  font-weight:700;
+}
+
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+footer{
+  margin-top:100px;
+
+  padding:
+    65px 5vw
+    30px;
+
+  background:#0c0c0c;
+
+  color:#fff;
+}
+
+.footer-grid{
+  display:grid;
+
+  grid-template-columns:
+    2fr 1fr 1fr 1fr;
+
+  gap:40px;
+}
+
+.footer-brand{
+  font-family:Cinzel,serif;
+
+  font-size:
+    clamp(28px,4.5vw,65px);
+
+  font-weight:800;
+
+  letter-spacing:-.04em;
+
+  line-height:.85;
+}
+
+.footer-column h4{
+  margin-bottom:20px;
+
+  color:#777;
+
+  font-size:9px;
+
+  letter-spacing:.20em;
+
+  text-transform:uppercase;
+}
+
+.footer-column a{
+  display:block;
+
+  margin-bottom:12px;
+
+  color:#aaa;
+
+  font-size:11px;
+}
+
+.footer-column a:hover{
+  color:#fff;
+}
+
+.footer-bottom{
+  display:flex;
+
+  justify-content:space-between;
+
+  margin-top:60px;
+
+  padding-top:20px;
+
+  border-top:1px solid #282828;
+
+  color:#666;
+
+  font-size:9px;
+
+  letter-spacing:.15em;
+}
+
+
+/* =========================================================
+   CART DRAWER
+   SAME STORAGE / STYLE AS INDEX
+========================================================= */
+
+.cart-drawer{
+  position:fixed;
+
+  top:0;
+  right:0;
+
+  z-index:3101;
+
+  width:min(460px,92vw);
+
+  height:100dvh;
+
+  padding:28px;
+
+  display:flex;
+
+  flex-direction:column;
+
+  background:#111;
+
+  color:#fff;
+
+  transform:translateX(105%);
+
+  transition:
+    transform .4s cubic-bezier(.22,.8,.2,1);
+}
+
+.cart-drawer.open{
+  transform:translateX(0);
+}
+
+.cart-head{
+  display:flex;
+
+  justify-content:space-between;
+
+  padding-bottom:20px;
+
+  border-bottom:1px solid #292929;
+}
+
+.cart-eyebrow{
+  display:block;
+
+  margin-bottom:8px;
+
+  color:#888;
+
+  font-size:12px;
+
+  letter-spacing:.20em;
+
+  text-transform:uppercase;
+}
+
+.cart-head strong{
+  font-family:Cinzel,serif;
+
+  font-size:17px;
+
+  letter-spacing:.12em;
+}
+
+.close{
+  border:0;
+
+  background:none;
+
+  color:#fff;
+
+  font-size:28px;
+}
+
+.cart-items{
+  flex:1;
+
+  overflow-y:auto;
+
+  padding:20px 0;
+}
+
+.cart-empty{
+  margin-top:70px;
+
+  text-align:center;
+
+  color:#888;
+}
+
+.cart-empty i{
+  display:block;
+
+  margin-bottom:20px;
+
+  color:#fff;
+
+  font-size:30px;
+}
+
+
+/* =========================================================
+   CART PRODUCT
+========================================================= */
+
+.cart-item{
+  display:grid;
+
+  grid-template-columns:
+    86px 1fr auto;
+
+  gap:15px;
+
+  padding:18px 0;
+
+  border-bottom:1px solid #292929;
+}
+
+.cart-item-image{
+  width:86px;
+  height:105px;
+
+  background:#222;
+
+  overflow:hidden;
+}
+
+.cart-item-image img{
+  width:100%;
+  height:100%;
+
+  object-fit:cover;
+}
+
+.cart-item-name{
+  font-size:12px;
+
+  line-height:1.5;
+
+  letter-spacing:.05em;
+}
+
+.cart-item-size{
+  margin-top:6px;
+
+  color:#aaa;
+
+  font-size:10px;
+
+  letter-spacing:.12em;
+
+  text-transform:uppercase;
+}
+
+.cart-item-price{
+  margin-top:7px;
+
+  color:#fff;
+
+  font-size:12px;
+  font-weight:700;
+}
+
+.qty-control{
+  display:flex;
+
+  align-items:center;
+
+  gap:10px;
+
+  margin-top:13px;
+}
+
+.qty-control button{
+  width:28px;
+  height:28px;
+
+  border:1px solid #333;
+
+  background:#181818;
+
+  color:#fff;
+}
+
+.qty-control span{
+  min-width:16px;
+
+  text-align:center;
+
+  font-size:11px;
+}
+
+.remove-item{
+  border:0;
+
+  background:none;
+
+  color:#888;
+
+  font-size:10px;
+}
+
+.remove-item:hover{
+  color:#fff;
+}
+
+
+/* =========================================================
+   CART FOOTER
+========================================================= */
+
+.cart-footer{
+  padding-top:20px;
+
+  border-top:1px solid #292929;
+}
+
+.cart-total-row{
+  display:flex;
+
+  justify-content:space-between;
+
+  font-size:14px;
+
+  text-transform:uppercase;
+
+  letter-spacing:.08em;
+}
+
+.checkout-btn{
+  width:100%;
+
+  margin-top:17px;
+
+  padding:17px;
+
+  border:0;
+
+  background:#fff;
+
+  color:#111;
+
+  font-size:10px;
+
+  font-weight:800;
+
+  letter-spacing:.18em;
+
+  text-transform:uppercase;
+}
+
+.checkout-btn:disabled{
+  opacity:.35;
+
+  cursor:not-allowed;
+}
+
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media(max-width:900px){
+
+  :root{
+    --header-height:68px;
+  }
+
+  .header-inner{
+    padding:0 14px;
+  }
+
+  .menu-toggle{
+    display:block;
+  }
+
+  .brand-mark{
+    position:absolute;
+
+    left:50%;
+
+    transform:translateX(-50%);
+
+    min-width:0;
+  }
+
+  .brand-mark span{
+    display:none;
+  }
+
+  .desktop-nav{
+    display:none;
+  }
+
+  .header-actions{
+    min-width:50px;
+  }
+
+  .cart-button span{
+    display:none;
+  }
+
+  .product-page{
+    padding:
+      calc(var(--header-height) + 40px)
+      20px
+      70px;
+  }
+
+  .product-layout{
+    grid-template-columns:1fr;
+
+    gap:45px;
+  }
+
+  .gallery{
+    position:static;
+  }
+
+  .product-info-main{
+    padding-top:0;
+  }
+
+  .product-story{
+    grid-template-columns:1fr;
+
+    gap:40px;
+
+    padding:
+      70px 8vw;
+  }
+
+  .story-points{
+    grid-template-columns:1fr 1fr;
+  }
+
+  .related-products{
+    gap:14px;
+  }
+
+  .related-image{
+    height:42vw;
+    min-height:250px;
+  }
+
+  .footer-grid{
+    grid-template-columns:1fr 1fr;
+  }
+
+  .footer-brand{
+    grid-column:1/-1;
+  }
+}
+
+
+@media(max-width:600px){
+
+  :root{
+    --header-height:64px;
+  }
+
+  .product-page{
+    padding:
+      calc(var(--header-height) + 25px)
+      12px
+      50px;
+  }
+
+  .breadcrumb{
+    margin-bottom:22px;
+
+    font-size:8px;
+  }
+
+  .product-title{
+    font-size:
+      clamp(43px,14vw,68px);
+  }
+
+  .product-description{
+    font-size:12px;
+  }
+
+  .purchase-row{
+    gap:7px;
+  }
+
+  .quantity{
+    height:50px;
+  }
+
+  .quantity button{
+    width:38px;
+  }
+
+  .quantity span{
+    width:35px;
+  }
+
+  .add-cart{
+    height:50px;
+
+    font-size:9px;
+  }
+
+  .buy-now{
+    height:48px;
+  }
+
+  .product-story{
+    margin-top:65px;
+
+    padding:
+      55px 25px;
+  }
+
+  .story-title{
+    font-size:
+      clamp(48px,15vw,75px);
+  }
+
+  .story-points{
+    grid-template-columns:1fr;
+  }
+
+  .collection-intro{
+    padding:
+      65px 0
+      35px;
+  }
+
+  .collection-heading{
+    font-size:
+      clamp(40px,13vw,65px);
+  }
+
+  .related-products{
+    grid-template-columns:1fr 1fr;
+
+    gap:8px;
+  }
+
+  .related-image{
+    height:55vw;
+    min-height:190px;
+  }
+
+  .related-badge{
+    top:8px;
+    left:8px;
+
+    padding:7px 8px;
+
+    font-size:7px;
+  }
+
+  .related-number{
+    top:9px;
+    right:8px;
+
+    font-size:7px;
+  }
+
+  .related-info{
+    min-height:120px;
+
+    padding:
+      14px 11px;
+  }
+
+  .related-brand{
+    font-size:7px;
+  }
+
+  .related-name{
+    font-size:12px;
+  }
+
+  .related-price{
+    margin-top:8px;
+
+    font-size:13px;
+  }
+
+  .cart-drawer{
+    width:92vw;
+
+    padding:
+      25px 18px;
+  }
+
+  .cart-item{
+    grid-template-columns:
+      65px 1fr;
+
+    gap:12px;
+  }
+
+  .cart-item-image{
+    width:65px;
+    height:82px;
+
+    grid-row:span 2;
+  }
+
+  .remove-item{
+    grid-column:2;
+
+    justify-self:start;
+
+    margin-top:-10px;
+  }
+
+  .footer-grid{
+    grid-template-columns:1fr;
+  }
+
+  .footer-brand{
+    grid-column:auto;
+  }
+
+  .footer-bottom{
+    display:block;
+
+    line-height:2.2;
+  }
+}
+
+</style>
+</head>
+
+
+<body>
+
+
+<!-- ======================================================
+     HEADER
+====================================================== -->
+
+<header
+  class="site-header"
+  id="siteHeader"
+>
+
+  <div class="header-inner">
+
+    <button
+      class="menu-toggle"
+      id="menuToggle"
+      aria-label="Open menu"
+    >
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+
+
+    <a
+      href="index.html"
+      class="brand-mark"
+    >
+
+      <img
+        src="logo.webp"
+        class="logo"
+        alt="Captain Abdullah logo"
+      >
+
+      <span>
+        CAPTAIN ABDULLAH
+      </span>
+
+    </a>
+
+
+    <nav class="desktop-nav">
+
+      <a href="index.html#shop">
+        Shop
+      </a>
+
+      <a href="index.html#collections">
+        Collections
+      </a>
+
+      <a href="index.html#story">
+        The Code
+      </a>
+
+      <a href="index.html#newsletter">
+        Journal
+      </a>
+
+    </nav>
+
+
+    <div class="header-actions">
+
+      <button
+        class="cart-button"
+        id="cartButton"
+      >
+
+        <i class="fa-solid fa-shopping-bag"></i>
+
+        <span>
+          Bag
+        </span>
+
+        <b id="cartCount">
+          0
+        </b>
+
+      </button>
+
+    </div>
+
+  </div>
+
+</header>
+
+
+<!-- ======================================================
+     MOBILE MENU
+====================================================== -->
+
+<div
+  class="menu-overlay"
+  id="menuOverlay"
+></div>
+
+
+<aside
+  class="mobile-menu"
+  id="mobileMenu"
+>
+
+  <div class="mobile-menu-head">
+
+    <span>
+      CAPTAIN ABDULLAH
+    </span>
+
+    <button
+      class="menu-close"
+      id="menuClose"
+    >
+      &times;
+    </button>
+
+  </div>
+
+
+  <div class="mobile-links">
+
+    <a href="index.html#shop">
+      Shop
+      <span>→</span>
+    </a>
+
+    <a href="index.html#collections">
+      Collections
+      <span>→</span>
+    </a>
+
+    <a href="index.html#story">
+      The Code
+      <span>→</span>
+    </a>
+
+    <a href="index.html#newsletter">
+      Journal
+      <span>→</span>
+    </a>
+
+  </div>
+
+</aside>
+
+
+
+<!-- ======================================================
+     PRODUCT
+====================================================== -->
+
+<main class="product-page">
+
+
+  <div class="breadcrumb">
+
+    <a href="index.html">
+      Home
+    </a>
+
+    &nbsp;/&nbsp;
+
+    <a href="index.html#shop">
+      Shop
+    </a>
+
+    &nbsp;/&nbsp;
+
+    The Hunter Shirt
+
+  </div>
+
+
+
+  <section class="product-layout">
+
+
+    <!-- ==================================================
+         GALLERY
+    ================================================== -->
+
+    <div class="gallery">
+
+      <div class="main-image">
+
+        <img
+          id="mainProductImage"
+          src="8.webp"
+          alt="Pirate Shirt"
+        >
+
+      </div>
+
+
+      <div class="thumbnail-grid">
+
+        <button
+          class="thumbnail active"
+          data-image="8.webp"
+        >
+          <img
+            src="8.webp"
+            alt=""
+          >
+        </button>
+
+        <button
+          class="thumbnail"
+          data-image="Bgat.webp"
+        >
+          <img
+            src="Bgat.webp"
+            alt=""
+          >
+        </button>
+
+        <button
+          class="thumbnail"
+          data-image="8.webp"
+        >
+          <img
+            src="8.webp"
+            alt=""
+          >
+        </button>
+
+      </div>
+
+    </div>
+
+
+
+    <!-- ==================================================
+         INFORMATION
+    ================================================== -->
+
+    <div class="product-info-main">
+
+      <div class="product-kicker">
+        CAPTAIN ABDULLAH / OUTERWEAR
+      </div>
+
+      <span class="product-number">
+        PRODUCT 02 / 06
+      </span>
+
+
+      <h1 class="product-title">
+        The Hunter
+        <em>Shirt.</em>
+      </h1>
+
+
+      <div class="product-price">
+        $899.00 USD
+      </div>
+
+
+      <p class="product-description">
+
+        A signature Captain Abdullah silhouette built around
+        <strong>weathered character, relaxed movement and modern adventure.</strong>
+
+        The brown edition brings a warmer direction to the
+        Captain's wardrobe while keeping the same rebellious
+        and refined visual language of the mainline collection.
+
+      </p>
+
+
+      <div class="product-rule"></div>
+
+
+      <!-- SIZE -->
+
+      <div class="info-label">
+        Select size
+      </div>
+
+
+      <div class="size-options">
+
+        <button
+          class="size-option"
+          data-size="S"
+        >
+          S
+        </button>
+
+        <button
+          class="size-option active"
+          data-size="M"
+        >
+          M
+        </button>
+
+        <button
+          class="size-option"
+          data-size="L"
+        >
+          L
+        </button>
+
+        <button
+          class="size-option"
+          data-size="XL"
+        >
+          XL
+        </button>
+
+        <button
+          class="size-option"
+          data-size="XXL"
+        >
+          XXL
+        </button>
+
+      </div>
+
+
+      <!-- PURCHASE -->
+
+      <div class="purchase-row">
+
+        <div class="quantity">
+
+          <button id="minus">
+            −
+          </button>
+
+          <span id="quantity">
+            1
+          </span>
+
+          <button id="plus">
+            +
+          </button>
+
+        </div>
+
+
+        <button
+          class="add-cart"
+          id="addCart"
+        >
+          Add to bag
+        </button>
+
+      </div>
+
+
+      <button
+        class="buy-now"
+        id="buyNow"
+      >
+        Buy this piece
+      </button>
+
+
+      <div class="product-rule"></div>
+
+
+      <!-- ACCORDION -->
+
+      <div class="product-accordion">
+
+
+        <div class="accordion-row open">
+
+          <button class="accordion-button">
+
+            The design
+
+            <i class="fa-solid fa-plus"></i>
+
+          </button>
+
+          <div class="accordion-content">
+
+            The Captain Shirt (Brown) is designed around
+            the idea of clothing that feels lived-in rather
+            than ordinary. Its warm brown direction,
+            relaxed proportions and adventure-inspired
+            character make it a central piece of the
+            Captain Abdullah wardrobe.
+
+          </div>
+
+        </div>
+
+
+        <div class="accordion-row">
+
+          <button class="accordion-button">
+
+            The philosophy
+
+            <i class="fa-solid fa-plus"></i>
+
+          </button>
+
+          <div class="accordion-content">
+
+            Captain Abdullah is built around freedom,
+            movement and choosing your own horizon.
+            Every piece is intended to feel like part
+            of a larger journey rather than simply
+            another item in a wardrobe.
+
+          </div>
+
+        </div>
+
+
+        <div class="accordion-row">
+
+          <button class="accordion-button">
+
+            Shipping & returns
+
+            <i class="fa-solid fa-plus"></i>
+
+          </button>
+
+          <div class="accordion-content">
+
+            Shipping times, delivery regions and the
+            final return policy can be connected here
+            when your store checkout system is ready.
+
+          </div>
+
+        </div>
+
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+
+  <!-- ====================================================
+       DESIGN STORY
+  ===================================================== -->
+
+  <section class="product-story">
+
+    <div>
+
+      <div class="story-label">
+        The philosophy behind the piece
+      </div>
+
+      <h2 class="story-title">
+        Wear the
+        <br>
+        <em>voyage.</em>
+      </h2>
+
+    </div>
+
+
+    <div class="story-copy">
+
+      <p>
+
+        Captain Abdullah is not built around clothing
+        that simply follows the current. The design
+        language is inspired by exploration, weathered
+        textures, old-world character and contemporary
+        silhouettes.
+
+      </p>
+
+
+      <p>
+
+        The Captain Shirt (Brown) translates that idea
+        into a versatile everyday piece — designed to
+        work alone, layered, dressed up or taken
+        somewhere completely unexpected.
+
+      </p>
+
+
+      <div class="story-points">
+
+        <div class="story-point">
+
+          <strong>
+            01 / CHARACTER
+          </strong>
+
+          <span>
+            A warm brown direction with a distinctive
+            Captain Abdullah attitude.
+          </span>
+
+        </div>
+
+
+        <div class="story-point">
+
+          <strong>
+            02 / MOVEMENT
+          </strong>
+
+          <span>
+            Created around an easy, relaxed approach
+            to everyday styling.
+          </span>
+
+        </div>
+
+
+        <div class="story-point">
+
+          <strong>
+            03 / HORIZON
+          </strong>
+
+          <span>
+            Designed for people who choose their own
+            direction.
+          </span>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+
+  <!-- ====================================================
+       ALL PRODUCTS
+       SAME DATA AS INDEX.HTML
+  ===================================================== -->
+
+  <section>
+
+    <div class="collection-intro">
+
+      <div class="collection-kicker">
+        03 / The Captain's Wardrobe
+      </div>
+
+      <h2 class="collection-heading">
+        Explore the
+        <em>collection.</em>
+      </h2>
+
+      <div
+        class="product-count"
+        id="productCount"
+      >
+        06 pieces in the mainline
+      </div>
+
+    </div>
+
+
+    <div
+      class="related-products"
+      id="relatedProducts"
+    ></div>
+
+  </section>
+
+
+</main>
+
+
+
+<!-- ======================================================
+     FOOTER
+====================================================== -->
+
+<footer>
+
+  <div class="footer-grid">
+
+
+    <div class="footer-brand">
+
+      CAPTAIN
+      <br>
+      ABDULLAH
+
+    </div>
+
+
+    <div class="footer-column">
+
+      <h4>
+        Explore
+      </h4>
+
+      <a href="index.html#shop">
+        Shop
+      </a>
+
+      <a href="index.html#collections">
+        Collections
+      </a>
+
+      <a href="index.html#story">
+        The Code
+      </a>
+
+    </div>
+
+
+    <div class="footer-column">
+
+      <h4>
+        Support
+      </h4>
+
+      <a href="#">
+        Contact
+      </a>
+
+      <a href="#">
+        Shipping
+      </a>
+
+      <a href="#">
+        Returns
+      </a>
+
+    </div>
+
+
+    <div class="footer-column">
+
+      <h4>
+        Follow
+      </h4>
+
+      <a href="#">
+        Instagram
+      </a>
+
+      <a href="#">
+        TikTok
+      </a>
+
+      <a href="#">
+        YouTube
+      </a>
+
+    </div>
+
+  </div>
+
+
+  <div class="footer-bottom">
+
+    <span>
+      © 2026 CAPTAIN ABDULLAH
+    </span>
+
+    <span>
+      Made for the ones who roam.
+    </span>
+
+  </div>
+
+</footer>
+
+
+
+<!-- ======================================================
+     CART OVERLAY
+====================================================== -->
+
+<div
+  class="cart-overlay"
+  id="cartOverlay"
+></div>
+
+
+
+<!-- ======================================================
+     CART DRAWER
+====================================================== -->
+
+<aside
+  class="cart-drawer"
+  id="cartDrawer"
+>
+
+
+  <div class="cart-head">
+
+    <div>
+
+      <span class="cart-eyebrow">
+        Your selection
+      </span>
+
+      <strong>
+        SHOPPING BAG
+      </strong>
+
+    </div>
+
+
+    <button
+      class="close"
+      id="cartClose"
+    >
+      &times;
+    </button>
+
+  </div>
+
+
+  <div
+    class="cart-items"
+    id="cartItems"
+  ></div>
+
+
+  <div class="cart-footer">
+
+    <div class="cart-total-row">
+
+      <span>
+        Subtotal
+      </span>
+
+      <strong id="cartTotal">
+        $0.00
+      </strong>
+
+    </div>
+
+
+    <button
+      class="checkout-btn"
+      id="checkoutBtn"
+      disabled
+    >
+      Proceed to checkout
+    </button>
+
+  </div>
+
+</aside>
+
+
+
+<script>
+
+"use strict";
+
+
+/* =========================================================
+   SAME PRODUCT DATA AS INDEX.HTML
+
+   IMPORTANT:
+   Do not create different prices/names here.
+========================================================= */
+
+const productsData = [
+
+  {
+    image:"8.webp",
+    brand:"CAPTAIN ABDULLAH",
+    name:"Captain Deckhand Shirt",
+    price:545,
+    category:"outerwear",
+    badge:"Exclusive Limited (700)"
+  },
+
+
+
+];
+
+
+/* =========================================================
+   CURRENT PRODUCT
+
+   2.html = second product
+========================================================= */
+
+const currentProduct = productsData[1];
+
+
+/* =========================================================
+   CART STORAGE
+   EXACT SAME KEY AS INDEX.HTML
+========================================================= */
+
+const CART_STORAGE_KEY =
+  "captainAbdullahCart";
+
+
+let cart = loadCart();
+
+
+function loadCart(){
+
+  try{
+
+    const saved =
+      localStorage.getItem(
+        CART_STORAGE_KEY
+      );
+
+    if(!saved){
+      return [];
+    }
+
+    const parsed =
+      JSON.parse(saved);
+
+    return Array.isArray(parsed)
+      ? parsed
+      : [];
+
+  }catch(error){
+
+    console.error(
+      "Could not load cart:",
+      error
+    );
+
+    return [];
+
+  }
+
+}
+
+
+function saveCart(){
+
+  localStorage.setItem(
+    CART_STORAGE_KEY,
+    JSON.stringify(cart)
+  );
+
+}
+
+
+/* =========================================================
+   PRODUCT IMAGE GALLERY
+========================================================= */
+
+const mainImage =
+  document.getElementById(
+    "mainProductImage"
+  );
+
+
+document
+  .querySelectorAll(".thumbnail")
+  .forEach(button => {
+
+    button.addEventListener(
+      "click",
+      () => {
+
+        mainImage.src =
+          button.dataset.image;
+
+        document
+          .querySelectorAll(".thumbnail")
+          .forEach(item =>
+            item.classList.remove("active")
+          );
+
+        button.classList.add("active");
+
+      }
+    );
+
+  });
+
+
+/* =========================================================
+   SIZE
+========================================================= */
+
+let selectedSize = "M";
+
+
+document
+  .querySelectorAll(".size-option")
+  .forEach(button => {
+
+    button.addEventListener(
+      "click",
+      () => {
+
+        document
+          .querySelectorAll(".size-option")
+          .forEach(item =>
+            item.classList.remove("active")
+          );
+
+        button.classList.add("active");
+
+        selectedSize =
+          button.dataset.size;
+
+      }
+    );
+
+  });
+
+
+/* =========================================================
+   QUANTITY
+========================================================= */
+
+let quantity = 1;
+
+
+document
+  .getElementById("minus")
+  .onclick = () => {
+
+    quantity =
+      Math.max(
+        1,
+        quantity - 1
+      );
+
+    document
+      .getElementById("quantity")
+      .textContent = quantity;
+
+  };
+
+
+document
+  .getElementById("plus")
+  .onclick = () => {
+
+    quantity++;
+
+    document
+      .getElementById("quantity")
+      .textContent = quantity;
+
+  };
+
+
+/* =========================================================
+   ADD PRODUCT TO CART
+========================================================= */
+
+function addProductToCart(){
+
+  const existing =
+    cart.find(item =>
+      item.name === currentProduct.name &&
+      item.size === selectedSize
+    );
+
+
+  if(existing){
+
+    existing.qty += quantity;
+
+  }else{
+
+    cart.push({
+
+      image:currentProduct.image,
+
+      brand:currentProduct.brand,
+
+      name:currentProduct.name,
+
+      price:currentProduct.price,
+
+      size:selectedSize,
+
+      qty:quantity
+
+    });
+
+  }
+
+
+  saveCart();
+
+  renderCart();
+
+  openCart();
+
+}
+
+
+/* =========================================================
+   BUTTONS
+========================================================= */
+
+document
+  .getElementById("addCart")
+  .onclick =
+  addProductToCart;
+
+
+document
+  .getElementById("buyNow")
+  .onclick =
+  addProductToCart;
+
+
+/* =========================================================
+   RENDER CART
+========================================================= */
+
+function renderCart(){
+
+  const count =
+    cart.reduce(
+      (sum,item) =>
+        sum + item.qty,
+      0
+    );
+
+
+  const total =
+    cart.reduce(
+      (sum,item) =>
+        sum +
+        item.price *
+        item.qty,
+      0
+    );
+
+
+  document
+    .getElementById("cartCount")
+    .textContent =
+    count;
+
+
+  document
+    .getElementById("cartTotal")
+    .textContent =
+    "$" +
+    total.toFixed(2);
+
+
+  document
+    .getElementById("checkoutBtn")
+    .disabled =
+    cart.length === 0;
+
+
+  const cartItems =
+    document.getElementById(
+      "cartItems"
+    );
+
+
+  if(!cart.length){
+
+    cartItems.innerHTML = `
+
+      <div class="cart-empty">
+
+        <i class="fa-solid fa-compass"></i>
+
+        <p>
+          Your bag is empty.
+        </p>
+
+      </div>
+
+    `;
+
+    return;
+
+  }
+
+
+  cartItems.innerHTML =
+    cart.map(
+      (item,index) => `
+
+        <div class="cart-item">
+
+
+          <div class="cart-item-image">
+
+            <img
+              src="${item.image}"
+              alt="${item.name}"
+            >
+
+          </div>
+
+
+          <div>
+
+            <div class="cart-item-name">
+              ${item.name}
+            </div>
+
+
+            <div class="cart-item-size">
+              Size: ${item.size}
+            </div>
+
+
+            <div class="cart-item-price">
+              $${item.price.toFixed(2)}
+            </div>
+
+
+            <div class="qty-control">
+
+              <button
+                onclick="changeQty(${index},-1)"
+              >
+                −
+              </button>
+
+              <span>
+                ${item.qty}
+              </span>
+
+              <button
+                onclick="changeQty(${index},1)"
+              >
+                +
+              </button>
+
+            </div>
+
+          </div>
+
+
+          <button
+            class="remove-item"
+            onclick="removeItem(${index})"
+          >
+            Remove
+          </button>
+
+
+        </div>
+
+      `
+    ).join("");
+
+}
+
+
+/* =========================================================
+   CHANGE CART QUANTITY
+========================================================= */
+
+function changeQty(
+  index,
+  amount
+){
+
+  if(!cart[index]){
+    return;
+  }
+
+
+  cart[index].qty += amount;
+
+
+  if(cart[index].qty <= 0){
+
+    cart.splice(
+      index,
+      1
+    );
+
+  }
+
+
+  saveCart();
+
+  renderCart();
+
+}
+
+
+/* =========================================================
+   REMOVE CART ITEM
+========================================================= */
+
+function removeItem(index){
+
+  cart.splice(
+    index,
+    1
+  );
+
+  saveCart();
+
+  renderCart();
+
+}
+
+
+/* =========================================================
+   CART DRAWER
+========================================================= */
+
+const cartDrawer =
+  document.getElementById(
+    "cartDrawer"
+  );
+
+const cartOverlay =
+  document.getElementById(
+    "cartOverlay"
+  );
+
+
+function openCart(){
+
+  closeMenu();
+
+  cartDrawer
+    .classList
+    .add("open");
+
+  cartOverlay
+    .classList
+    .add("show");
+
+  document.body
+    .classList
+    .add("locked");
+
+}
+
+
+function closeCart(){
+
+  cartDrawer
+    .classList
+    .remove("open");
+
+  cartOverlay
+    .classList
+    .remove("show");
+
+  unlockBody();
+
+}
+
+
+document
+  .getElementById("cartButton")
+  .onclick =
+  openCart;
+
+
+document
+  .getElementById("cartClose")
+  .onclick =
+  closeCart;
+
+
+cartOverlay.onclick =
+  closeCart;
+
+
+/* =========================================================
+   MOBILE MENU
+========================================================= */
+
+const mobileMenu =
+  document.getElementById(
+    "mobileMenu"
+  );
+
+const menuOverlay =
+  document.getElementById(
+    "menuOverlay"
+  );
+
+
+function openMenu(){
+
+  closeCart();
+
+  mobileMenu
+    .classList
+    .add("open");
+
+  menuOverlay
+    .classList
+    .add("show");
+
+  document.body
+    .classList
+    .add("locked");
+
+}
+
+
+function closeMenu(){
+
+  mobileMenu
+    .classList
+    .remove("open");
+
+  menuOverlay
+    .classList
+    .remove("show");
+
+  unlockBody();
+
+}
+
+
+function unlockBody(){
+
+  if(
+    !mobileMenu.classList.contains("open") &&
+    !cartDrawer.classList.contains("open")
+  ){
+
+    document.body
+      .classList
+      .remove("locked");
+
+  }
+
+}
+
+
+document
+  .getElementById("menuToggle")
+  .onclick =
+  openMenu;
+
+
+document
+  .getElementById("menuClose")
+  .onclick =
+  closeMenu;
+
+
+menuOverlay.onclick =
+  closeMenu;
+
+
+document
+  .querySelectorAll(".mobile-links a")
+  .forEach(link => {
+
+    link.onclick =
+      closeMenu;
+
+  });
+
+
+/* =========================================================
+   ACCORDION
+========================================================= */
+
+document
+  .querySelectorAll(".accordion-button")
+  .forEach(button => {
+
+    button.addEventListener(
+      "click",
+      () => {
+
+        button
+          .parentElement
+          .classList
+          .toggle("open");
+
+      }
+    );
+
+  });
+
+
+/* =========================================================
+   RELATED PRODUCT CARDS
+
+   EXACT SAME DATA AS INDEX.HTML
+========================================================= */
+
+const relatedProducts =
+  document.getElementById(
+    "relatedProducts"
+  );
+
+
+document
+  .getElementById("productCount")
+  .textContent =
+  `${productsData.length} pieces in the mainline`;
+
+
+function renderRelatedProducts(){
+
+  relatedProducts.innerHTML =
+    productsData
+      .map(
+        (product,index) => {
+
+          return `
+
+            <article class="related-card">
+
+
+              ${
+                product.badge
+                ?
+                `
+                <div class="related-badge">
+                  ${product.badge}
+                </div>
+                `
+                :
+                ""
+              }
+
+
+              <div class="related-number">
+                ${String(index + 1).padStart(2,"0")}
+                / ${String(productsData.length).padStart(2,"0")}
+              </div>
+
+
+              <div class="related-image">
+
+                <a
+                  href="${index + 1}.html"
+                >
+
+                  <img
+                    src="${product.image}"
+                    alt="${product.name}"
+                    loading="lazy"
+                  >
+
+                </a>
+
+              </div>
+
+
+              <div class="related-info">
+
+                <span class="related-brand">
+                  ${product.brand}
+                </span>
+
+
+                <h3 class="related-name">
+                  ${product.name}
+                </h3>
+
+
+                <div class="related-price">
+                  $${product.price.toFixed(2)} USD
+                </div>
+
+              </div>
+
+
+            </article>
+
+          `;
+
+        }
+      )
+      .join("");
+
+}
+
+
+renderRelatedProducts();
+
+
+/* =========================================================
+   HEADER SCROLL
+   SAME AS INDEX.HTML
+========================================================= */
+
+const siteHeader =
+  document.getElementById(
+    "siteHeader"
+  );
+
+
+function updateHeader(){
+
+  siteHeader.classList.toggle(
+    "scrolled",
+    window.scrollY > 30
+  );
+
+}
+
+
+window.addEventListener(
+  "scroll",
+  updateHeader,
+  {passive:true}
+);
+
+
+/* =========================================================
+   ESCAPE
+========================================================= */
+
+document.addEventListener(
+  "keydown",
+  event => {
+
+    if(event.key === "Escape"){
+
+      closeMenu();
+      closeCart();
+
+    }
+
+  }
+);
+
+
+/* =========================================================
+   CHECKOUT
+========================================================= */
+
+document
+  .getElementById("checkoutBtn")
+  .onclick =
+  () => {
+
+    if(cart.length){
+
+      alert(
+        "Checkout is ready to connect to your payment gateway."
+      );
+
+    }
+
+  };
+
+
+/* =========================================================
+   INITIALIZE
+========================================================= */
+
+renderCart();
+
+updateHeader();
+
+</script>
+
+</body>
+</html>
