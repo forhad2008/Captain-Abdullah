@@ -1,0 +1,3526 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+
+<title>Shop — CAPTAIN ABDULLAH</title>
+
+<meta
+  name="description"
+  content="Shop Captain Abdullah — independent fashion for those who choose their own horizon."
+>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link
+  href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800;900&family=Cinzel:wght@500;600;700;800&family=DM+Serif+Display:ital@0;1&display=swap"
+  rel="stylesheet"
+>
+
+<link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+>
+
+<style>
+
+/* =========================================================
+   ROOT
+========================================================= */
+
+:root{
+
+  --paper:#eee9df;
+  --paper2:#e5dfd3;
+  --white:#fffdf8;
+
+  --ink:#121212;
+  --muted:#777066;
+
+  --red:#8d1515;
+  --gold:#a27a3b;
+
+  --dark:#10100f;
+
+  --line:rgba(18,18,18,.13);
+
+  --header-height:78px;
+
+  --ease:cubic-bezier(.22,.8,.2,1);
+}
+
+
+/* =========================================================
+   RESET
+========================================================= */
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+html{
+  scroll-behavior:smooth;
+}
+
+body{
+  background:var(--paper);
+  color:var(--ink);
+  font-family:Archivo,sans-serif;
+  overflow-x:hidden;
+}
+
+body.locked{
+  overflow:hidden;
+}
+
+a{
+  color:inherit;
+  text-decoration:none;
+}
+
+button,
+input{
+  font:inherit;
+}
+
+button{
+  cursor:pointer;
+}
+
+img{
+  max-width:100%;
+}
+
+
+/* =========================================================
+   HEADER
+========================================================= */
+
+.site-header{
+
+  position:fixed;
+
+  inset:0 0 auto;
+
+  width:100%;
+  height:var(--header-height);
+
+  z-index:1000;
+
+  background:rgba(255,255,255,.94);
+
+  border-bottom:1px solid rgba(0,0,0,.09);
+
+  box-shadow:0 8px 35px rgba(0,0,0,.06);
+
+  backdrop-filter:blur(18px);
+
+  transition:.35s ease;
+}
+
+.header-inner{
+
+  width:100%;
+  max-width:1500px;
+
+  height:100%;
+
+  margin:auto;
+
+  padding:0 38px;
+
+  display:flex;
+
+  align-items:center;
+
+  justify-content:space-between;
+}
+
+
+/* BRAND */
+
+.brand-mark{
+
+  min-width:240px;
+
+  display:flex;
+
+  align-items:center;
+
+  gap:11px;
+
+  font-family:Cinzel,serif;
+
+  font-size:13px;
+
+  font-weight:800;
+
+  letter-spacing:.16em;
+}
+
+.brand-mark .logo{
+
+  width:55px;
+  height:55px;
+
+  object-fit:contain;
+}
+
+
+/* NAV */
+
+.desktop-nav{
+
+  flex:1;
+
+  display:flex;
+
+  justify-content:center;
+
+  align-items:center;
+
+  gap:42px;
+}
+
+.desktop-nav a{
+
+  position:relative;
+
+  font-size:10px;
+
+  font-weight:700;
+
+  letter-spacing:.18em;
+
+  text-transform:uppercase;
+
+  transition:.25s ease;
+}
+
+.desktop-nav a::after{
+
+  content:"";
+
+  position:absolute;
+
+  left:0;
+  right:0;
+
+  bottom:-9px;
+
+  height:1px;
+
+  background:var(--red);
+
+  transform:scaleX(0);
+
+  transition:transform .3s var(--ease);
+}
+
+.desktop-nav a:hover{
+  color:var(--red);
+}
+
+.desktop-nav a:hover::after{
+  transform:scaleX(1);
+}
+
+
+/* HEADER ACTIONS */
+
+.header-actions{
+
+  min-width:210px;
+
+  display:flex;
+
+  justify-content:flex-end;
+}
+
+.cart-button,
+.menu-toggle{
+
+  border:0;
+
+  background:none;
+
+  color:var(--ink);
+}
+
+.cart-button{
+
+  height:48px;
+
+  display:flex;
+
+  align-items:center;
+
+  gap:9px;
+
+  padding:0 10px;
+
+  font-size:10px;
+
+  font-weight:700;
+
+  letter-spacing:.14em;
+
+  text-transform:uppercase;
+
+  transition:.25s ease;
+}
+
+.cart-button:hover{
+  color:var(--red);
+}
+
+.cart-button i{
+  font-size:13px;
+}
+
+.cart-button b{
+
+  width:24px;
+  height:24px;
+
+  display:grid;
+
+  place-items:center;
+
+  border-radius:50%;
+
+  background:#111;
+
+  color:#fff;
+
+  font-size:9px;
+
+  transition:.25s ease;
+}
+
+.cart-button:hover b{
+
+  background:var(--red);
+
+  transform:scale(1.08);
+}
+
+
+/* =========================================================
+   MOBILE MENU BUTTON
+========================================================= */
+
+.menu-toggle{
+
+  display:none;
+
+  width:44px;
+  height:44px;
+}
+
+.menu-toggle span{
+
+  display:block;
+
+  width:22px;
+  height:1.5px;
+
+  margin:5px auto;
+
+  background:currentColor;
+
+  transition:.3s ease;
+}
+
+
+/* =========================================================
+   MOBILE MENU
+========================================================= */
+
+.mobile-menu{
+
+  position:fixed;
+
+  top:0;
+  left:0;
+
+  width:min(390px,88vw);
+
+  height:100dvh;
+
+  z-index:3000;
+
+  padding:30px;
+
+  background:#111;
+
+  color:#fff;
+
+  transform:translateX(-105%);
+
+  transition:transform .45s var(--ease);
+
+  box-shadow:15px 0 50px rgba(0,0,0,.25);
+}
+
+.mobile-menu.open{
+  transform:translateX(0);
+}
+
+.menu-overlay,
+.cart-overlay{
+
+  position:fixed;
+
+  inset:0;
+
+  z-index:2990;
+
+  background:rgba(0,0,0,.58);
+
+  opacity:0;
+
+  visibility:hidden;
+
+  pointer-events:none;
+
+  transition:.3s ease;
+}
+
+.menu-overlay.show,
+.cart-overlay.show{
+
+  opacity:1;
+
+  visibility:visible;
+
+  pointer-events:auto;
+}
+
+.mobile-menu-head{
+
+  display:flex;
+
+  align-items:center;
+
+  justify-content:space-between;
+
+  padding-bottom:22px;
+
+  border-bottom:1px solid rgba(255,255,255,.15);
+
+  font-family:Cinzel,serif;
+
+  font-size:13px;
+
+  font-weight:800;
+
+  letter-spacing:.18em;
+}
+
+.menu-close{
+
+  width:40px;
+  height:40px;
+
+  border:0;
+
+  background:none;
+
+  color:#fff;
+
+  font-size:30px;
+
+  transition:.25s ease;
+}
+
+.menu-close:hover{
+
+  color:#aaa;
+
+  transform:rotate(90deg);
+}
+
+.mobile-links{
+  margin-top:25px;
+}
+
+.mobile-links a{
+
+  display:flex;
+
+  justify-content:space-between;
+
+  align-items:center;
+
+  padding:18px 0;
+
+  border-bottom:1px solid rgba(255,255,255,.12);
+
+  font-family:Cinzel,serif;
+
+  font-size:20px;
+
+  transition:.25s ease;
+}
+
+.mobile-links a:hover{
+
+  padding-left:8px;
+
+  color:#c8a36a;
+}
+
+.mobile-links a span{
+
+  color:#777;
+
+  transition:.25s ease;
+}
+
+.mobile-links a:hover span{
+
+  color:#fff;
+
+  transform:translateX(5px);
+}
+
+
+/* =========================================================
+   SHOP PAGE
+========================================================= */
+
+.shop-page{
+
+  padding-top:var(--header-height);
+
+  min-height:100vh;
+}
+
+
+/* =========================================================
+   SHOP INTRO
+========================================================= */
+
+.shop-intro{
+
+  padding:90px 25px 55px;
+
+  text-align:center;
+
+  border-bottom:1px solid var(--line);
+}
+
+.shop-intro-kicker{
+
+  display:block;
+
+  margin-bottom:20px;
+
+  color:var(--muted);
+
+  font-size:10px;
+
+  letter-spacing:.35em;
+
+  text-transform:uppercase;
+}
+
+.shop-intro h1{
+
+  font-size:clamp(55px,9vw,125px);
+
+  line-height:.82;
+
+  letter-spacing:-.075em;
+
+  text-transform:uppercase;
+}
+
+.shop-intro h1 em{
+
+  color:var(--red);
+
+  font-family:"DM Serif Display",serif;
+
+  font-weight:400;
+}
+
+
+/* =========================================================
+   FILTERS
+========================================================= */
+
+.shop-controls{
+
+  max-width:1500px;
+
+  margin:auto;
+
+  padding:30px 38px;
+
+  display:flex;
+
+  justify-content:space-between;
+
+  align-items:center;
+
+  border-bottom:1px solid var(--line);
+}
+
+.shop-count{
+
+  color:var(--muted);
+
+  font-size:9px;
+
+  letter-spacing:.2em;
+
+  text-transform:uppercase;
+}
+
+.shop-tabs{
+
+  display:flex;
+
+  align-items:center;
+
+  gap:35px;
+}
+
+.shop-tabs button{
+
+  position:relative;
+
+  padding:0 0 9px;
+
+  border:0;
+
+  background:none;
+
+  color:#666;
+
+  font-family:Cinzel,serif;
+
+  font-size:10px;
+
+  font-weight:700;
+
+  letter-spacing:.15em;
+
+  text-transform:uppercase;
+
+  transition:.25s ease;
+}
+
+.shop-tabs button:hover{
+  color:var(--red);
+}
+
+.shop-tabs button.active{
+  color:#111;
+}
+
+.shop-tabs button.active::after{
+
+  content:"";
+
+  position:absolute;
+
+  left:0;
+  right:0;
+
+  bottom:0;
+
+  height:1px;
+
+  background:#111;
+}
+
+
+/* =========================================================
+   PRODUCT GRID
+========================================================= */
+
+.products-wrapper{
+
+  padding:45px 24px 100px;
+}
+
+.products{
+
+  width:100%;
+
+  max-width:1500px;
+
+  margin:auto;
+
+  display:grid;
+
+  grid-template-columns:repeat(2,minmax(0,1fr));
+
+  gap:30px;
+}
+
+
+/* PRODUCT */
+
+.product{
+
+  position:relative;
+
+  overflow:hidden;
+
+  background:#fff;
+
+  border:1px solid rgba(0,0,0,.06);
+
+  transition:
+    transform .35s var(--ease),
+    box-shadow .35s ease;
+}
+
+.product:hover{
+
+  transform:translateY(-5px);
+
+  box-shadow:
+    0 22px 55px rgba(0,0,0,.11);
+}
+
+
+/* IMAGE */
+
+.product-image{
+
+  position:relative;
+
+  width:100%;
+
+  height:clamp(430px,42vw,650px);
+
+  overflow:hidden;
+
+  background:#ddd7ca;
+}
+
+.product-image-link{
+
+  display:block;
+
+  width:100%;
+  height:100%;
+}
+
+.product-image-link img{
+
+  width:100%;
+  height:100%;
+
+  display:block;
+
+  object-fit:cover;
+
+  transition:
+    transform .75s var(--ease);
+}
+
+.product:hover .product-image-link img{
+  transform:scale(1.035);
+}
+
+
+/* BADGE */
+
+.badge{
+
+  position:absolute;
+
+  top:18px;
+  left:18px;
+
+  z-index:5;
+
+  padding:10px 13px;
+
+  background:rgba(255,253,248,.9);
+
+  font-size:9px;
+
+  font-weight:700;
+
+  letter-spacing:.14em;
+
+  text-transform:uppercase;
+
+  backdrop-filter:blur(10px);
+}
+
+
+/* ADD BUTTON */
+
+.product-cart{
+
+  position:absolute;
+
+  right:18px;
+  bottom:18px;
+
+  z-index:10;
+
+  width:60px;
+  height:60px;
+
+  display:grid;
+
+  place-items:center;
+
+  border:1px solid rgba(0,0,0,.12);
+
+  background:#fff;
+
+  color:#111;
+
+  font-size:34px;
+
+  font-weight:300;
+
+  line-height:1;
+
+  transition:.25s ease;
+}
+
+.product-cart:hover{
+
+  background:#111;
+
+  color:#fff;
+
+  transform:translateY(-4px);
+}
+
+
+/* PRODUCT INFO */
+
+.product-info{
+
+  min-height:155px;
+
+  padding:25px 24px 28px;
+
+  border-top:1px solid rgba(0,0,0,.06);
+}
+
+.product-brand{
+
+  display:block;
+
+  margin-bottom:8px;
+
+  font-family:Cinzel,serif;
+
+  font-size:9px;
+
+  font-weight:700;
+
+  letter-spacing:.17em;
+
+  color:#555;
+}
+
+.product-name{
+
+  max-width:90%;
+
+  font-size:clamp(17px,1.5vw,24px);
+
+  font-weight:400;
+
+  line-height:1.3;
+}
+
+.product-price{
+
+  margin-top:13px;
+
+  font-size:16px;
+
+  font-weight:700;
+}
+
+
+/* =========================================================
+   CART DRAWER
+========================================================= */
+
+.cart-drawer{
+
+  position:fixed;
+
+  top:0;
+  right:0;
+
+  z-index:3101;
+
+  width:min(600px,94vw);
+
+  height:100dvh;
+
+  padding:38px 30px 25px;
+
+  display:flex;
+
+  flex-direction:column;
+
+  background:#090909;
+
+  color:#fff;
+
+  transform:translateX(105%);
+
+  transition:transform .45s var(--ease);
+
+  box-shadow:-20px 0 60px rgba(0,0,0,.28);
+}
+
+.cart-drawer.open{
+  transform:translateX(0);
+}
+
+
+/* CART HEADER */
+
+.cart-head{
+
+  display:flex;
+
+  justify-content:space-between;
+
+  align-items:center;
+
+  padding-bottom:24px;
+
+  border-bottom:1px solid #242424;
+}
+
+.cart-head strong{
+
+  font-family:"DM Serif Display",serif;
+
+  font-size:28px;
+
+  font-weight:400;
+
+  letter-spacing:.16em;
+
+  text-transform:uppercase;
+}
+
+.close{
+
+  width:40px;
+  height:40px;
+
+  display:grid;
+
+  place-items:center;
+
+  padding:0;
+
+  border:0;
+
+  background:none;
+
+  color:#777;
+
+  font-size:32px;
+
+  line-height:1;
+
+  transition:.25s ease;
+}
+
+.close:hover{
+
+  color:#fff;
+
+  transform:rotate(90deg);
+}
+
+
+/* CART ITEMS */
+
+.cart-items{
+
+  flex:1;
+
+  overflow-y:auto;
+
+  overflow-x:hidden;
+
+  padding:18px 2px;
+
+  scrollbar-width:thin;
+
+  scrollbar-color:#333 transparent;
+}
+
+.cart-items::-webkit-scrollbar{
+  width:4px;
+}
+
+.cart-items::-webkit-scrollbar-track{
+  background:transparent;
+}
+
+.cart-items::-webkit-scrollbar-thumb{
+
+  background:#333;
+
+  border-radius:20px;
+}
+
+.cart-empty{
+
+  margin-top:100px;
+
+  text-align:center;
+
+  color:#777;
+}
+
+.cart-empty i{
+
+  display:block;
+
+  margin-bottom:20px;
+
+  color:#aaa;
+
+  font-size:30px;
+}
+
+
+/* CART ITEM */
+
+.cart-item{
+
+  position:relative;
+
+  display:grid;
+
+  grid-template-columns:92px minmax(0,1fr) 24px;
+
+  gap:16px;
+
+  align-items:center;
+
+  width:100%;
+
+  margin-bottom:10px;
+
+  padding:12px;
+
+  background:#111;
+
+  border:1px solid #242424;
+
+  border-radius:5px;
+
+  transition:.25s ease;
+}
+
+.cart-item:hover{
+
+  background:#141414;
+
+  border-color:#363636;
+
+  transform:translateY(-1px);
+}
+
+
+/* CART IMAGE */
+
+.cart-item-image{
+
+  width:92px;
+  height:108px;
+
+  overflow:hidden;
+
+  background:#181818;
+}
+
+.cart-item-image img{
+
+  width:100%;
+  height:100%;
+
+  display:block;
+
+  object-fit:cover;
+
+  transition:.4s var(--ease);
+}
+
+.cart-item:hover .cart-item-image img{
+  transform:scale(1.045);
+}
+
+
+/* CART INFO */
+
+.cart-item-info{
+  min-width:0;
+
+  display:flex;
+
+  flex-direction:column;
+
+  justify-content:center;
+}
+
+.cart-item-brand{
+
+  margin-bottom:5px;
+
+  color:#777;
+
+  font-family:Cinzel,serif;
+
+  font-size:7px;
+
+  letter-spacing:.17em;
+
+  text-transform:uppercase;
+}
+
+.cart-item-name{
+
+  color:#f5f5f5;
+
+  font-family:"DM Serif Display",serif;
+
+  font-size:18px;
+
+  line-height:1.12;
+
+  display:-webkit-box;
+
+  -webkit-box-orient:vertical;
+
+  -webkit-line-clamp:2;
+
+  overflow:hidden;
+}
+
+.cart-item-price{
+
+  margin-top:6px;
+
+  font-size:14px;
+
+  font-weight:600;
+}
+
+.cart-item-size{
+
+  margin-top:5px;
+
+  color:#777;
+
+  font-size:8px;
+
+  letter-spacing:.14em;
+
+  text-transform:uppercase;
+}
+
+
+/* QUANTITY */
+
+.qty-control{
+
+  display:flex;
+
+  align-items:center;
+
+  gap:7px;
+
+  margin-top:11px;
+}
+
+.qty-control button{
+
+  width:28px;
+  height:28px;
+
+  display:grid;
+
+  place-items:center;
+
+  border:1px solid #303030;
+
+  border-radius:3px;
+
+  background:#181818;
+
+  color:#fff;
+
+  font-size:13px;
+
+  transition:.2s ease;
+}
+
+.qty-control button:hover{
+
+  background:#fff;
+
+  color:#111;
+
+  border-color:#fff;
+}
+
+.qty-control span{
+
+  min-width:18px;
+
+  text-align:center;
+
+  font-size:12px;
+
+  font-weight:600;
+}
+
+
+/* REMOVE */
+
+.remove-item{
+
+  width:24px;
+  height:30px;
+
+  align-self:center;
+
+  display:grid;
+
+  place-items:center;
+
+  border:0;
+
+  background:none;
+
+  color:#666;
+
+  font-size:14px;
+
+  transition:.2s ease;
+}
+
+.remove-item:hover{
+
+  color:#fff;
+
+  transform:scale(1.1);
+}
+
+
+/* CART FOOTER */
+
+.cart-footer{
+
+  padding-top:22px;
+
+  border-top:1px solid #242424;
+}
+
+.cart-total-row{
+
+  display:flex;
+
+  justify-content:space-between;
+
+  align-items:center;
+
+  font-family:"DM Serif Display",serif;
+
+  font-size:26px;
+
+  letter-spacing:.04em;
+
+  text-transform:uppercase;
+}
+
+.cart-total-row strong{
+  font-weight:400;
+}
+
+.checkout-btn{
+
+  width:100%;
+
+  margin-top:22px;
+
+  padding:19px;
+
+  border:0;
+
+  background:#fff;
+
+  color:#111;
+
+  font-size:10px;
+
+  font-weight:700;
+
+  letter-spacing:.25em;
+
+  text-transform:uppercase;
+
+  transition:.25s ease;
+}
+
+.checkout-btn:hover{
+
+  background:#d8d8d8;
+
+  transform:translateY(-2px);
+}
+
+.checkout-btn:disabled{
+
+  opacity:.35;
+
+  cursor:not-allowed;
+
+  transform:none;
+}
+
+
+/* =========================================================
+   PRODUCT OPTIONS MODAL
+========================================================= */
+
+.product-modal-overlay{
+
+  position:fixed;
+
+  inset:0;
+
+  z-index:5000;
+
+  background:rgba(0,0,0,.52);
+
+  opacity:0;
+
+  visibility:hidden;
+
+  pointer-events:none;
+
+  transition:.3s ease;
+}
+
+.product-modal-overlay.show{
+
+  opacity:1;
+
+  visibility:visible;
+
+  pointer-events:auto;
+}
+
+.product-modal{
+
+  position:fixed;
+
+  left:0;
+  right:0;
+  bottom:0;
+
+  z-index:5100;
+
+  width:100%;
+
+  height:55vh;
+
+  min-height:430px;
+
+  max-height:680px;
+
+  overflow-y:auto;
+
+  background:#fffdf0;
+
+  color:#111;
+
+  transform:translateY(105%);
+
+  transition:transform .45s var(--ease);
+
+  box-shadow:0 -15px 50px rgba(0,0,0,.16);
+}
+
+.product-modal.open{
+  transform:translateY(0);
+}
+
+.product-modal-head{
+
+  height:78px;
+
+  padding:0 38px;
+
+  display:flex;
+
+  align-items:center;
+
+  justify-content:space-between;
+
+  border-bottom:1px solid rgba(0,0,0,.12);
+}
+
+.product-modal-title{
+
+  font-size:24px;
+
+  letter-spacing:.20em;
+
+  text-transform:uppercase;
+}
+
+.product-modal-close{
+
+  width:45px;
+  height:45px;
+
+  border:0;
+
+  background:none;
+
+  color:#111;
+
+  font-size:32px;
+
+  transition:.25s ease;
+}
+
+.product-modal-close:hover{
+
+  color:var(--red);
+
+  transform:rotate(90deg);
+}
+
+.product-modal-content{
+
+  max-width:1200px;
+
+  margin:auto;
+
+  padding:36px 40px 45px;
+
+  display:grid;
+
+  grid-template-columns:260px 1fr;
+
+  gap:45px;
+
+  align-items:center;
+}
+
+.modal-product-image{
+
+  width:260px;
+  height:310px;
+
+  overflow:hidden;
+
+  background:#ddd7ca;
+}
+
+.modal-product-image img{
+
+  width:100%;
+  height:100%;
+
+  object-fit:cover;
+}
+
+.modal-product-brand{
+
+  margin-bottom:10px;
+
+  font-family:Cinzel,serif;
+
+  font-size:11px;
+
+  letter-spacing:.18em;
+}
+
+.modal-product-name{
+
+  max-width:700px;
+
+  font-family:"DM Serif Display",serif;
+
+  font-size:clamp(28px,3vw,48px);
+
+  line-height:1;
+}
+
+.modal-product-price{
+
+  margin-top:18px;
+
+  font-size:17px;
+
+  letter-spacing:.16em;
+
+  color:#666;
+}
+
+
+/* SIZE */
+
+.size-area{
+  margin-top:30px;
+}
+
+.size-title-row{
+
+  display:flex;
+
+  justify-content:space-between;
+
+  margin-bottom:15px;
+}
+
+.size-title{
+
+  font-family:Cinzel,serif;
+
+  font-size:13px;
+
+  letter-spacing:.16em;
+
+  text-transform:uppercase;
+}
+
+.size-error{
+
+  display:none;
+
+  color:var(--red);
+
+  font-size:10px;
+
+  letter-spacing:.12em;
+
+  text-transform:uppercase;
+}
+
+.size-error.show{
+  display:block;
+}
+
+.size-options{
+
+  display:flex;
+
+  flex-wrap:wrap;
+
+  gap:9px;
+}
+
+.size-option input{
+
+  position:absolute;
+
+  opacity:0;
+
+  pointer-events:none;
+}
+
+.size-option label{
+
+  min-width:68px;
+
+  height:52px;
+
+  padding:0 18px;
+
+  display:flex;
+
+  align-items:center;
+
+  justify-content:center;
+
+  border:1px solid rgba(0,0,0,.18);
+
+  color:#555;
+
+  font-size:12px;
+
+  letter-spacing:.12em;
+
+  cursor:pointer;
+
+  transition:.2s ease;
+}
+
+.size-option label:hover{
+
+  border-color:#111;
+
+  color:#111;
+}
+
+.size-option input:checked + label{
+
+  background:#111;
+
+  border-color:#111;
+
+  color:#fff;
+}
+
+.modal-add-cart{
+
+  width:100%;
+
+  max-width:500px;
+
+  height:55px;
+
+  margin-top:22px;
+
+  border:0;
+
+  background:#111;
+
+  color:#fff;
+
+  font-size:10px;
+
+  font-weight:700;
+
+  letter-spacing:.22em;
+
+  text-transform:uppercase;
+
+  transition:.25s ease;
+}
+
+.modal-add-cart:hover{
+
+  background:var(--red);
+
+  transform:translateY(-2px);
+}
+
+
+/* =========================================================
+   RESPONSIVE TABLET
+========================================================= */
+
+@media(max-width:900px){
+
+  :root{
+    --header-height:68px;
+  }
+
+  .header-inner{
+    padding:0 14px;
+  }
+
+  .menu-toggle{
+    display:block;
+  }
+
+  .brand-mark{
+
+    position:absolute;
+
+    left:50%;
+
+    transform:translateX(-50%);
+
+    min-width:0;
+  }
+
+  .brand-mark span{
+    display:none;
+  }
+
+  .desktop-nav{
+    display:none;
+  }
+
+  .header-actions{
+    min-width:50px;
+  }
+
+  .cart-button span{
+    display:none;
+  }
+
+  .shop-intro{
+    padding-top:70px;
+  }
+
+  .shop-controls{
+    padding:25px 20px;
+  }
+
+  .products-wrapper{
+    padding:35px 16px 70px;
+  }
+
+  .products{
+    gap:16px;
+  }
+
+  .product-image{
+
+    height:55vw;
+
+    min-height:320px;
+  }
+
+  .product-info{
+    padding:20px;
+  }
+
+  .product-modal-content{
+
+    grid-template-columns:180px 1fr;
+
+    gap:25px;
+
+    padding:25px 22px 35px;
+  }
+
+  .modal-product-image{
+
+    width:180px;
+    height:230px;
+  }
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media(max-width:600px){
+
+  :root{
+    --header-height:64px;
+  }
+
+  .shop-intro{
+
+    padding:60px 15px 40px;
+  }
+
+  .shop-intro-kicker{
+
+    font-size:8px;
+
+    letter-spacing:.27em;
+  }
+
+  .shop-intro h1{
+
+    font-size:clamp(50px,16vw,82px);
+
+    line-height:.82;
+  }
+
+  .shop-controls{
+
+    display:block;
+
+    padding:22px 14px;
+  }
+
+  .shop-count{
+
+    margin-bottom:18px;
+
+    text-align:center;
+  }
+
+  .shop-tabs{
+
+    justify-content:center;
+
+    gap:24px;
+  }
+
+  .shop-tabs button{
+
+    font-size:9px;
+
+    letter-spacing:.1em;
+  }
+
+  .products-wrapper{
+
+    padding:20px 8px 60px;
+  }
+
+  .products{
+
+    grid-template-columns:1fr 1fr;
+
+    gap:8px;
+  }
+
+  .product-image{
+
+    height:55vw;
+
+    min-height:205px;
+  }
+
+  .badge{
+
+    top:8px;
+    left:8px;
+
+    padding:6px 8px;
+
+    font-size:7px;
+  }
+
+  .product-cart{
+
+    width:36px;
+    height:36px;
+
+    right:7px;
+    bottom:7px;
+
+    font-size:23px;
+  }
+
+  .product-info{
+
+    min-height:122px;
+
+    padding:14px 11px 16px;
+  }
+
+  .product-brand{
+
+    margin-bottom:6px;
+
+    font-size:7px;
+
+    letter-spacing:.13em;
+  }
+
+  .product-name{
+
+    max-width:100%;
+
+    font-size:12px;
+
+    line-height:1.3;
+  }
+
+  .product-price{
+
+    margin-top:8px;
+
+    font-size:12px;
+  }
+
+
+  /* MOBILE CART */
+
+  .cart-drawer{
+
+    width:calc(100vw - 43px);
+
+    max-width:none;
+
+    padding:34px 16px 20px;
+  }
+
+  .cart-head{
+    padding-bottom:22px;
+  }
+
+  .cart-head strong{
+
+    font-size:25px;
+
+    letter-spacing:.13em;
+  }
+
+  .close{
+
+    width:35px;
+    height:35px;
+
+    font-size:30px;
+  }
+
+  .cart-items{
+    padding:14px 0;
+  }
+
+  .cart-item{
+
+    grid-template-columns:
+      82px
+      minmax(0,1fr)
+      20px;
+
+    gap:11px;
+
+    margin-bottom:9px;
+
+    padding:10px;
+  }
+
+  .cart-item-image{
+
+    width:82px;
+    height:96px;
+  }
+
+  .cart-item-brand{
+    font-size:6.5px;
+  }
+
+  .cart-item-name{
+    font-size:16px;
+  }
+
+  .cart-item-price{
+    font-size:13px;
+  }
+
+  .cart-item-size{
+    font-size:7px;
+  }
+
+  .qty-control{
+
+    margin-top:9px;
+
+    gap:6px;
+  }
+
+  .qty-control button{
+
+    width:26px;
+    height:26px;
+
+    font-size:12px;
+  }
+
+  .qty-control span{
+
+    min-width:17px;
+
+    font-size:11px;
+  }
+
+  .remove-item{
+
+    width:20px;
+
+    font-size:12px;
+  }
+
+  .cart-total-row{
+    font-size:22px;
+  }
+
+  .checkout-btn{
+
+    margin-top:20px;
+
+    padding:18px 12px;
+
+    font-size:9px;
+  }
+
+
+  /* MOBILE PRODUCT MODAL */
+
+  .product-modal{
+
+    height:55vh;
+
+    min-height:420px;
+  }
+
+  .product-modal-head{
+
+    height:60px;
+
+    padding:0 18px;
+  }
+
+  .product-modal-title{
+    font-size:14px;
+  }
+
+  .product-modal-content{
+
+    padding:20px 18px 30px;
+
+    display:block;
+  }
+
+  .modal-product-image{
+
+    width:130px;
+    height:160px;
+
+    margin-bottom:20px;
+  }
+
+  .modal-product-name{
+    font-size:27px;
+  }
+
+  .modal-product-price{
+    font-size:14px;
+  }
+
+  .size-area{
+    margin-top:22px;
+  }
+
+  .size-option label{
+
+    min-width:55px;
+
+    height:45px;
+
+    padding:0 14px;
+  }
+
+  .modal-add-cart{
+    height:52px;
+  }
+}
+
+
+/* =========================================================
+   VERY SMALL
+========================================================= */
+
+@media(max-width:380px){
+
+  .shop-tabs{
+    gap:16px;
+  }
+
+  .shop-tabs button{
+    font-size:8px;
+  }
+
+  .cart-drawer{
+
+    width:calc(100vw - 25px);
+
+    padding-left:12px;
+    padding-right:12px;
+  }
+
+  .cart-item{
+
+    grid-template-columns:
+      72px
+      minmax(0,1fr)
+      18px;
+
+    gap:9px;
+
+    padding:8px;
+  }
+
+  .cart-item-image{
+
+    width:72px;
+    height:86px;
+  }
+
+  .cart-item-name{
+    font-size:14px;
+  }
+
+  .cart-item-price{
+    font-size:12px;
+  }
+
+  .qty-control button{
+
+    width:24px;
+    height:24px;
+  }
+
+  .cart-total-row{
+    font-size:20px;
+  }
+}
+
+
+/* =========================================================
+   REDUCED MOTION
+========================================================= */
+
+@media(prefers-reduced-motion:reduce){
+
+  *,
+  *::before,
+  *::after{
+
+    scroll-behavior:auto!important;
+
+    animation-duration:.01ms!important;
+
+    animation-iteration-count:1!important;
+
+    transition-duration:.01ms!important;
+  }
+}
+
+</style>
+</head>
+
+
+<body>
+
+
+<!-- =======================================================
+     HEADER
+======================================================== -->
+
+<header class="site-header" id="siteHeader">
+
+  <div class="header-inner">
+
+
+    <button
+      class="menu-toggle"
+      id="menuToggle"
+      aria-label="Open menu"
+    >
+
+      <span></span>
+      <span></span>
+      <span></span>
+
+    </button>
+
+
+    <a href="index.html" class="brand-mark">
+
+      <img
+        src="logo.webp"
+        class="logo"
+        alt="Captain Abdullah logo"
+      >
+
+      <span>
+        CAPTAIN ABDULLAH
+      </span>
+
+    </a>
+
+
+    <nav class="desktop-nav">
+
+      <a href="index.html">
+        Home
+      </a>
+
+      <a href="shop.html">
+        Shop
+      </a>
+
+      <a href="index.html#collections">
+        Collections
+      </a>
+
+      <a href="index.html#story">
+        The Code
+      </a>
+
+    </nav>
+
+
+    <div class="header-actions">
+
+      <button
+        class="cart-button"
+        id="cartButton"
+        aria-label="Open shopping bag"
+      >
+
+        <i class="fa-solid fa-shopping-bag"></i>
+
+        <span>
+          Bag
+        </span>
+
+        <b id="cartCount">
+          0
+        </b>
+
+      </button>
+
+    </div>
+
+  </div>
+
+</header>
+
+
+
+<!-- =======================================================
+     MOBILE MENU
+======================================================== -->
+
+<div
+  class="menu-overlay"
+  id="menuOverlay">
+</div>
+
+
+<aside
+  class="mobile-menu"
+  id="mobileMenu"
+>
+
+  <div class="mobile-menu-head">
+
+    <span>
+      CAPTAIN ABDULLAH
+    </span>
+
+    <button
+      class="menu-close"
+      id="menuClose"
+      aria-label="Close menu"
+    >
+      &times;
+    </button>
+
+  </div>
+
+
+  <div class="mobile-links">
+
+    <a href="index.html">
+      Home
+      <span>→</span>
+    </a>
+
+    <a href="shop.html">
+      Shop
+      <span>→</span>
+    </a>
+
+    <a href="index.html#collections">
+      Collections
+      <span>→</span>
+    </a>
+
+    <a href="index.html#story">
+      The Code
+      <span>→</span>
+    </a>
+
+  </div>
+
+</aside>
+
+
+
+<!-- =======================================================
+     SHOP
+======================================================== -->
+
+<main class="shop-page">
+
+
+  <section class="shop-intro">
+
+    <span class="shop-intro-kicker">
+      Captain Abdullah / 01
+    </span>
+
+    <h1>
+      The
+      <br>
+      <em>Wardrobe.</em>
+    </h1>
+
+  </section>
+
+
+
+  <!-- FILTER -->
+
+  <div class="shop-controls">
+
+    <div
+      class="shop-count"
+      id="shopCount"
+    >
+      06 Pieces
+    </div>
+
+
+    <div class="shop-tabs">
+
+      <button
+        class="active"
+        data-filter="all"
+      >
+        Mainline
+      </button>
+
+      <button
+        data-filter="outerwear"
+      >
+        Outerwear
+      </button>
+
+      <button
+        data-filter="essentials"
+      >
+        Essentials
+      </button>
+
+    </div>
+
+  </div>
+
+
+
+  <!-- PRODUCTS -->
+
+  <section class="products-wrapper">
+
+    <div
+      class="products"
+      id="productsGrid"
+    ></div>
+
+  </section>
+
+
+</main>
+
+
+
+<!-- =======================================================
+     CART
+======================================================== -->
+
+<div
+  class="cart-overlay"
+  id="cartOverlay">
+</div>
+
+
+<aside
+  class="cart-drawer"
+  id="cartDrawer"
+>
+
+
+  <div class="cart-head">
+
+    <strong>
+      YOUR CART
+    </strong>
+
+    <button
+      class="close"
+      id="cartClose"
+      aria-label="Close cart"
+    >
+      &times;
+    </button>
+
+  </div>
+
+
+  <div
+    class="cart-items"
+    id="cartItems"
+  ></div>
+
+
+  <div class="cart-footer">
+
+    <div class="cart-total-row">
+
+      <span>
+        Subtotal:
+      </span>
+
+      <strong id="cartTotal">
+        $0.00
+      </strong>
+
+    </div>
+
+
+    <button
+      class="checkout-btn"
+      id="checkoutBtn"
+      disabled
+    >
+      Proceed to checkout
+    </button>
+
+  </div>
+
+</aside>
+
+
+
+<!-- =======================================================
+     PRODUCT OPTIONS MODAL
+======================================================== -->
+
+<div
+  class="product-modal-overlay"
+  id="productModalOverlay">
+</div>
+
+
+<aside
+  class="product-modal"
+  id="productModal"
+>
+
+
+  <div class="product-modal-head">
+
+    <div class="product-modal-title">
+      Choose Options
+    </div>
+
+    <button
+      class="product-modal-close"
+      id="productModalClose"
+      aria-label="Close product options"
+    >
+      &times;
+    </button>
+
+  </div>
+
+
+  <div class="product-modal-content">
+
+
+    <div class="modal-product-image">
+
+      <img
+        id="modalProductImage"
+        src=""
+        alt=""
+      >
+
+    </div>
+
+
+    <div class="modal-product-info">
+
+      <div
+        class="modal-product-brand"
+        id="modalProductBrand"
+      ></div>
+
+
+      <h2
+        class="modal-product-name"
+        id="modalProductName"
+      ></h2>
+
+
+      <div
+        class="modal-product-price"
+        id="modalProductPrice"
+      ></div>
+
+
+      <div class="size-area">
+
+
+        <div class="size-title-row">
+
+          <span class="size-title">
+            Select Size
+          </span>
+
+          <span
+            class="size-error"
+            id="sizeError"
+          >
+            Please select a size
+          </span>
+
+        </div>
+
+
+        <div class="size-options">
+
+
+          <div class="size-option">
+
+            <input
+              type="radio"
+              name="productSize"
+              id="sizeS"
+              value="S"
+            >
+
+            <label for="sizeS">
+              S
+            </label>
+
+          </div>
+
+
+          <div class="size-option">
+
+            <input
+              type="radio"
+              name="productSize"
+              id="sizeM"
+              value="M"
+            >
+
+            <label for="sizeM">
+              M
+            </label>
+
+          </div>
+
+
+          <div class="size-option">
+
+            <input
+              type="radio"
+              name="productSize"
+              id="sizeL"
+              value="L"
+            >
+
+            <label for="sizeL">
+              L
+            </label>
+
+          </div>
+
+
+          <div class="size-option">
+
+            <input
+              type="radio"
+              name="productSize"
+              id="sizeXL"
+              value="XL"
+            >
+
+            <label for="sizeXL">
+              XL
+            </label>
+
+          </div>
+
+
+          <div class="size-option">
+
+            <input
+              type="radio"
+              name="productSize"
+              id="sizeXXL"
+              value="XXL"
+            >
+
+            <label for="sizeXXL">
+              XXL
+            </label>
+
+          </div>
+
+
+        </div>
+
+
+        <button
+          class="modal-add-cart"
+          id="modalAddCart"
+        >
+          Add to cart
+        </button>
+
+
+      </div>
+
+    </div>
+
+  </div>
+
+</aside>
+
+
+
+<script>
+
+"use strict";
+
+
+/* =========================================================
+   PRODUCT DATABASE
+========================================================= */
+
+const productsData = [
+
+  {
+    image:"1.webp",
+    brand:"CAPTAIN ABDULLAH",
+    name:"The Captain Shirt",
+    price:899,
+    category:"outerwear",
+    badge:"Limited (800)"
+  },
+
+  {
+    image:"2.webp",
+    brand:"CAPTAIN ABDULLAH",
+    name:"The Captain Shirt (Brown)",
+    price:985,
+    category:"outerwear",
+    badge:"Limited (700)"
+  },
+
+  {
+    image:"3.webp",
+    brand:"CAPTAIN ABDULLAH",
+    name:"Hunter Signature Shirt",
+    price:999,
+    category:"essentials",
+    badge:"Limited (699)"
+  },
+
+  {
+    image:"captain-jacket.webp",
+    brand:"CAPTAIN ABDULLAH",
+    name:"Voyager Leather Jacket",
+    price:210,
+    category:"outerwear",
+    badge:"Limited"
+  },
+
+  {
+    image:"captain-pants.webp",
+    brand:"CAPTAIN ABDULLAH",
+    name:"Deckhand Trousers",
+    price:95,
+    category:"essentials",
+    badge:""
+  },
+
+  {
+    image:"captain-hoodie.webp",
+    brand:"CAPTAIN ABDULLAH",
+    name:"Black Flag Hoodie",
+    price:110,
+    category:"essentials",
+    badge:"New"
+  }
+
+];
+
+
+/* =========================================================
+   CART STORAGE
+========================================================= */
+
+const CART_STORAGE_KEY =
+  "captainAbdullahCart";
+
+let cart = loadCart();
+
+
+function loadCart(){
+
+  try{
+
+    const saved =
+      localStorage.getItem(
+        CART_STORAGE_KEY
+      );
+
+    if(!saved){
+      return [];
+    }
+
+    const parsed =
+      JSON.parse(saved);
+
+    return Array.isArray(parsed)
+      ? parsed
+      : [];
+
+  }catch(error){
+
+    return [];
+
+  }
+
+}
+
+
+function saveCart(){
+
+  localStorage.setItem(
+    CART_STORAGE_KEY,
+    JSON.stringify(cart)
+  );
+
+}
+
+
+/* =========================================================
+   PRODUCT RENDER
+========================================================= */
+
+const productsGrid =
+  document.getElementById(
+    "productsGrid"
+  );
+
+const shopCount =
+  document.getElementById(
+    "shopCount"
+  );
+
+let currentFilter = "all";
+
+
+function renderProducts(){
+
+  const visible =
+    productsData.filter(
+      product =>
+        currentFilter === "all" ||
+        product.category === currentFilter
+    );
+
+
+  shopCount.textContent =
+    `${String(visible.length).padStart(2,"0")} Pieces`;
+
+
+  productsGrid.innerHTML =
+    visible.map(product => {
+
+      const index =
+        productsData.indexOf(product);
+
+
+      return `
+
+        <article class="product">
+
+          ${
+            product.badge
+            ?
+            `
+              <div class="badge">
+                ${product.badge}
+              </div>
+            `
+            :
+            ""
+          }
+
+
+          <div class="product-image">
+
+            <a
+              class="product-image-link"
+              href="${index + 1}.html"
+            >
+
+              <img
+                src="${product.image}"
+                alt="${product.name}"
+                loading="lazy"
+              >
+
+            </a>
+
+
+            <button
+              class="product-cart"
+              onclick="openProductOptions(${index})"
+              aria-label="Add ${product.name} to cart"
+            >
+              +
+            </button>
+
+          </div>
+
+
+          <div class="product-info">
+
+            <span class="product-brand">
+              ${product.brand}
+            </span>
+
+
+            <h2 class="product-name">
+              ${product.name}
+            </h2>
+
+
+            <div class="product-price">
+              $${product.price.toFixed(2)} USD
+            </div>
+
+          </div>
+
+        </article>
+
+      `;
+
+    }).join("");
+
+}
+
+
+/* =========================================================
+   FILTER
+========================================================= */
+
+document
+.querySelectorAll(
+  ".shop-tabs button"
+)
+.forEach(button => {
+
+  button.addEventListener(
+    "click",
+    () => {
+
+      document
+      .querySelectorAll(
+        ".shop-tabs button"
+      )
+      .forEach(btn =>
+        btn.classList.remove("active")
+      );
+
+
+      button.classList.add("active");
+
+
+      currentFilter =
+        button.dataset.filter;
+
+
+      renderProducts();
+
+    }
+  );
+
+});
+
+
+/* =========================================================
+   PRODUCT MODAL
+========================================================= */
+
+const productModal =
+  document.getElementById(
+    "productModal"
+  );
+
+const productModalOverlay =
+  document.getElementById(
+    "productModalOverlay"
+  );
+
+let selectedProductIndex = null;
+
+
+function openProductOptions(index){
+
+  selectedProductIndex = index;
+
+
+  const product =
+    productsData[index];
+
+
+  document.getElementById(
+    "modalProductImage"
+  ).src =
+    product.image;
+
+
+  document.getElementById(
+    "modalProductImage"
+  ).alt =
+    product.name;
+
+
+  document.getElementById(
+    "modalProductBrand"
+  ).textContent =
+    product.brand;
+
+
+  document.getElementById(
+    "modalProductName"
+  ).textContent =
+    product.name;
+
+
+  document.getElementById(
+    "modalProductPrice"
+  ).textContent =
+    "$" +
+    product.price.toFixed(2) +
+    " USD";
+
+
+  document
+  .querySelectorAll(
+    'input[name="productSize"]'
+  )
+  .forEach(
+    input =>
+      input.checked = false
+  );
+
+
+  document
+  .getElementById(
+    "sizeError"
+  )
+  .classList.remove("show");
+
+
+  productModal.classList.add("open");
+
+  productModalOverlay.classList.add("show");
+
+  document.body.classList.add("locked");
+
+}
+
+
+function closeProductOptions(){
+
+  productModal.classList.remove("open");
+
+  productModalOverlay.classList.remove("show");
+
+  unlockBody();
+
+}
+
+
+document.getElementById(
+  "productModalClose"
+).onclick =
+  closeProductOptions;
+
+
+productModalOverlay.onclick =
+  closeProductOptions;
+
+
+/* =========================================================
+   ADD TO CART FROM MODAL
+========================================================= */
+
+document.getElementById(
+  "modalAddCart"
+).onclick = () => {
+
+
+  if(
+    selectedProductIndex === null
+  ){
+    return;
+  }
+
+
+  const selectedSize =
+    document.querySelector(
+      'input[name="productSize"]:checked'
+    );
+
+
+  if(!selectedSize){
+
+    document
+    .getElementById(
+      "sizeError"
+    )
+    .classList.add("show");
+
+    return;
+
+  }
+
+
+  const product =
+    productsData[
+      selectedProductIndex
+    ];
+
+
+  addProductToCart(
+    product,
+    selectedSize.value
+  );
+
+
+  closeProductOptions();
+
+  openCart();
+
+};
+
+
+/* =========================================================
+   ADD PRODUCT
+========================================================= */
+
+function addProductToCart(
+  product,
+  size
+){
+
+  const existing =
+    cart.find(
+      item =>
+        item.name === product.name &&
+        item.size === size
+    );
+
+
+  if(existing){
+
+    existing.qty += 1;
+
+  }else{
+
+    cart.push({
+
+      image:product.image,
+
+      brand:product.brand,
+
+      name:product.name,
+
+      price:product.price,
+
+      size:size,
+
+      qty:1
+
+    });
+
+  }
+
+
+  saveCart();
+
+  renderCart();
+
+}
+
+
+/* =========================================================
+   CART RENDER
+========================================================= */
+
+function renderCart(){
+
+  const count =
+    cart.reduce(
+      (sum,item) =>
+        sum + Number(item.qty || 0),
+      0
+    );
+
+
+  const total =
+    cart.reduce(
+      (sum,item) =>
+        sum +
+        Number(item.price || 0) *
+        Number(item.qty || 0),
+      0
+    );
+
+
+  document.getElementById(
+    "cartCount"
+  ).textContent =
+    count;
+
+
+  document.getElementById(
+    "cartTotal"
+  ).textContent =
+    "$" +
+    total.toFixed(2);
+
+
+  document.getElementById(
+    "checkoutBtn"
+  ).disabled =
+    cart.length === 0;
+
+
+  const cartItems =
+    document.getElementById(
+      "cartItems"
+    );
+
+
+  if(!cart.length){
+
+    cartItems.innerHTML = `
+
+      <div class="cart-empty">
+
+        <i class="fa-solid fa-compass"></i>
+
+        <p>
+          Your bag is empty.
+        </p>
+
+      </div>
+
+    `;
+
+    return;
+
+  }
+
+
+  cartItems.innerHTML =
+    cart.map(
+      (item,index) => `
+
+        <div class="cart-item">
+
+
+          <div class="cart-item-image">
+
+            <img
+              src="${item.image || "1.webp"}"
+              alt="${item.name}"
+            >
+
+          </div>
+
+
+          <div class="cart-item-info">
+
+            <div class="cart-item-brand">
+
+              ${
+                item.brand ||
+                "CAPTAIN ABDULLAH"
+              }
+
+            </div>
+
+
+            <div class="cart-item-name">
+              ${item.name}
+            </div>
+
+
+            <div class="cart-item-price">
+
+              $${Number(
+                item.price
+              ).toFixed(2)}
+
+            </div>
+
+
+            <div class="cart-item-size">
+
+              Size:
+              ${item.size || "M"}
+
+            </div>
+
+
+            <div class="qty-control">
+
+
+              <button
+                onclick="changeQty(${index},-1)"
+                aria-label="Decrease quantity"
+              >
+                −
+              </button>
+
+
+              <span>
+                ${item.qty}
+              </span>
+
+
+              <button
+                onclick="changeQty(${index},1)"
+                aria-label="Increase quantity"
+              >
+                +
+              </button>
+
+
+            </div>
+
+          </div>
+
+
+          <button
+            class="remove-item"
+            onclick="removeItem(${index})"
+            aria-label="Remove item"
+          >
+
+            <i class="fa-solid fa-trash"></i>
+
+          </button>
+
+
+        </div>
+
+      `
+    ).join("");
+
+}
+
+
+/* =========================================================
+   QUANTITY
+========================================================= */
+
+function changeQty(
+  index,
+  amount
+){
+
+  if(!cart[index]){
+    return;
+  }
+
+
+  cart[index].qty =
+    Number(cart[index].qty) +
+    amount;
+
+
+  if(cart[index].qty <= 0){
+
+    cart.splice(index,1);
+
+  }
+
+
+  saveCart();
+
+  renderCart();
+
+}
+
+
+/* =========================================================
+   REMOVE
+========================================================= */
+
+function removeItem(index){
+
+  if(!cart[index]){
+    return;
+  }
+
+
+  cart.splice(index,1);
+
+  saveCart();
+
+  renderCart();
+
+}
+
+
+/* =========================================================
+   CART DRAWER
+========================================================= */
+
+const cartDrawer =
+  document.getElementById(
+    "cartDrawer"
+  );
+
+const cartOverlay =
+  document.getElementById(
+    "cartOverlay"
+  );
+
+
+function openCart(){
+
+  closeMenu();
+
+  closeProductOptions();
+
+  renderCart();
+
+
+  cartDrawer.classList.add(
+    "open"
+  );
+
+  cartOverlay.classList.add(
+    "show"
+  );
+
+
+  document.body.classList.add(
+    "locked"
+  );
+
+}
+
+
+function closeCart(){
+
+  cartDrawer.classList.remove(
+    "open"
+  );
+
+  cartOverlay.classList.remove(
+    "show"
+  );
+
+
+  unlockBody();
+
+}
+
+
+document.getElementById(
+  "cartButton"
+).onclick =
+  openCart;
+
+
+document.getElementById(
+  "cartClose"
+).onclick =
+  closeCart;
+
+
+cartOverlay.onclick =
+  closeCart;
+
+
+/* =========================================================
+   MOBILE MENU
+========================================================= */
+
+const mobileMenu =
+  document.getElementById(
+    "mobileMenu"
+  );
+
+const menuOverlay =
+  document.getElementById(
+    "menuOverlay"
+  );
+
+
+function openMenu(){
+
+  closeCart();
+
+  mobileMenu.classList.add(
+    "open"
+  );
+
+  menuOverlay.classList.add(
+    "show"
+  );
+
+  document.body.classList.add(
+    "locked"
+  );
+
+}
+
+
+function closeMenu(){
+
+  mobileMenu.classList.remove(
+    "open"
+  );
+
+  menuOverlay.classList.remove(
+    "show"
+  );
+
+  unlockBody();
+
+}
+
+
+document.getElementById(
+  "menuToggle"
+).onclick =
+  openMenu;
+
+
+document.getElementById(
+  "menuClose"
+).onclick =
+  closeMenu;
+
+
+menuOverlay.onclick =
+  closeMenu;
+
+
+document
+.querySelectorAll(
+  ".mobile-links a"
+)
+.forEach(
+  link =>
+    link.onclick =
+      closeMenu
+);
+
+
+/* =========================================================
+   BODY LOCK
+========================================================= */
+
+function unlockBody(){
+
+  if(
+
+    !mobileMenu.classList.contains(
+      "open"
+    )
+
+    &&
+
+    !cartDrawer.classList.contains(
+      "open"
+    )
+
+    &&
+
+    !productModal.classList.contains(
+      "open"
+    )
+
+  ){
+
+    document.body.classList.remove(
+      "locked"
+    );
+
+  }
+
+}
+
+
+/* =========================================================
+   ESCAPE
+========================================================= */
+
+document.addEventListener(
+  "keydown",
+  event => {
+
+    if(
+      event.key === "Escape"
+    ){
+
+      closeMenu();
+
+      closeCart();
+
+      closeProductOptions();
+
+    }
+
+  }
+);
+
+
+/* =========================================================
+   CROSS-TAB CART SYNC
+========================================================= */
+
+window.addEventListener(
+  "storage",
+  event => {
+
+    if(
+      event.key ===
+      CART_STORAGE_KEY
+    ){
+
+      cart = loadCart();
+
+      renderCart();
+
+    }
+
+  }
+);
+
+
+/* =========================================================
+   INIT
+========================================================= */
+
+renderProducts();
+
+renderCart();
+
+</script>
+
+</body>
+</html>
